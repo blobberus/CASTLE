@@ -44,7 +44,25 @@
         "model2_mean": 10.296,
         "model2_worst": 9.905,
         "model2_beats_every_contestant": 0.74,
-        "average_of_models": 9.433
+        "average_of_models": 9.433,
+        "model3_mean": 10.406,
+        "model3_worst": 10.244,
+        "model3_beats_every_contestant": 0.945,
+        "average_of_3_models": 9.758
+      },
+      {
+        "name": "model3_pick (501st entrant)",
+        "alloc": "3/16/1/37/43",
+        "model1_mean": 8.533,
+        "model1_worst": 6.996,
+        "model2_mean": 10.293,
+        "model2_worst": 9.94,
+        "model2_beats_every_contestant": 0.72,
+        "average_of_models": 9.413,
+        "model3_mean": 10.427,
+        "model3_worst": 10.263,
+        "model3_beats_every_contestant": 0.995,
+        "average_of_3_models": 9.751
       },
       {
         "name": "strategy1_pick",
@@ -54,7 +72,11 @@
         "model2_mean": 9.709,
         "model2_worst": 9.375,
         "model2_beats_every_contestant": 0.005,
-        "average_of_models": 9.295
+        "average_of_models": 9.295,
+        "model3_mean": 9.718,
+        "model3_worst": 9.578,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.436
       },
       {
         "name": "best simulated contestant (P056, meta_simulator)",
@@ -64,7 +86,11 @@
         "model2_mean": 10.027,
         "model2_worst": 9.445,
         "model2_beats_every_contestant": 0.12,
-        "average_of_models": 9.182
+        "average_of_models": 9.182,
+        "model3_mean": 9.985,
+        "model3_worst": 9.714,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.45
       },
       {
         "name": "AI answer AI06 (opus)",
@@ -74,7 +100,11 @@
         "model2_mean": 9.724,
         "model2_worst": 9.16,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.981
+        "average_of_models": 8.981,
+        "model3_mean": 9.713,
+        "model3_worst": 9.432,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.225
       },
       {
         "name": "AI answer AI29 (opus)",
@@ -84,7 +114,11 @@
         "model2_mean": 9.735,
         "model2_worst": 9.13,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.978
+        "average_of_models": 8.978,
+        "model3_mean": 9.758,
+        "model3_worst": 9.422,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.238
       },
       {
         "name": "AI answer AI12 (opus)",
@@ -94,7 +128,11 @@
         "model2_mean": 9.638,
         "model2_worst": 9.185,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.967
+        "average_of_models": 8.967,
+        "model3_mean": 9.89,
+        "model3_worst": 9.665,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.275
       },
       {
         "name": "AI answer AI03 (sonnet)",
@@ -104,7 +142,11 @@
         "model2_mean": 9.67,
         "model2_worst": 9.185,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.933
+        "average_of_models": 8.933,
+        "model3_mean": 9.707,
+        "model3_worst": 9.381,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.191
       },
       {
         "name": "AI answer AI21 (sonnet)",
@@ -114,7 +156,11 @@
         "model2_mean": 9.637,
         "model2_worst": 9.135,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.907
+        "average_of_models": 8.907,
+        "model3_mean": 9.598,
+        "model3_worst": 9.278,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.137
       },
       {
         "name": "AI answer AI24 (opus)",
@@ -124,7 +170,11 @@
         "model2_mean": 9.189,
         "model2_worst": 8.85,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.753
+        "average_of_models": 8.753,
+        "model3_mean": 9.263,
+        "model3_worst": 9.144,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 8.923
       },
       {
         "name": "AI answer AI11 (opus)",
@@ -134,7 +184,11 @@
         "model2_mean": 9.287,
         "model2_worst": 8.7,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.676
+        "average_of_models": 8.676,
+        "model3_mean": 9.298,
+        "model3_worst": 8.914,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 8.884
       },
       {
         "name": "two castles 0/0/0/50/50",
@@ -144,7 +198,11 @@
         "model2_mean": 8.992,
         "model2_worst": 8.755,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.604
+        "average_of_models": 8.604,
+        "model3_mean": 9.094,
+        "model3_worst": 8.976,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 8.767
       },
       {
         "name": "AI answer AI27 (sonnet)",
@@ -154,7 +212,11 @@
         "model2_mean": 8.935,
         "model2_worst": 8.24,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.359
+        "average_of_models": 8.359,
+        "model3_mean": 8.81,
+        "model3_worst": 8.497,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 8.51
       },
       {
         "name": "AI answer AI09 (sonnet)",
@@ -164,7 +226,11 @@
         "model2_mean": 8.667,
         "model2_worst": 7.95,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.185
+        "average_of_models": 8.185,
+        "model3_mean": 8.436,
+        "model3_worst": 8.119,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 8.269
       },
       {
         "name": "AI answer AI23 (opus)",
@@ -174,7 +240,11 @@
         "model2_mean": 8.425,
         "model2_worst": 8.035,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.139
+        "average_of_models": 8.139,
+        "model3_mean": 8.162,
+        "model3_worst": 7.955,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 8.147
       },
       {
         "name": "AI answer AI08 (haiku)",
@@ -184,7 +254,11 @@
         "model2_mean": 8.299,
         "model2_worst": 7.59,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 8.134
+        "average_of_models": 8.134,
+        "model3_mean": 8.248,
+        "model3_worst": 7.969,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 8.172
       },
       {
         "name": "AI answer AI04 (sonnet)",
@@ -194,7 +268,11 @@
         "model2_mean": 8.303,
         "model2_worst": 7.67,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 7.913
+        "average_of_models": 7.913,
+        "model3_mean": 8.116,
+        "model3_worst": 7.828,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 7.981
       },
       {
         "name": "AI answer AI28 (sonnet)",
@@ -204,7 +282,11 @@
         "model2_mean": 8.08,
         "model2_worst": 7.44,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 7.794
+        "average_of_models": 7.794,
+        "model3_mean": 7.869,
+        "model3_worst": 7.501,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 7.819
       },
       {
         "name": "AI answer AI19 (haiku)",
@@ -214,7 +296,11 @@
         "model2_mean": 7.757,
         "model2_worst": 7.42,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 7.649
+        "average_of_models": 7.649,
+        "model3_mean": 7.697,
+        "model3_worst": 7.48,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 7.665
       },
       {
         "name": "AI answer AI30 (opus)",
@@ -224,7 +310,11 @@
         "model2_mean": 7.843,
         "model2_worst": 7.16,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 7.627
+        "average_of_models": 7.627,
+        "model3_mean": 7.68,
+        "model3_worst": 7.336,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 7.644
       },
       {
         "name": "AI answer AI22 (sonnet)",
@@ -234,7 +324,11 @@
         "model2_mean": 7.718,
         "model2_worst": 7.06,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 7.546
+        "average_of_models": 7.546,
+        "model3_mean": 7.63,
+        "model3_worst": 7.199,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 7.574
       },
       {
         "name": "AI answer AI20 (haiku)",
@@ -244,7 +338,11 @@
         "model2_mean": 7.552,
         "model2_worst": 7.005,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 7.461
+        "average_of_models": 7.461,
+        "model3_mean": 7.516,
+        "model3_worst": 7.139,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 7.479
       },
       {
         "name": "AI answer AI17 (opus)",
@@ -254,7 +352,11 @@
         "model2_mean": 7.485,
         "model2_worst": 6.69,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 7.39
+        "average_of_models": 7.39,
+        "model3_mean": 7.316,
+        "model3_worst": 6.903,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 7.365
       },
       {
         "name": "AI answer AI05 (opus)",
@@ -264,7 +366,11 @@
         "model2_mean": 7.415,
         "model2_worst": 6.73,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 7.331
+        "average_of_models": 7.331,
+        "model3_mean": 7.263,
+        "model3_worst": 6.924,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 7.308
       },
       {
         "name": "AI answer AI18 (opus)",
@@ -274,7 +380,11 @@
         "model2_mean": 7.36,
         "model2_worst": 6.485,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 7.286
+        "average_of_models": 7.286,
+        "model3_mean": 7.08,
+        "model3_worst": 6.614,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 7.217
       },
       {
         "name": "AI answer AI10 (sonnet)",
@@ -284,7 +394,11 @@
         "model2_mean": 7.247,
         "model2_worst": 6.455,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 7.225
+        "average_of_models": 7.225,
+        "model3_mean": 7.087,
+        "model3_worst": 6.752,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 7.179
       },
       {
         "name": "AI answer AI16 (sonnet)",
@@ -294,7 +408,11 @@
         "model2_mean": 7.218,
         "model2_worst": 6.395,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 7.203
+        "average_of_models": 7.203,
+        "model3_mean": 7.136,
+        "model3_worst": 6.77,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 7.181
       },
       {
         "name": "AI answer AI15 (sonnet)",
@@ -304,7 +422,11 @@
         "model2_mean": 5.929,
         "model2_worst": 5.46,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 6.304
+        "average_of_models": 6.304,
+        "model3_mean": 5.893,
+        "model3_worst": 5.628,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 6.167
       },
       {
         "name": "textbook proportional",
@@ -314,7 +436,11 @@
         "model2_mean": 5.462,
         "model2_worst": 5.005,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 5.967
+        "average_of_models": 5.967,
+        "model3_mean": 5.537,
+        "model3_worst": 5.297,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 5.824
       },
       {
         "name": "even split",
@@ -324,7 +450,84 @@
         "model2_mean": 4.546,
         "model2_worst": 4.27,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 5.326
+        "average_of_models": 5.326,
+        "model3_mean": 4.491,
+        "model3_worst": 4.317,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 5.048
+      }
+    ],
+    "consensus_3_models": "2/16/1/38/43",
+    "best_m3_ai_answers": [
+      {
+        "name": "M3 AI M3-AI054 (opus)",
+        "alloc": "1/21/1/36/41",
+        "model1_mean": 8.273,
+        "model1_worst": 6.662,
+        "model2_mean": 9.881,
+        "model2_worst": 9.49,
+        "model2_beats_every_contestant": 0.015,
+        "average_of_models": 9.077,
+        "model3_mean": 10.093,
+        "model3_worst": 9.91,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.416
+      },
+      {
+        "name": "M3 AI M3-AI112 (opus)",
+        "alloc": "1/1/23/33/42",
+        "model1_mean": 8.337,
+        "model1_worst": 6.37,
+        "model2_mean": 10.027,
+        "model2_worst": 9.445,
+        "model2_beats_every_contestant": 0.12,
+        "average_of_models": 9.182,
+        "model3_mean": 9.985,
+        "model3_worst": 9.714,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.45
+      },
+      {
+        "name": "M3 AI M3-AI120 (opus)",
+        "alloc": "1/1/23/33/42",
+        "model1_mean": 8.337,
+        "model1_worst": 6.37,
+        "model2_mean": 10.027,
+        "model2_worst": 9.445,
+        "model2_beats_every_contestant": 0.12,
+        "average_of_models": 9.182,
+        "model3_mean": 9.985,
+        "model3_worst": 9.714,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.45
+      },
+      {
+        "name": "M3 AI M3-AI056 (opus)",
+        "alloc": "1/1/21/36/41",
+        "model1_mean": 8.296,
+        "model1_worst": 6.388,
+        "model2_mean": 9.638,
+        "model2_worst": 9.185,
+        "model2_beats_every_contestant": 0.0,
+        "average_of_models": 8.967,
+        "model3_mean": 9.89,
+        "model3_worst": 9.665,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.275
+      },
+      {
+        "name": "M3 AI M3-AI058 (opus)",
+        "alloc": "1/1/21/36/41",
+        "model1_mean": 8.296,
+        "model1_worst": 6.388,
+        "model2_mean": 9.638,
+        "model2_worst": 9.185,
+        "model2_beats_every_contestant": 0.0,
+        "average_of_models": 8.967,
+        "model3_mean": 9.89,
+        "model3_worst": 9.665,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 9.275
       }
     ]
   },
@@ -353,7 +556,25 @@
         "model2_mean": 7.994,
         "model2_worst": 7.394,
         "model2_beats_every_contestant": 0.77,
-        "average_of_models": 6.967
+        "average_of_models": 6.967,
+        "model3_mean": 7.522,
+        "model3_worst": 7.153,
+        "model3_beats_every_contestant": 0.255,
+        "average_of_3_models": 7.152
+      },
+      {
+        "name": "3-model consensus",
+        "alloc": "1/36/0/63/0",
+        "model1_mean": 5.915,
+        "model1_worst": 5.085,
+        "model2_mean": 7.992,
+        "model2_worst": 7.394,
+        "model2_beats_every_contestant": 0.77,
+        "average_of_models": 6.954,
+        "model3_mean": 7.556,
+        "model3_worst": 7.179,
+        "model3_beats_every_contestant": 0.325,
+        "average_of_3_models": 7.154
       },
       {
         "name": "strategy1_pick",
@@ -363,7 +584,11 @@
         "model2_mean": 7.933,
         "model2_worst": 7.336,
         "model2_beats_every_contestant": 0.715,
-        "average_of_models": 6.944
+        "average_of_models": 6.944,
+        "model3_mean": 7.549,
+        "model3_worst": 7.228,
+        "model3_beats_every_contestant": 0.3,
+        "average_of_3_models": 7.146
       },
       {
         "name": "strategy2_pick (101st entrant)",
@@ -373,7 +598,25 @@
         "model2_mean": 8.052,
         "model2_worst": 7.421,
         "model2_beats_every_contestant": 0.81,
-        "average_of_models": 6.88
+        "average_of_models": 6.88,
+        "model3_mean": 7.551,
+        "model3_worst": 7.118,
+        "model3_beats_every_contestant": 0.3,
+        "average_of_3_models": 7.104
+      },
+      {
+        "name": "model3_pick (501st entrant)",
+        "alloc": "7/25/0/0/68",
+        "model1_mean": 4.937,
+        "model1_worst": 2.406,
+        "model2_mean": 7.688,
+        "model2_worst": 6.898,
+        "model2_beats_every_contestant": 0.4,
+        "average_of_models": 6.313,
+        "model3_mean": 7.707,
+        "model3_worst": 7.313,
+        "model3_beats_every_contestant": 0.665,
+        "average_of_3_models": 6.777
       },
       {
         "name": "AI answer AI24 (opus)",
@@ -383,7 +626,11 @@
         "model2_mean": 6.918,
         "model2_worst": 5.948,
         "model2_beats_every_contestant": 0.01,
-        "average_of_models": 6.063
+        "average_of_models": 6.063,
+        "model3_mean": 7.444,
+        "model3_worst": 7.028,
+        "model3_beats_every_contestant": 0.06,
+        "average_of_3_models": 6.523
       },
       {
         "name": "AI answer AI30 (opus)",
@@ -393,7 +640,11 @@
         "model2_mean": 6.475,
         "model2_worst": 5.42,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 5.963
+        "average_of_models": 5.963,
+        "model3_mean": 6.684,
+        "model3_worst": 6.18,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 6.203
       },
       {
         "name": "AI answer AI11 (opus)",
@@ -403,7 +654,11 @@
         "model2_mean": 6.644,
         "model2_worst": 5.556,
         "model2_beats_every_contestant": 0.01,
-        "average_of_models": 5.953
+        "average_of_models": 5.953,
+        "model3_mean": 7.296,
+        "model3_worst": 6.862,
+        "model3_beats_every_contestant": 0.01,
+        "average_of_3_models": 6.4
       },
       {
         "name": "best simulated contestant (P059, meta_ai_sampler)",
@@ -413,7 +668,11 @@
         "model2_mean": 7.074,
         "model2_worst": 5.987,
         "model2_beats_every_contestant": 0.08,
-        "average_of_models": 5.789
+        "average_of_models": 5.789,
+        "model3_mean": 6.971,
+        "model3_worst": 6.583,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 6.183
       },
       {
         "name": "AI answer AI29 (opus)",
@@ -423,7 +682,11 @@
         "model2_mean": 6.142,
         "model2_worst": 5.217,
         "model2_beats_every_contestant": 0.005,
-        "average_of_models": 5.55
+        "average_of_models": 5.55,
+        "model3_mean": 6.101,
+        "model3_worst": 5.45,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 5.733
       },
       {
         "name": "AI answer AI05 (opus)",
@@ -433,7 +696,11 @@
         "model2_mean": 5.964,
         "model2_worst": 4.808,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 5.388
+        "average_of_models": 5.388,
+        "model3_mean": 5.823,
+        "model3_worst": 5.249,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 5.533
       },
       {
         "name": "AI answer AI23 (opus)",
@@ -443,7 +710,11 @@
         "model2_mean": 5.876,
         "model2_worst": 4.757,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 5.346
+        "average_of_models": 5.346,
+        "model3_mean": 5.478,
+        "model3_worst": 4.918,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 5.39
       },
       {
         "name": "all in castle 5",
@@ -453,7 +724,11 @@
         "model2_mean": 5.571,
         "model2_worst": 4.974,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 5.345
+        "average_of_models": 5.345,
+        "model3_mean": 5.65,
+        "model3_worst": 5.362,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 5.446
       },
       {
         "name": "AI answer AI12 (opus)",
@@ -463,7 +738,11 @@
         "model2_mean": 5.849,
         "model2_worst": 4.753,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 5.325
+        "average_of_models": 5.325,
+        "model3_mean": 5.706,
+        "model3_worst": 5.128,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 5.452
       },
       {
         "name": "AI answer AI06 (opus)",
@@ -473,7 +752,11 @@
         "model2_mean": 5.187,
         "model2_worst": 4.268,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 4.382
+        "average_of_models": 4.382,
+        "model3_mean": 4.927,
+        "model3_worst": 4.437,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 4.564
       },
       {
         "name": "AI answer AI18 (opus)",
@@ -483,7 +766,11 @@
         "model2_mean": 5.173,
         "model2_worst": 4.228,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 4.283
+        "average_of_models": 4.283,
+        "model3_mean": 4.926,
+        "model3_worst": 4.486,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 4.498
       },
       {
         "name": "AI answer AI08 (haiku)",
@@ -493,7 +780,11 @@
         "model2_mean": 5.064,
         "model2_worst": 4.044,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 4.234
+        "average_of_models": 4.234,
+        "model3_mean": 4.863,
+        "model3_worst": 4.444,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 4.444
       },
       {
         "name": "two castles 0/0/0/50/50",
@@ -503,7 +794,11 @@
         "model2_mean": 4.837,
         "model2_worst": 3.665,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 4.092
+        "average_of_models": 4.092,
+        "model3_mean": 4.71,
+        "model3_worst": 4.22,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 4.298
       },
       {
         "name": "AI answer AI17 (opus)",
@@ -513,7 +808,11 @@
         "model2_mean": 4.621,
         "model2_worst": 3.47,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 4.043
+        "average_of_models": 4.043,
+        "model3_mean": 4.785,
+        "model3_worst": 4.237,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 4.29
       },
       {
         "name": "AI answer AI20 (haiku)",
@@ -523,7 +822,11 @@
         "model2_mean": 2.828,
         "model2_worst": 2.095,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.969
+        "average_of_models": 2.969,
+        "model3_mean": 2.719,
+        "model3_worst": 2.351,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.886
       },
       {
         "name": "AI answer AI21 (sonnet)",
@@ -533,7 +836,11 @@
         "model2_mean": 2.955,
         "model2_worst": 2.293,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.962
+        "average_of_models": 2.962,
+        "model3_mean": 2.871,
+        "model3_worst": 2.539,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.931
       },
       {
         "name": "AI answer AI01 (haiku)",
@@ -543,7 +850,11 @@
         "model2_mean": 2.922,
         "model2_worst": 2.155,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.892
+        "average_of_models": 2.892,
+        "model3_mean": 2.89,
+        "model3_worst": 2.408,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.891
       },
       {
         "name": "AI answer AI03 (sonnet)",
@@ -553,7 +864,11 @@
         "model2_mean": 2.863,
         "model2_worst": 2.09,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.843
+        "average_of_models": 2.843,
+        "model3_mean": 2.689,
+        "model3_worst": 2.352,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.791
       },
       {
         "name": "AI answer AI02 (haiku)",
@@ -563,7 +878,11 @@
         "model2_mean": 2.59,
         "model2_worst": 1.915,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.788
+        "average_of_models": 2.788,
+        "model3_mean": 2.637,
+        "model3_worst": 2.183,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.738
       },
       {
         "name": "AI answer AI28 (sonnet)",
@@ -573,7 +892,11 @@
         "model2_mean": 2.393,
         "model2_worst": 1.887,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.728
+        "average_of_models": 2.728,
+        "model3_mean": 2.366,
+        "model3_worst": 2.043,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.608
       },
       {
         "name": "AI answer AI09 (sonnet)",
@@ -583,7 +906,11 @@
         "model2_mean": 2.367,
         "model2_worst": 1.871,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.679
+        "average_of_models": 2.679,
+        "model3_mean": 2.27,
+        "model3_worst": 1.979,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.543
       },
       {
         "name": "AI answer AI25 (haiku)",
@@ -593,7 +920,11 @@
         "model2_mean": 2.633,
         "model2_worst": 1.947,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.589
+        "average_of_models": 2.589,
+        "model3_mean": 2.519,
+        "model3_worst": 2.182,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.566
       },
       {
         "name": "AI answer AI26 (haiku)",
@@ -603,7 +934,11 @@
         "model2_mean": 2.433,
         "model2_worst": 1.878,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.562
+        "average_of_models": 2.562,
+        "model3_mean": 2.359,
+        "model3_worst": 1.991,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.494
       },
       {
         "name": "AI answer AI04 (sonnet)",
@@ -613,7 +948,11 @@
         "model2_mean": 2.184,
         "model2_worst": 1.635,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.529
+        "average_of_models": 2.529,
+        "model3_mean": 2.155,
+        "model3_worst": 1.869,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.404
       },
       {
         "name": "AI answer AI16 (sonnet)",
@@ -623,7 +962,11 @@
         "model2_mean": 2.105,
         "model2_worst": 1.644,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.495
+        "average_of_models": 2.495,
+        "model3_mean": 2.032,
+        "model3_worst": 1.753,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.341
       },
       {
         "name": "AI answer AI27 (sonnet)",
@@ -633,7 +976,11 @@
         "model2_mean": 2.085,
         "model2_worst": 1.734,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.492
+        "average_of_models": 2.492,
+        "model3_mean": 2.045,
+        "model3_worst": 1.829,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.343
       },
       {
         "name": "AI answer AI13 (haiku)",
@@ -643,7 +990,11 @@
         "model2_mean": 2.081,
         "model2_worst": 1.709,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.463
+        "average_of_models": 2.463,
+        "model3_mean": 1.951,
+        "model3_worst": 1.753,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.292
       },
       {
         "name": "AI answer AI15 (sonnet)",
@@ -653,7 +1004,11 @@
         "model2_mean": 1.874,
         "model2_worst": 1.434,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.299
+        "average_of_models": 2.299,
+        "model3_mean": 1.887,
+        "model3_worst": 1.661,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.161
       },
       {
         "name": "AI answer AI14 (haiku)",
@@ -663,7 +1018,11 @@
         "model2_mean": 2.034,
         "model2_worst": 1.638,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.295
+        "average_of_models": 2.295,
+        "model3_mean": 1.895,
+        "model3_worst": 1.671,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.162
       },
       {
         "name": "AI answer AI10 (sonnet)",
@@ -673,7 +1032,11 @@
         "model2_mean": 1.944,
         "model2_worst": 1.627,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.228
+        "average_of_models": 2.228,
+        "model3_mean": 1.685,
+        "model3_worst": 1.52,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 2.047
       },
       {
         "name": "AI answer AI07 (haiku)",
@@ -683,7 +1046,11 @@
         "model2_mean": 1.764,
         "model2_worst": 1.493,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 2.075
+        "average_of_models": 2.075,
+        "model3_mean": 1.574,
+        "model3_worst": 1.365,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 1.908
       },
       {
         "name": "textbook proportional",
@@ -693,7 +1060,91 @@
         "model2_mean": 1.559,
         "model2_worst": 1.33,
         "model2_beats_every_contestant": 0.0,
-        "average_of_models": 1.832
+        "average_of_models": 1.832,
+        "model3_mean": 1.547,
+        "model3_worst": 1.387,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 1.737
+      }
+    ],
+    "consensus_3_models": "1/36/0/63/0",
+    "consensus_finish_model3": {
+      "mean_payout": 7.522,
+      "p_first": 0.755,
+      "p_top2": 0.984,
+      "p_last": 0.007,
+      "mean_castle_points": 6.15
+    },
+    "best_m3_ai_answers": [
+      {
+        "name": "M3 AI M3-AI120 (opus)",
+        "alloc": "12/21/0/0/67",
+        "model1_mean": 4.956,
+        "model1_worst": 2.465,
+        "model2_mean": 7.39,
+        "model2_worst": 6.367,
+        "model2_beats_every_contestant": 0.12,
+        "average_of_models": 6.173,
+        "model3_mean": 7.584,
+        "model3_worst": 7.1,
+        "model3_beats_every_contestant": 0.235,
+        "average_of_3_models": 6.643
+      },
+      {
+        "name": "M3 AI M3-AI117 (opus)",
+        "alloc": "12/17/0/0/71",
+        "model1_mean": 5.238,
+        "model1_worst": 3.075,
+        "model2_mean": 7.403,
+        "model2_worst": 6.448,
+        "model2_beats_every_contestant": 0.12,
+        "average_of_models": 6.321,
+        "model3_mean": 7.547,
+        "model3_worst": 7.192,
+        "model3_beats_every_contestant": 0.135,
+        "average_of_3_models": 6.729
+      },
+      {
+        "name": "M3 AI M3-AI113 (opus)",
+        "alloc": "0/0/44/56/0",
+        "model1_mean": 5.204,
+        "model1_worst": 4.395,
+        "model2_mean": 6.643,
+        "model2_worst": 5.519,
+        "model2_beats_every_contestant": 0.01,
+        "average_of_models": 5.923,
+        "model3_mean": 7.357,
+        "model3_worst": 6.979,
+        "model3_beats_every_contestant": 0.03,
+        "average_of_3_models": 6.401
+      },
+      {
+        "name": "M3 AI M3-AI053 (opus)",
+        "alloc": "1/0/42/57/0",
+        "model1_mean": 5.247,
+        "model1_worst": 4.338,
+        "model2_mean": 6.607,
+        "model2_worst": 5.453,
+        "model2_beats_every_contestant": 0.01,
+        "average_of_models": 5.927,
+        "model3_mean": 7.267,
+        "model3_worst": 6.838,
+        "model3_beats_every_contestant": 0.005,
+        "average_of_3_models": 6.374
+      },
+      {
+        "name": "M3 AI M3-AI116 (opus)",
+        "alloc": "13/23/0/64/0",
+        "model1_mean": 4.938,
+        "model1_worst": 4.155,
+        "model2_mean": 7.092,
+        "model2_worst": 6.053,
+        "model2_beats_every_contestant": 0.06,
+        "average_of_models": 6.015,
+        "model3_mean": 7.123,
+        "model3_worst": 6.754,
+        "model3_beats_every_contestant": 0.0,
+        "average_of_3_models": 6.384
       }
     ]
   }

@@ -1,0 +1,3304 @@
+{
+  "seed": 7,
+  "quick": false,
+  "players": 500,
+  "mix": {
+    "ai_verbatim": 150,
+    "ai_round": 35,
+    "ai_gut": 35,
+    "ai_plus1": 30,
+    "meta_level2": 15,
+    "meta_simulator": 15,
+    "meta_ai_sampler": 15,
+    "meta_equilibrium": 15,
+    "meta_contrarian": 15,
+    "human_proportional": 35,
+    "human_round": 25,
+    "human_even": 20,
+    "human_top_heavy": 25,
+    "human_all_in": 15,
+    "human_plus1": 20,
+    "human_random": 20,
+    "human_underdog": 15
+  },
+  "descriptions": {
+    "ai_verbatim": "Pasted the prompt into an AI chatbot and submitted its answer unchanged.",
+    "ai_round": "Asked an AI, then rounded the numbers to multiples of 5 because they looked cleaner.",
+    "ai_gut": "Asked an AI, then moved a few soldiers onto the castle that felt most important.",
+    "ai_plus1": "Asked an AI, then bumped round-number castles by +1 to win ties.",
+    "meta_level2": "Assumed most entries are proportional or AI '+1' answers and computed the exact best response.",
+    "meta_simulator": "Imagined a population of applicants, simulated both games, and best-responded to it.",
+    "meta_ai_sampler": "Asked the AI several times to see what AI users would submit, then best-responded to that.",
+    "meta_equilibrium": "Played a random draw from the Colonel Blotto Nash equilibrium (unexploitable on average).",
+    "meta_contrarian": "Predicted the crowd would fight over castles 4-5 and built around skipping one of them.",
+    "human_proportional": "Split soldiers in proportion to castle points, rounding by hand.",
+    "human_round": "Used a tidy round-number ladder.",
+    "human_even": "Put about 20 on every castle.",
+    "human_top_heavy": "Ignored the cheap castles and stacked the valuable ones.",
+    "human_all_in": "Bet everything on one or two castles.",
+    "human_plus1": "Guessed what most people do and added one soldier to beat it.",
+    "human_random": "Low effort: typed numbers that roughly added up.",
+    "human_underdog": "Fought for the cheap castles everyone else ignores."
+  },
+  "baseline": {
+    "game1_top10": [
+      {
+        "id": "P283",
+        "archetype": "meta_ai_sampler",
+        "model": null,
+        "framing": null,
+        "game1": "5/16/0/37/42",
+        "game1_score": 10.31,
+        "game2": "8/0/40/52/0",
+        "game2_payout": 6.25,
+        "game2_p_first": 0.627,
+        "reasoning": "Asked the AI 6 times to see what AI users will submit, assumed ~29% non-AI entries, and best-responded to that field."
+      },
+      {
+        "id": "P293",
+        "archetype": "meta_ai_sampler",
+        "model": null,
+        "framing": null,
+        "game1": "3/15/0/36/46",
+        "game1_score": 10.244,
+        "game2": "7/23/2/0/68",
+        "game2_payout": 7.58,
+        "game2_p_first": 0.804,
+        "reasoning": "Asked the AI 9 times to see what AI users will submit, assumed ~43% non-AI entries, and best-responded to that field."
+      },
+      {
+        "id": "P284",
+        "archetype": "meta_ai_sampler",
+        "model": null,
+        "framing": null,
+        "game1": "8/15/0/35/42",
+        "game1_score": 10.19,
+        "game2": "7/0/41/52/0",
+        "game2_payout": 6.437,
+        "game2_p_first": 0.65,
+        "reasoning": "Asked the AI 7 times to see what AI users will submit, assumed ~34% non-AI entries, and best-responded to that field."
+      },
+      {
+        "id": "P281",
+        "archetype": "meta_ai_sampler",
+        "model": null,
+        "framing": null,
+        "game1": "3/16/0/35/46",
+        "game1_score": 10.188,
+        "game2": "9/16/2/3/70",
+        "game2_payout": 7.416,
+        "game2_p_first": 0.737,
+        "reasoning": "Asked the AI 8 times to see what AI users will submit, assumed ~43% non-AI entries, and best-responded to that field."
+      },
+      {
+        "id": "P294",
+        "archetype": "meta_ai_sampler",
+        "model": null,
+        "framing": null,
+        "game1": "3/16/0/35/46",
+        "game1_score": 10.188,
+        "game2": "13/15/3/1/68",
+        "game2_payout": 7.377,
+        "game2_p_first": 0.744,
+        "reasoning": "Asked the AI 10 times to see what AI users will submit, assumed ~40% non-AI entries, and best-responded to that field."
+      },
+      {
+        "id": "P290",
+        "archetype": "meta_ai_sampler",
+        "model": null,
+        "framing": null,
+        "game1": "3/17/0/35/45",
+        "game1_score": 10.138,
+        "game2": "8/15/5/2/70",
+        "game2_payout": 7.184,
+        "game2_p_first": 0.705,
+        "reasoning": "Asked the AI 10 times to see what AI users will submit, assumed ~21% non-AI entries, and best-responded to that field."
+      },
+      {
+        "id": "P289",
+        "archetype": "meta_ai_sampler",
+        "model": null,
+        "framing": null,
+        "game1": "3/14/0/38/45",
+        "game1_score": 10.126,
+        "game2": "5/0/40/55/0",
+        "game2_payout": 7.004,
+        "game2_p_first": 0.718,
+        "reasoning": "Asked the AI 5 times to see what AI users will submit, assumed ~27% non-AI entries, and best-responded to that field."
+      },
+      {
+        "id": "P282",
+        "archetype": "meta_ai_sampler",
+        "model": null,
+        "framing": null,
+        "game1": "7/15/0/37/41",
+        "game1_score": 10.095,
+        "game2": "3/0/42/55/0",
+        "game2_payout": 7.276,
+        "game2_p_first": 0.749,
+        "reasoning": "Asked the AI 8 times to see what AI users will submit, assumed ~21% non-AI entries, and best-responded to that field."
+      },
+      {
+        "id": "P054",
+        "archetype": "ai_verbatim",
+        "model": "opus",
+        "framing": "optimal",
+        "game1": "1/21/1/36/41",
+        "game1_score": 10.071,
+        "game2": "0/0/37/0/63",
+        "game2_payout": 5.905,
+        "game2_p_first": 0.515,
+        "reasoning": "There's no provably optimal Blotto allocation, so I imagined a likely field of submissions (even splits, proportional, 0/10/20/30/40-style, heavy top-end), worked out by hand how candidate allocations scored against it, and did no actual simulation. In Game 1 the scoring is average points, so each castle is a separate contest. Conceding castle 3 while slightly overbidding the common round numbers on castles 2, 4 and 5 scored best and held up well across the fields I tried. In Game 2 you have to beat the maximum of three opponents and placement is what counts, so I picked the cheapest pair of castles that guarantees first place (3+5 = 8 of 15) and gave them enough margin. These numbers rest on my guesses about other players, not on data."
+      },
+      {
+        "id": "P251",
+        "archetype": "meta_level2",
+        "model": null,
+        "framing": null,
+        "game1": "1/1/23/34/41",
+        "game1_score": 10.063,
+        "game2": "3/1/43/53/0",
+        "game2_payout": 6.999,
+        "game2_p_first": 0.722,
+        "reasoning": "Assumed mostly proportional / AI-style entries and computed the exact best response to that guess."
+      }
+    ],
+    "game2_top10": [
+      {
+        "id": "P117",
+        "archetype": "ai_verbatim",
+        "model": "opus",
+        "framing": "field_aware",
+        "game1": "11/16/27/0/46",
+        "game1_score": 9.607,
+        "game2": "12/17/0/0/71",
+        "game2_payout": 7.662,
+        "game2_p_first": 0.78,
+        "reasoning": "I assumed the field would mostly be AI-style allocations near the proportional 7/13/20/27/33 split, some leaning toward castles 4 and 5, plus a minority going all-in on the top castles, bunched on round and round-plus-one numbers. In Game 1 the average-score rule means each castle is its own contest against the field, so I gave up castle 4 (where the field is high and bunched) and sat just above the common values on the other four, which wins about 11 points against typical opponents and stays reasonable against all-in players. In Game 2 a castle requires beating the highest of three opponents and first place pays far more than the rest, so I aimed for a guaranteed majority (castles 1+2+5 = 8 points) with a very heavy castle 5 and small edges on the castles AI answers tend to neglect. These choices rest on guesses about the field, not certainty, and copies of this same answer would tie each other."
+      },
+      {
+        "id": "P225",
+        "archetype": "ai_plus1",
+        "model": null,
+        "framing": null,
+        "game1": "1/1/23/33/42",
+        "game1_score": 10.039,
+        "game2": "12/21/0/0/67",
+        "game2_payout": 7.607,
+        "game2_p_first": 0.798,
+        "reasoning": "AI (opus) suggested 1/1/23/33/42; I added +1 to round numbers to win ties."
+      },
+      {
+        "id": "P120",
+        "archetype": "ai_verbatim",
+        "model": "opus",
+        "framing": "field_aware",
+        "game1": "1/1/23/33/42",
+        "game1_score": 10.039,
+        "game2": "12/21/0/0/67",
+        "game2_payout": 7.586,
+        "game2_p_first": 0.795,
+        "reasoning": "I guessed that a mostly AI-assisted field would use proportional (about 7/13/20/27/33), round-number (0/10/20/30/40) or plus-one variants, with little on castles 1-2 and rarely more than 55 on castle 5. Because Game 1 is scored by average points, each castle can be judged on its own, so I placed soldiers just above the common clusters on castles 3-5 (23/33/42) and put one soldier each on castles 1-2 to turn the many 0-0 ties into wins. For Game 2, where finishing place matters and first is worth 9, I aimed for castles 1+2+5 (8 of 15 points, which guarantees first) because the field neglects the small castles and rarely sends 65 or more to castle 5. This is a bet on the field, not a guaranteed winner; it does poorly against unusual extreme or very even allocations."
+      },
+      {
+        "id": "P293",
+        "archetype": "meta_ai_sampler",
+        "model": null,
+        "framing": null,
+        "game1": "3/15/0/36/46",
+        "game1_score": 10.244,
+        "game2": "7/23/2/0/68",
+        "game2_payout": 7.58,
+        "game2_p_first": 0.804,
+        "reasoning": "Asked the AI 9 times to see what AI users will submit, assumed ~43% non-AI entries, and best-responded to that field."
+      },
+      {
+        "id": "P311",
+        "archetype": "meta_contrarian",
+        "model": null,
+        "framing": null,
+        "game1": "1/18/27/2/52",
+        "game1_score": 9.521,
+        "game2": "13/33/52/1/1",
+        "game2_payout": 7.471,
+        "game2_p_first": 0.76,
+        "reasoning": "The crowd will overspend on castles 4-5, so Game 1: skip castles 1 and 4; Game 2: lock castles 1-3."
+      },
+      {
+        "id": "P312",
+        "archetype": "meta_contrarian",
+        "model": null,
+        "framing": null,
+        "game1": "1/21/30/0/48",
+        "game1_score": 9.526,
+        "game2": "15/31/54/0/0",
+        "game2_payout": 7.45,
+        "game2_p_first": 0.754,
+        "reasoning": "The crowd will overspend on castles 4-5, so Game 1: skip castles 1 and 4; Game 2: lock castles 1-3."
+      },
+      {
+        "id": "P113",
+        "archetype": "ai_verbatim",
+        "model": "opus",
+        "framing": "field_aware",
+        "game1": "0/0/26/33/41",
+        "game1_score": 9.774,
+        "game2": "0/0/44/56/0",
+        "game2_payout": 7.439,
+        "game2_p_first": 0.771,
+        "reasoning": "For Game 1, I noted that the score is additive average points, so each castle is an independent bet against the field's spread at that castle. I estimated that the field bunches around proportional or slightly top-heavy allocations and round numbers, priced what it costs to beat most of the field at each castle, and dropped castles 1 and 2 as the cheapest points to give up, placing 26/33/41 just above the expected bunches. For Game 2, the four-player format and 1st-place-heavy payout favor concentrating. I expected castle 5 to be over-contested by others who concentrate, so I took castles 3 and 4 with large margins: 7 points usually wins because the other 8 points are split three ways. The numbers are judgment calls about likely opponent behavior, not provably optimal."
+      },
+      {
+        "id": "P281",
+        "archetype": "meta_ai_sampler",
+        "model": null,
+        "framing": null,
+        "game1": "3/16/0/35/46",
+        "game1_score": 10.188,
+        "game2": "9/16/2/3/70",
+        "game2_payout": 7.416,
+        "game2_p_first": 0.737,
+        "reasoning": "Asked the AI 8 times to see what AI users will submit, assumed ~43% non-AI entries, and best-responded to that field."
+      },
+      {
+        "id": "P053",
+        "archetype": "ai_verbatim",
+        "model": "opus",
+        "framing": "optimal",
+        "game1": "2/2/23/32/41",
+        "game1_score": 9.778,
+        "game2": "1/0/42/57/0",
+        "game2_payout": 7.393,
+        "game2_p_first": 0.754,
+        "reasoning": "In Game 1 the score is average points, so each castle can be treated separately. I guessed that the field would mostly submit proportional splits, all 20s, ladders and round numbers, and put soldiers just above those levels on the high-value castles, with small tokens on the cheap ones. In Game 2 the payout heavily rewards first place and each castle needs the highest bid of four players, so concentrating beats spreading out. I chose castles 4+3 over 5+3 or 5+4 because castle 5 is likely to be fought over by players going all in. All of this depends on guesses about what other applicants will submit, so these are well-reasoned bets rather than provably optimal answers."
+      },
+      {
+        "id": "P321",
+        "archetype": "meta_contrarian",
+        "model": null,
+        "framing": null,
+        "game1": "8/18/28/44/2",
+        "game1_score": 9.079,
+        "game2": "12/32/55/1/0",
+        "game2_payout": 7.381,
+        "game2_p_first": 0.754,
+        "reasoning": "The crowd will overspend on castles 4-5, so Game 1: skip castle 5; Game 2: lock castles 1-3."
+      }
+    ],
+    "game1_bottom5": [
+      {
+        "id": "P472",
+        "archetype": "human_random",
+        "model": null,
+        "framing": null,
+        "game1": "10/50/15/15/10",
+        "game1_score": 3.559,
+        "game2": "25/25/15/20/15",
+        "game2_payout": 2.049,
+        "game2_p_first": 0.017,
+        "reasoning": "Didn't overthink it."
+      },
+      {
+        "id": "P479",
+        "archetype": "human_random",
+        "model": null,
+        "framing": null,
+        "game1": "19/38/18/13/12",
+        "game1_score": 3.7,
+        "game2": "35/30/10/10/15",
+        "game2_payout": 2.105,
+        "game2_p_first": 0.014,
+        "reasoning": "Didn't overthink it."
+      },
+      {
+        "id": "P397",
+        "archetype": "human_even",
+        "model": null,
+        "framing": null,
+        "game1": "21/20/19/20/20",
+        "game1_score": 3.932,
+        "game2": "21/20/19/20/20",
+        "game2_payout": 1.945,
+        "game2_p_first": 0.019,
+        "reasoning": "Even split so I'm competitive everywhere."
+      },
+      {
+        "id": "P396",
+        "archetype": "human_even",
+        "model": null,
+        "framing": null,
+        "game1": "21/22/19/20/18",
+        "game1_score": 3.933,
+        "game2": "21/22/19/20/18",
+        "game2_payout": 2.024,
+        "game2_p_first": 0.021,
+        "reasoning": "Even split so I'm competitive everywhere."
+      },
+      {
+        "id": "P477",
+        "archetype": "human_random",
+        "model": null,
+        "framing": null,
+        "game1": "5/40/20/15/20",
+        "game1_score": 4.119,
+        "game2": "5/15/40/30/10",
+        "game2_payout": 4.413,
+        "game2_p_first": 0.361,
+        "reasoning": "Didn't overthink it."
+      }
+    ],
+    "game2_bottom5": [
+      {
+        "id": "P484",
+        "archetype": "human_random",
+        "model": null,
+        "framing": null,
+        "game1": "30/10/35/10/15",
+        "game1_score": 5.176,
+        "game2": "29/7/19/27/18",
+        "game2_payout": 1.115,
+        "game2_p_first": 0.024,
+        "reasoning": "Didn't overthink it."
+      },
+      {
+        "id": "P470",
+        "archetype": "human_random",
+        "model": null,
+        "framing": null,
+        "game1": "6/34/26/12/22",
+        "game1_score": 5.95,
+        "game2": "48/11/10/23/8",
+        "game2_payout": 1.364,
+        "game2_p_first": 0.014,
+        "reasoning": "Didn't overthink it."
+      },
+      {
+        "id": "P184",
+        "archetype": "ai_round",
+        "model": null,
+        "framing": null,
+        "game1": "5/15/20/25/35",
+        "game1_score": 6.01,
+        "game2": "10/10/20/25/35",
+        "game2_payout": 1.48,
+        "game2_p_first": 0.026,
+        "reasoning": "AI (haiku) suggested 7/13/20/27/33 and 10/12/22/26/30; I rounded to 5s."
+      },
+      {
+        "id": "P345",
+        "archetype": "human_proportional",
+        "model": null,
+        "framing": null,
+        "game1": "8/12/20/27/33",
+        "game1_score": 5.512,
+        "game2": "8/12/20/27/33",
+        "game2_payout": 1.5,
+        "game2_p_first": 0.022,
+        "reasoning": "Points-proportional split; for Game 2 I either kept it or leaned harder on the top castles."
+      },
+      {
+        "id": "P350",
+        "archetype": "human_proportional",
+        "model": null,
+        "framing": null,
+        "game1": "7/13/20/27/33",
+        "game1_score": 5.603,
+        "game2": "7/13/20/27/33",
+        "game2_payout": 1.519,
+        "game2_p_first": 0.018,
+        "reasoning": "Points-proportional split; for Game 2 I either kept it or leaned harder on the top castles."
+      }
+    ],
+    "by_category": {
+      "AI-assisted": {
+        "n": 250,
+        "game1_mean": 7.633,
+        "game1_best": 10.071,
+        "game1_mean_rank": 241.1,
+        "game2_mean": 3.539,
+        "game2_best": 7.662,
+        "game2_mean_rank": 257.1,
+        "game2_p_first": 0.237
+      },
+      "Human": {
+        "n": 175,
+        "game1_mean": 6.499,
+        "game1_best": 9.787,
+        "game1_mean_rank": 333.4,
+        "game2_mean": 3.047,
+        "game2_best": 7.356,
+        "game2_mean_rank": 312.7,
+        "game2_p_first": 0.172
+      },
+      "Metastrategist": {
+        "n": 75,
+        "game1_mean": 9.392,
+        "game1_best": 10.31,
+        "game1_mean_rank": 88.2,
+        "game2_mean": 6.094,
+        "game2_best": 7.58,
+        "game2_mean_rank": 83.4,
+        "game2_p_first": 0.579
+      }
+    },
+    "by_archetype": {
+      "ai_gut": {
+        "n": 35,
+        "game1_mean": 7.893,
+        "game1_best": 9.786,
+        "game1_mean_rank": 221.5,
+        "game2_mean": 3.646,
+        "game2_best": 7.068,
+        "game2_mean_rank": 238.1,
+        "game2_p_first": 0.239
+      },
+      "ai_plus1": {
+        "n": 30,
+        "game1_mean": 7.695,
+        "game1_best": 10.043,
+        "game1_mean_rank": 231.9,
+        "game2_mean": 3.572,
+        "game2_best": 7.607,
+        "game2_mean_rank": 247.5,
+        "game2_p_first": 0.237
+      },
+      "ai_round": {
+        "n": 35,
+        "game1_mean": 6.99,
+        "game1_best": 9.787,
+        "game1_mean_rank": 292.8,
+        "game2_mean": 3.044,
+        "game2_best": 6.058,
+        "game2_mean_rank": 298.4,
+        "game2_p_first": 0.183
+      },
+      "ai_verbatim": {
+        "n": 150,
+        "game1_mean": 7.711,
+        "game1_best": 10.071,
+        "game1_mean_rank": 235.5,
+        "game2_mean": 3.622,
+        "game2_best": 7.662,
+        "game2_mean_rank": 253.8,
+        "game2_p_first": 0.249
+      },
+      "human_all_in": {
+        "n": 15,
+        "game1_mean": 8.852,
+        "game1_best": 9.205,
+        "game1_mean_rank": 153.5,
+        "game2_mean": 5.245,
+        "game2_best": 5.598,
+        "game2_mean_rank": 143.7,
+        "game2_p_first": 0.359
+      },
+      "human_even": {
+        "n": 20,
+        "game1_mean": 4.395,
+        "game1_best": 5.156,
+        "game1_mean_rank": 483.8,
+        "game2_mean": 2.014,
+        "game2_best": 2.091,
+        "game2_mean_rank": 385.2,
+        "game2_p_first": 0.051
+      },
+      "human_plus1": {
+        "n": 20,
+        "game1_mean": 7.299,
+        "game1_best": 7.766,
+        "game1_mean_rank": 273.7,
+        "game2_mean": 2.416,
+        "game2_best": 4.907,
+        "game2_mean_rank": 367.4,
+        "game2_p_first": 0.111
+      },
+      "human_proportional": {
+        "n": 35,
+        "game1_mean": 5.748,
+        "game1_best": 6.526,
+        "game1_mean_rank": 399.3,
+        "game2_mean": 1.941,
+        "game2_best": 2.8,
+        "game2_mean_rank": 416.7,
+        "game2_p_first": 0.059
+      },
+      "human_random": {
+        "n": 20,
+        "game1_mean": 5.608,
+        "game1_best": 7.963,
+        "game1_mean_rank": 399.3,
+        "game2_mean": 3.024,
+        "game2_best": 6.439,
+        "game2_mean_rank": 294.3,
+        "game2_p_first": 0.164
+      },
+      "human_round": {
+        "n": 25,
+        "game1_mean": 6.084,
+        "game1_best": 7.5,
+        "game1_mean_rank": 374.9,
+        "game2_mean": 2.178,
+        "game2_best": 2.882,
+        "game2_mean_rank": 375.5,
+        "game2_p_first": 0.086
+      },
+      "human_top_heavy": {
+        "n": 25,
+        "game1_mean": 8.521,
+        "game1_best": 9.787,
+        "game1_mean_rank": 170.4,
+        "game2_mean": 3.654,
+        "game2_best": 5.338,
+        "game2_mean_rank": 252.6,
+        "game2_p_first": 0.226
+      },
+      "human_underdog": {
+        "n": 15,
+        "game1_mean": 6.142,
+        "game1_best": 9.128,
+        "game1_mean_rank": 353.8,
+        "game2_mean": 6.115,
+        "game2_best": 7.356,
+        "game2_mean_rank": 89.9,
+        "game2_p_first": 0.551
+      },
+      "meta_ai_sampler": {
+        "n": 15,
+        "game1_mean": 9.97,
+        "game1_best": 10.31,
+        "game1_mean_rank": 29.5,
+        "game2_mean": 6.905,
+        "game2_best": 7.58,
+        "game2_mean_rank": 36.0,
+        "game2_p_first": 0.698
+      },
+      "meta_contrarian": {
+        "n": 15,
+        "game1_mean": 9.293,
+        "game1_best": 9.596,
+        "game1_mean_rank": 114.0,
+        "game2_mean": 6.391,
+        "game2_best": 7.471,
+        "game2_mean_rank": 70.3,
+        "game2_p_first": 0.601
+      },
+      "meta_equilibrium": {
+        "n": 15,
+        "game1_mean": 8.078,
+        "game1_best": 9.84,
+        "game1_mean_rank": 202.3,
+        "game2_mean": 4.244,
+        "game2_best": 6.763,
+        "game2_mean_rank": 193.3,
+        "game2_p_first": 0.31
+      },
+      "meta_level2": {
+        "n": 15,
+        "game1_mean": 9.877,
+        "game1_best": 10.063,
+        "game1_mean_rank": 36.7,
+        "game2_mean": 6.595,
+        "game2_best": 7.156,
+        "game2_mean_rank": 53.2,
+        "game2_p_first": 0.664
+      },
+      "meta_simulator": {
+        "n": 15,
+        "game1_mean": 9.739,
+        "game1_best": 10.063,
+        "game1_mean_rank": 58.4,
+        "game2_mean": 6.337,
+        "game2_best": 7.287,
+        "game2_mean_rank": 64.0,
+        "game2_p_first": 0.623
+      }
+    },
+    "ai_by_model": {
+      "haiku": {
+        "n": 50,
+        "game1_mean": 5.857,
+        "game1_best": 9.099,
+        "game1_mean_rank": 385.6,
+        "game2_mean": 2.373,
+        "game2_best": 5.104,
+        "game2_mean_rank": 347.9,
+        "game2_p_first": 0.102
+      },
+      "opus": {
+        "n": 50,
+        "game1_mean": 8.749,
+        "game1_best": 10.071,
+        "game1_mean_rank": 149.1,
+        "game2_mean": 5.784,
+        "game2_best": 7.662,
+        "game2_mean_rank": 104.1,
+        "game2_p_first": 0.51
+      },
+      "sonnet": {
+        "n": 50,
+        "game1_mean": 8.526,
+        "game1_best": 9.858,
+        "game1_mean_rank": 171.8,
+        "game2_mean": 2.71,
+        "game2_best": 5.018,
+        "game2_mean_rank": 309.3,
+        "game2_p_first": 0.134
+      }
+    },
+    "ai_by_framing": {
+      "field_aware": {
+        "n": 30,
+        "game1_mean": 8.128,
+        "game1_best": 10.039,
+        "game1_mean_rank": 201.0,
+        "game2_mean": 3.755,
+        "game2_best": 7.662,
+        "game2_mean_rank": 254.3,
+        "game2_p_first": 0.273
+      },
+      "game_theory": {
+        "n": 30,
+        "game1_mean": 7.826,
+        "game1_best": 9.929,
+        "game1_mean_rank": 226.9,
+        "game2_mean": 3.712,
+        "game2_best": 6.068,
+        "game2_mean_rank": 249.9,
+        "game2_p_first": 0.252
+      },
+      "optimal": {
+        "n": 30,
+        "game1_mean": 7.956,
+        "game1_best": 10.071,
+        "game1_mean_rank": 215.7,
+        "game2_mean": 3.776,
+        "game2_best": 7.393,
+        "game2_mean_rank": 245.1,
+        "game2_p_first": 0.265
+      },
+      "quick": {
+        "n": 30,
+        "game1_mean": 7.259,
+        "game1_best": 9.681,
+        "game1_mean_rank": 273.7,
+        "game2_mean": 3.382,
+        "game2_best": 5.926,
+        "game2_mean_rank": 274.8,
+        "game2_p_first": 0.222
+      },
+      "verbatim": {
+        "n": 30,
+        "game1_mean": 7.384,
+        "game1_best": 9.858,
+        "game1_mean_rank": 260.2,
+        "game2_mean": 3.486,
+        "game2_best": 5.925,
+        "game2_mean_rank": 244.8,
+        "game2_p_first": 0.231
+      }
+    },
+    "trend_spearman": {
+      "game1": {
+        "castle1": -0.612,
+        "castle2": -0.572,
+        "castle3": 0.416,
+        "castle4": 0.767,
+        "castle5": 0.7,
+        "castles_with_10plus": -0.75,
+        "soldiers_on_4_and_5": 0.725,
+        "concentration_hhi": 0.83,
+        "round_number_piles": -0.475,
+        "largest_pile": 0.754,
+        "skips_castle5": 0.005
+      },
+      "game2": {
+        "castle1": -0.059,
+        "castle2": -0.241,
+        "castle3": 0.346,
+        "castle4": 0.168,
+        "castle5": 0.115,
+        "castles_with_10plus": -0.698,
+        "soldiers_on_4_and_5": -0.103,
+        "concentration_hhi": 0.852,
+        "round_number_piles": -0.277,
+        "largest_pile": 0.869,
+        "skips_castle5": 0.316
+      }
+    },
+    "most_common_game1": [
+      [
+        "7/13/20/27/33",
+        34
+      ],
+      [
+        "5/10/20/30/35",
+        16
+      ],
+      [
+        "20/20/20/20/20",
+        15
+      ],
+      [
+        "10/15/20/25/30",
+        14
+      ],
+      [
+        "5/15/20/25/35",
+        14
+      ],
+      [
+        "1/11/21/31/36",
+        9
+      ],
+      [
+        "0/10/20/30/40",
+        9
+      ],
+      [
+        "0/0/0/50/50",
+        9
+      ]
+    ],
+    "most_common_game2": [
+      [
+        "0/0/33/33/34",
+        15
+      ],
+      [
+        "0/0/25/35/40",
+        14
+      ],
+      [
+        "0/0/38/0/62",
+        11
+      ],
+      [
+        "0/10/20/30/40",
+        11
+      ],
+      [
+        "5/10/15/30/40",
+        10
+      ],
+      [
+        "0/0/36/0/64",
+        9
+      ],
+      [
+        "0/0/0/40/60",
+        8
+      ],
+      [
+        "0/0/0/50/50",
+        8
+      ]
+    ],
+    "field_mean_game1": [
+      4.79,
+      10.29,
+      21.18,
+      29.26,
+      34.47
+    ],
+    "field_mean_game2": [
+      3.46,
+      6.46,
+      24.51,
+      29.69,
+      35.88
+    ]
+  },
+  "replications": {
+    "n": 200,
+    "by_archetype": {
+      "ai_verbatim": {
+        "game1_mean": 7.653,
+        "game1_mean_rank": 238.8,
+        "game1_top10_rate": 0.004,
+        "game2_mean": 3.565,
+        "game2_mean_rank": 258.0,
+        "game2_top10_rate": 0.017
+      },
+      "ai_round": {
+        "game1_mean": 7.505,
+        "game1_mean_rank": 253.6,
+        "game1_top10_rate": 0.0,
+        "game2_mean": 3.58,
+        "game2_mean_rank": 255.3,
+        "game2_top10_rate": 0.013
+      },
+      "ai_gut": {
+        "game1_mean": 7.991,
+        "game1_mean_rank": 215.2,
+        "game1_top10_rate": 0.006,
+        "game2_mean": 3.725,
+        "game2_mean_rank": 230.8,
+        "game2_top10_rate": 0.005
+      },
+      "ai_plus1": {
+        "game1_mean": 7.93,
+        "game1_mean_rank": 214.9,
+        "game1_top10_rate": 0.003,
+        "game2_mean": 3.692,
+        "game2_mean_rank": 241.0,
+        "game2_top10_rate": 0.016
+      },
+      "meta_level2": {
+        "game1_mean": 9.802,
+        "game1_mean_rank": 40.1,
+        "game1_top10_rate": 0.027,
+        "game2_mean": 6.467,
+        "game2_mean_rank": 61.2,
+        "game2_top10_rate": 0.005
+      },
+      "meta_simulator": {
+        "game1_mean": 9.654,
+        "game1_mean_rank": 61.5,
+        "game1_top10_rate": 0.048,
+        "game2_mean": 6.545,
+        "game2_mean_rank": 56.3,
+        "game2_top10_rate": 0.025
+      },
+      "meta_ai_sampler": {
+        "game1_mean": 9.997,
+        "game1_mean_rank": 28.0,
+        "game1_top10_rate": 0.526,
+        "game2_mean": 6.778,
+        "game2_mean_rank": 43.9,
+        "game2_top10_rate": 0.101
+      },
+      "meta_equilibrium": {
+        "game1_mean": 7.672,
+        "game1_mean_rank": 242.6,
+        "game1_top10_rate": 0.0,
+        "game2_mean": 3.94,
+        "game2_mean_rank": 214.4,
+        "game2_top10_rate": 0.0
+      },
+      "meta_contrarian": {
+        "game1_mean": 9.241,
+        "game1_mean_rank": 111.8,
+        "game1_top10_rate": 0.0,
+        "game2_mean": 6.212,
+        "game2_mean_rank": 82.5,
+        "game2_top10_rate": 0.141
+      },
+      "human_proportional": {
+        "game1_mean": 5.678,
+        "game1_mean_rank": 403.2,
+        "game1_top10_rate": 0.0,
+        "game2_mean": 1.875,
+        "game2_mean_rank": 423.9,
+        "game2_top10_rate": 0.0
+      },
+      "human_round": {
+        "game1_mean": 6.087,
+        "game1_mean_rank": 374.0,
+        "game1_top10_rate": 0.0,
+        "game2_mean": 2.057,
+        "game2_mean_rank": 391.4,
+        "game2_top10_rate": 0.0
+      },
+      "human_even": {
+        "game1_mean": 4.515,
+        "game1_mean_rank": 481.5,
+        "game1_top10_rate": 0.0,
+        "game2_mean": 1.999,
+        "game2_mean_rank": 390.6,
+        "game2_top10_rate": 0.0
+      },
+      "human_top_heavy": {
+        "game1_mean": 8.426,
+        "game1_mean_rank": 178.5,
+        "game1_top10_rate": 0.001,
+        "game2_mean": 3.561,
+        "game2_mean_rank": 253.1,
+        "game2_top10_rate": 0.0
+      },
+      "human_all_in": {
+        "game1_mean": 7.857,
+        "game1_mean_rank": 231.6,
+        "game1_top10_rate": 0.0,
+        "game2_mean": 5.124,
+        "game2_mean_rank": 150.3,
+        "game2_top10_rate": 0.0
+      },
+      "human_plus1": {
+        "game1_mean": 7.323,
+        "game1_mean_rank": 280.6,
+        "game1_top10_rate": 0.0,
+        "game2_mean": 2.715,
+        "game2_mean_rank": 340.5,
+        "game2_top10_rate": 0.0
+      },
+      "human_random": {
+        "game1_mean": 5.505,
+        "game1_mean_rank": 398.1,
+        "game1_top10_rate": 0.0,
+        "game2_mean": 2.689,
+        "game2_mean_rank": 320.1,
+        "game2_top10_rate": 0.0
+      },
+      "human_underdog": {
+        "game1_mean": 6.675,
+        "game1_mean_rank": 314.1,
+        "game1_top10_rate": 0.0,
+        "game2_mean": 6.252,
+        "game2_mean_rank": 80.5,
+        "game2_top10_rate": 0.152
+      }
+    },
+    "ai_answers": [
+      {
+        "id": "M3-AI120",
+        "game1": "1/1/23/33/42",
+        "game2": "12/21/0/0/67",
+        "game1_mean": 9.982,
+        "game2_mean": 7.576,
+        "appearances": 213
+      },
+      {
+        "id": "M3-AI117",
+        "game1": "11/16/27/0/46",
+        "game2": "12/17/0/0/71",
+        "game1_mean": 9.622,
+        "game2_mean": 7.525,
+        "appearances": 192
+      },
+      {
+        "id": "M3-AI113",
+        "game1": "0/0/26/33/41",
+        "game2": "0/0/44/56/0",
+        "game1_mean": 9.69,
+        "game2_mean": 7.353,
+        "appearances": 188
+      },
+      {
+        "id": "M3-AI053",
+        "game1": "2/2/23/32/41",
+        "game2": "1/0/42/57/0",
+        "game1_mean": 9.698,
+        "game2_mean": 7.284,
+        "appearances": 221
+      },
+      {
+        "id": "M3-AI116",
+        "game1": "11/21/31/36/1",
+        "game2": "13/23/0/64/0",
+        "game1_mean": 9.303,
+        "game2_mean": 7.121,
+        "appearances": 218
+      },
+      {
+        "id": "M3-AI148",
+        "game1": "1/2/23/32/42",
+        "game2": "0/0/34/0/66",
+        "game1_mean": 9.867,
+        "game2_mean": 6.079,
+        "appearances": 193
+      },
+      {
+        "id": "M3-AI055",
+        "game1": "1/3/22/33/41",
+        "game2": "0/0/34/0/66",
+        "game1_mean": 9.666,
+        "game2_mean": 6.087,
+        "appearances": 192
+      },
+      {
+        "id": "M3-AI054",
+        "game1": "1/21/1/36/41",
+        "game2": "0/0/37/0/63",
+        "game1_mean": 10.093,
+        "game2_mean": 5.807,
+        "appearances": 193
+      },
+      {
+        "id": "M3-AI057",
+        "game1": "1/1/26/31/41",
+        "game2": "0/0/34/0/66",
+        "game1_mean": 9.633,
+        "game2_mean": 6.069,
+        "appearances": 195
+      },
+      {
+        "id": "M3-AI114",
+        "game1": "4/16/32/47/1",
+        "game2": "0/0/38/62/0",
+        "game1_mean": 9.12,
+        "game2_mean": 6.371,
+        "appearances": 209
+      },
+      {
+        "id": "M3-AI058",
+        "game1": "1/1/21/36/41",
+        "game2": "0/0/38/0/62",
+        "game1_mean": 9.885,
+        "game2_mean": 5.651,
+        "appearances": 212
+      },
+      {
+        "id": "M3-AI142",
+        "game1": "1/2/23/33/41",
+        "game2": "0/0/38/0/62",
+        "game1_mean": 9.815,
+        "game2_mean": 5.667,
+        "appearances": 179
+      },
+      {
+        "id": "M3-AI112",
+        "game1": "1/1/23/33/42",
+        "game2": "1/0/37/0/62",
+        "game1_mean": 9.981,
+        "game2_mean": 5.515,
+        "appearances": 209
+      },
+      {
+        "id": "M3-AI052",
+        "game1": "2/2/23/32/41",
+        "game2": "11/0/37/52/0",
+        "game1_mean": 9.705,
+        "game2_mean": 5.68,
+        "appearances": 198
+      },
+      {
+        "id": "M3-AI146",
+        "game1": "1/5/22/31/41",
+        "game2": "0/0/36/0/64",
+        "game1_mean": 9.307,
+        "game2_mean": 5.894,
+        "appearances": 172
+      },
+      {
+        "id": "M3-AI147",
+        "game1": "1/1/26/31/41",
+        "game2": "0/0/38/0/62",
+        "game1_mean": 9.634,
+        "game2_mean": 5.671,
+        "appearances": 198
+      },
+      {
+        "id": "M3-AI056",
+        "game1": "1/1/21/36/41",
+        "game2": "0/0/39/0/61",
+        "game1_mean": 9.882,
+        "game2_mean": 5.443,
+        "appearances": 196
+      },
+      {
+        "id": "M3-AI144",
+        "game1": "1/4/22/32/41",
+        "game2": "0/0/38/0/62",
+        "game1_mean": 9.492,
+        "game2_mean": 5.639,
+        "appearances": 209
+      },
+      {
+        "id": "M3-AI111",
+        "game1": "8/18/32/41/1",
+        "game2": "1/0/36/0/63",
+        "game1_mean": 9.336,
+        "game2_mean": 5.719,
+        "appearances": 211
+      },
+      {
+        "id": "M3-AI026",
+        "game1": "1/3/22/33/41",
+        "game2": "0/0/39/0/61",
+        "game1_mean": 9.672,
+        "game2_mean": 5.452,
+        "appearances": 227
+      },
+      {
+        "id": "M3-AI118",
+        "game1": "2/14/26/35/23",
+        "game2": "8/0/41/51/0",
+        "game1_mean": 8.411,
+        "game2_mean": 6.134,
+        "appearances": 204
+      },
+      {
+        "id": "M3-AI087",
+        "game1": "2/6/22/31/39",
+        "game2": "0/0/37/0/63",
+        "game1_mean": 8.818,
+        "game2_mean": 5.823,
+        "appearances": 216
+      },
+      {
+        "id": "M3-AI027",
+        "game1": "1/1/31/31/36",
+        "game2": "0/0/36/0/64",
+        "game1_mean": 8.678,
+        "game2_mean": 5.871,
+        "appearances": 244
+      },
+      {
+        "id": "M3-AI088",
+        "game1": "2/5/21/31/41",
+        "game2": "0/0/39/0/61",
+        "game1_mean": 9.109,
+        "game2_mean": 5.458,
+        "appearances": 228
+      },
+      {
+        "id": "M3-AI149",
+        "game1": "1/11/21/31/36",
+        "game2": "0/0/34/0/66",
+        "game1_mean": 8.007,
+        "game2_mean": 6.087,
+        "appearances": 197
+      },
+      {
+        "id": "M3-AI145",
+        "game1": "0/11/22/31/36",
+        "game2": "0/0/35/0/65",
+        "game1_mean": 8.087,
+        "game2_mean": 6.02,
+        "appearances": 199
+      },
+      {
+        "id": "M3-AI060",
+        "game1": "2/4/22/31/41",
+        "game2": "0/0/41/0/59",
+        "game1_mean": 9.35,
+        "game2_mean": 5.23,
+        "appearances": 209
+      },
+      {
+        "id": "M3-AI085",
+        "game1": "3/7/22/31/37",
+        "game2": "1/0/36/0/63",
+        "game1_mean": 8.54,
+        "game2_mean": 5.677,
+        "appearances": 187
+      },
+      {
+        "id": "M3-AI143",
+        "game1": "3/4/22/34/37",
+        "game2": "0/14/35/51/0",
+        "game1_mean": 9.191,
+        "game2_mean": 5.209,
+        "appearances": 204
+      },
+      {
+        "id": "M3-AI083",
+        "game1": "1/11/21/31/36",
+        "game2": "0/0/36/0/64",
+        "game1_mean": 7.998,
+        "game2_mean": 5.861,
+        "appearances": 187
+      },
+      {
+        "id": "M3-AI150",
+        "game1": "1/11/21/31/36",
+        "game2": "0/0/36/0/64",
+        "game1_mean": 7.99,
+        "game2_mean": 5.85,
+        "appearances": 206
+      },
+      {
+        "id": "M3-AI119",
+        "game1": "8/14/23/33/22",
+        "game2": "0/0/36/0/64",
+        "game1_mean": 7.806,
+        "game2_mean": 5.867,
+        "appearances": 215
+      },
+      {
+        "id": "M3-AI090",
+        "game1": "3/11/21/28/37",
+        "game2": "0/0/36/0/64",
+        "game1_mean": 7.666,
+        "game2_mean": 5.899,
+        "appearances": 191
+      },
+      {
+        "id": "M3-AI022",
+        "game1": "1/11/21/31/36",
+        "game2": "0/0/38/0/62",
+        "game1_mean": 8.008,
+        "game2_mean": 5.688,
+        "appearances": 187
+      },
+      {
+        "id": "M3-AI059",
+        "game1": "1/11/22/31/35",
+        "game2": "0/0/38/0/62",
+        "game1_mean": 7.818,
+        "game2_mean": 5.672,
+        "appearances": 188
+      },
+      {
+        "id": "M3-AI024",
+        "game1": "2/12/22/28/36",
+        "game2": "0/0/38/0/62",
+        "game1_mean": 7.643,
+        "game2_mean": 5.676,
+        "appearances": 207
+      },
+      {
+        "id": "M3-AI021",
+        "game1": "1/11/21/31/36",
+        "game2": "0/0/39/0/61",
+        "game1_mean": 8.011,
+        "game2_mean": 5.45,
+        "appearances": 187
+      },
+      {
+        "id": "M3-AI141",
+        "game1": "0/14/21/31/34",
+        "game2": "0/0/36/0/64",
+        "game1_mean": 7.294,
+        "game2_mean": 5.879,
+        "appearances": 206
+      },
+      {
+        "id": "M3-AI042",
+        "game1": "1/0/30/33/36",
+        "game2": "0/0/0/48/52",
+        "game1_mean": 8.831,
+        "game2_mean": 4.941,
+        "appearances": 183
+      },
+      {
+        "id": "M3-AI044",
+        "game1": "0/0/30/34/36",
+        "game2": "0/0/0/49/51",
+        "game1_mean": 8.914,
+        "game2_mean": 4.854,
+        "appearances": 188
+      },
+      {
+        "id": "M3-AI023",
+        "game1": "2/11/22/31/34",
+        "game2": "0/0/38/0/62",
+        "game1_mean": 7.509,
+        "game2_mean": 5.672,
+        "appearances": 207
+      },
+      {
+        "id": "M3-AI115",
+        "game1": "1/4/23/31/41",
+        "game2": "11/14/34/41/0",
+        "game1_mean": 9.477,
+        "game2_mean": 4.463,
+        "appearances": 180
+      },
+      {
+        "id": "M3-AI138",
+        "game1": "0/0/31/33/36",
+        "game2": "0/0/0/49/51",
+        "game1_mean": 8.735,
+        "game2_mean": 4.858,
+        "appearances": 199
+      },
+      {
+        "id": "M3-AI086",
+        "game1": "2/11/21/31/35",
+        "game2": "1/1/36/0/62",
+        "game1_mean": 7.642,
+        "game2_mean": 5.474,
+        "appearances": 215
+      },
+      {
+        "id": "M3-AI081",
+        "game1": "1/11/21/31/36",
+        "game2": "0/14/35/51/0",
+        "game1_mean": 8.011,
+        "game2_mean": 5.215,
+        "appearances": 180
+      },
+      {
+        "id": "M3-AI082",
+        "game1": "1/11/21/31/36",
+        "game2": "0/22/36/42/0",
+        "game1_mean": 8.014,
+        "game2_mean": 5.055,
+        "appearances": 204
+      },
+      {
+        "id": "M3-AI089",
+        "game1": "2/11/22/31/34",
+        "game2": "2/0/36/0/62",
+        "game1_mean": 7.501,
+        "game2_mean": 5.341,
+        "appearances": 186
+      },
+      {
+        "id": "M3-AI029",
+        "game1": "3/9/21/30/37",
+        "game2": "1/14/34/51/0",
+        "game1_mean": 7.846,
+        "game2_mean": 5.079,
+        "appearances": 199
+      },
+      {
+        "id": "M3-AI132",
+        "game1": "0/0/32/34/34",
+        "game2": "0/0/0/49/51",
+        "game1_mean": 8.199,
+        "game2_mean": 4.863,
+        "appearances": 184
+      },
+      {
+        "id": "M3-AI051",
+        "game1": "1/14/23/28/34",
+        "game2": "0/0/39/0/61",
+        "game1_mean": 7.193,
+        "game2_mean": 5.459,
+        "appearances": 221
+      },
+      {
+        "id": "M3-AI030",
+        "game1": "1/11/21/31/36",
+        "game2": "0/22/34/44/0",
+        "game1_mean": 7.998,
+        "game2_mean": 4.771,
+        "appearances": 169
+      },
+      {
+        "id": "M3-AI135",
+        "game1": "0/0/31/34/35",
+        "game2": "0/0/2/48/50",
+        "game1_mean": 8.551,
+        "game2_mean": 4.386,
+        "appearances": 199
+      },
+      {
+        "id": "M3-AI028",
+        "game1": "4/11/21/29/35",
+        "game2": "0/0/41/0/59",
+        "game1_mean": 6.994,
+        "game2_mean": 5.222,
+        "appearances": 193
+      },
+      {
+        "id": "M3-AI084",
+        "game1": "2/11/22/31/34",
+        "game2": "0/0/0/45/55",
+        "game1_mean": 7.491,
+        "game2_mean": 4.901,
+        "appearances": 170
+      },
+      {
+        "id": "M3-AI140",
+        "game1": "0/0/28/34/38",
+        "game2": "0/0/10/42/48",
+        "game1_mean": 9.323,
+        "game2_mean": 3.777,
+        "appearances": 187
+      },
+      {
+        "id": "M3-AI110",
+        "game1": "2/3/22/34/39",
+        "game2": "2/2/12/40/44",
+        "game1_mean": 9.442,
+        "game2_mean": 3.536,
+        "appearances": 198
+      },
+      {
+        "id": "M3-AI102",
+        "game1": "0/0/32/33/35",
+        "game2": "0/0/10/44/46",
+        "game1_mean": 8.335,
+        "game2_mean": 3.788,
+        "appearances": 204
+      },
+      {
+        "id": "M3-AI015",
+        "game1": "0/3/26/34/37",
+        "game2": "0/0/20/38/42",
+        "game1_mean": 9.411,
+        "game2_mean": 3.037,
+        "appearances": 179
+      },
+      {
+        "id": "M3-AI012",
+        "game1": "0/0/24/36/40",
+        "game2": "0/0/25/35/40",
+        "game1_mean": 9.757,
+        "game2_mean": 2.712,
+        "appearances": 167
+      },
+      {
+        "id": "M3-AI076",
+        "game1": "1/1/22/37/39",
+        "game2": "3/3/19/35/40",
+        "game1_mean": 9.648,
+        "game2_mean": 2.725,
+        "appearances": 197
+      },
+      {
+        "id": "M3-AI133",
+        "game1": "0/2/24/36/38",
+        "game2": "0/3/23/34/40",
+        "game1_mean": 9.729,
+        "game2_mean": 2.562,
+        "appearances": 207
+      },
+      {
+        "id": "M3-AI031",
+        "game1": "7/13/20/27/33",
+        "game2": "0/0/0/40/60",
+        "game1_mean": 5.546,
+        "game2_mean": 5.039,
+        "appearances": 209
+      },
+      {
+        "id": "M3-AI134",
+        "game1": "0/2/23/35/40",
+        "game2": "1/1/28/34/36",
+        "game1_mean": 9.756,
+        "game2_mean": 2.37,
+        "appearances": 201
+      },
+      {
+        "id": "M3-AI043",
+        "game1": "0/0/28/33/39",
+        "game2": "0/0/25/35/40",
+        "game1_mean": 9.173,
+        "game2_mean": 2.701,
+        "appearances": 198
+      },
+      {
+        "id": "M3-AI131",
+        "game1": "0/0/25/35/40",
+        "game2": "0/0/28/34/38",
+        "game1_mean": 9.72,
+        "game2_mean": 2.272,
+        "appearances": 205
+      },
+      {
+        "id": "M3-AI050",
+        "game1": "0/3/26/33/38",
+        "game2": "1/1/26/34/38",
+        "game1_mean": 9.334,
+        "game2_mean": 2.438,
+        "appearances": 218
+      },
+      {
+        "id": "M3-AI074",
+        "game1": "3/5/22/31/39",
+        "game2": "0/0/25/35/40",
+        "game1_mean": 8.855,
+        "game2_mean": 2.718,
+        "appearances": 189
+      },
+      {
+        "id": "M3-AI105",
+        "game1": "1/2/26/35/36",
+        "game2": "0/3/25/34/38",
+        "game1_mean": 9.439,
+        "game2_mean": 2.275,
+        "appearances": 177
+      },
+      {
+        "id": "M3-AI136",
+        "game1": "0/0/26/34/40",
+        "game2": "0/0/30/34/36",
+        "game1_mean": 9.585,
+        "game2_mean": 2.187,
+        "appearances": 207
+      },
+      {
+        "id": "M3-AI109",
+        "game1": "1/4/29/31/35",
+        "game2": "0/0/22/38/40",
+        "game1_mean": 8.241,
+        "game2_mean": 2.952,
+        "appearances": 191
+      },
+      {
+        "id": "M3-AI011",
+        "game1": "0/3/21/35/41",
+        "game2": "1/2/30/33/34",
+        "game1_mean": 9.699,
+        "game2_mean": 2.054,
+        "appearances": 198
+      },
+      {
+        "id": "M3-AI014",
+        "game1": "1/1/24/35/39",
+        "game2": "0/2/31/32/35",
+        "game1_mean": 9.806,
+        "game2_mean": 1.945,
+        "appearances": 193
+      },
+      {
+        "id": "M3-AI047",
+        "game1": "0/1/31/34/34",
+        "game2": "0/0/26/36/38",
+        "game1_mean": 8.332,
+        "game2_mean": 2.685,
+        "appearances": 202
+      },
+      {
+        "id": "M3-AI072",
+        "game1": "0/2/32/33/33",
+        "game2": "0/0/22/38/40",
+        "game1_mean": 7.816,
+        "game2_mean": 2.968,
+        "appearances": 194
+      },
+      {
+        "id": "M3-AI017",
+        "game1": "0/6/25/32/37",
+        "game2": "0/0/28/34/38",
+        "game1_mean": 8.892,
+        "game2_mean": 2.252,
+        "appearances": 199
+      },
+      {
+        "id": "M3-AI075",
+        "game1": "0/3/24/34/39",
+        "game2": "1/8/24/31/36",
+        "game1_mean": 9.542,
+        "game2_mean": 1.861,
+        "appearances": 216
+      },
+      {
+        "id": "M3-AI077",
+        "game1": "0/8/22/30/40",
+        "game2": "0/0/26/34/40",
+        "game1_mean": 8.337,
+        "game2_mean": 2.523,
+        "appearances": 196
+      },
+      {
+        "id": "M3-AI137",
+        "game1": "0/0/34/32/34",
+        "game2": "1/1/24/36/38",
+        "game1_mean": 7.73,
+        "game2_mean": 2.793,
+        "appearances": 199
+      },
+      {
+        "id": "M3-AI139",
+        "game1": "0/0/31/33/36",
+        "game2": "0/0/32/34/34",
+        "game1_mean": 8.737,
+        "game2_mean": 2.161,
+        "appearances": 220
+      },
+      {
+        "id": "M3-AI097",
+        "game1": "0/0/25/30/45",
+        "game2": "0/5/25/30/40",
+        "game1_mean": 9.091,
+        "game2_mean": 1.939,
+        "appearances": 226
+      },
+      {
+        "id": "M3-AI045",
+        "game1": "0/0/31/34/35",
+        "game2": "0/0/28/34/38",
+        "game1_mean": 8.531,
+        "game2_mean": 2.25,
+        "appearances": 230
+      },
+      {
+        "id": "M3-AI041",
+        "game1": "0/0/30/34/36",
+        "game2": "0/0/32/33/35",
+        "game1_mean": 8.911,
+        "game2_mean": 2.021,
+        "appearances": 193
+      },
+      {
+        "id": "M3-AI049",
+        "game1": "0/0/30/34/36",
+        "game2": "0/0/32/33/35",
+        "game1_mean": 8.908,
+        "game2_mean": 1.998,
+        "appearances": 203
+      },
+      {
+        "id": "M3-AI016",
+        "game1": "0/0/32/33/35",
+        "game2": "0/0/27/34/39",
+        "game1_mean": 8.332,
+        "game2_mean": 2.316,
+        "appearances": 214
+      },
+      {
+        "id": "M3-AI078",
+        "game1": "1/12/22/30/35",
+        "game2": "0/0/25/35/40",
+        "game1_mean": 7.463,
+        "game2_mean": 2.715,
+        "appearances": 207
+      },
+      {
+        "id": "M3-AI048",
+        "game1": "0/0/30/33/37",
+        "game2": "0/8/24/31/37",
+        "game1_mean": 8.956,
+        "game2_mean": 1.814,
+        "appearances": 207
+      },
+      {
+        "id": "M3-AI093",
+        "game1": "5/10/20/30/35",
+        "game2": "0/5/15/35/45",
+        "game1_mean": 6.556,
+        "game2_mean": 3.183,
+        "appearances": 182
+      },
+      {
+        "id": "M3-AI013",
+        "game1": "1/1/32/32/34",
+        "game2": "0/0/28/34/38",
+        "game1_mean": 8.101,
+        "game2_mean": 2.249,
+        "appearances": 190
+      },
+      {
+        "id": "M3-AI019",
+        "game1": "0/10/25/30/35",
+        "game2": "0/0/27/35/38",
+        "game1_mean": 7.539,
+        "game2_mean": 2.467,
+        "appearances": 194
+      },
+      {
+        "id": "M3-AI018",
+        "game1": "0/6/31/31/32",
+        "game2": "0/0/22/39/39",
+        "game1_mean": 7.147,
+        "game2_mean": 2.683,
+        "appearances": 210
+      },
+      {
+        "id": "M3-AI046",
+        "game1": "0/14/21/28/37",
+        "game2": "0/0/27/33/40",
+        "game1_mean": 7.674,
+        "game2_mean": 2.354,
+        "appearances": 191
+      },
+      {
+        "id": "M3-AI020",
+        "game1": "2/3/31/31/33",
+        "game2": "1/1/28/34/36",
+        "game1_mean": 7.649,
+        "game2_mean": 2.364,
+        "appearances": 213
+      },
+      {
+        "id": "M3-AI025",
+        "game1": "4/11/21/28/36",
+        "game2": "0/0/26/31/43",
+        "game1_mean": 7.368,
+        "game2_mean": 2.484,
+        "appearances": 194
+      },
+      {
+        "id": "M3-AI095",
+        "game1": "5/10/20/30/35",
+        "game2": "0/0/20/35/45",
+        "game1_mean": 6.531,
+        "game2_mean": 2.976,
+        "appearances": 185
+      },
+      {
+        "id": "M3-AI103",
+        "game1": "3/11/23/29/34",
+        "game2": "0/0/26/37/37",
+        "game1_mean": 7.048,
+        "game2_mean": 2.655,
+        "appearances": 225
+      },
+      {
+        "id": "M3-AI104",
+        "game1": "1/9/24/31/35",
+        "game2": "0/0/30/33/37",
+        "game1_mean": 7.984,
+        "game2_mean": 2.033,
+        "appearances": 205
+      },
+      {
+        "id": "M3-AI107",
+        "game1": "0/11/21/31/37",
+        "game2": "0/12/22/32/34",
+        "game1_mean": 8.125,
+        "game2_mean": 1.907,
+        "appearances": 185
+      },
+      {
+        "id": "M3-AI010",
+        "game1": "8/14/20/26/32",
+        "game2": "0/5/10/40/45",
+        "game1_mean": 5.123,
+        "game2_mean": 3.668,
+        "appearances": 213
+      },
+      {
+        "id": "M3-AI067",
+        "game1": "5/10/20/30/35",
+        "game2": "0/5/15/30/50",
+        "game1_mean": 6.554,
+        "game2_mean": 2.804,
+        "appearances": 201
+      },
+      {
+        "id": "M3-AI096",
+        "game1": "0/0/21/30/49",
+        "game2": "5/10/20/30/35",
+        "game1_mean": 8.454,
+        "game2_mean": 1.559,
+        "appearances": 189
+      },
+      {
+        "id": "M3-AI099",
+        "game1": "5/10/20/30/35",
+        "game2": "0/5/20/35/40",
+        "game1_mean": 6.566,
+        "game2_mean": 2.681,
+        "appearances": 196
+      },
+      {
+        "id": "M3-AI071",
+        "game1": "1/10/23/31/35",
+        "game2": "0/4/31/32/33",
+        "game1_mean": 7.916,
+        "game2_mean": 1.828,
+        "appearances": 197
+      },
+      {
+        "id": "M3-AI040",
+        "game1": "7/13/20/27/33",
+        "game2": "0/5/15/35/45",
+        "game1_mean": 5.549,
+        "game2_mean": 3.187,
+        "appearances": 209
+      },
+      {
+        "id": "M3-AI064",
+        "game1": "6/12/20/27/35",
+        "game2": "0/5/15/30/50",
+        "game1_mean": 6.138,
+        "game2_mean": 2.815,
+        "appearances": 188
+      },
+      {
+        "id": "M3-AI101",
+        "game1": "4/9/23/29/35",
+        "game2": "0/2/30/33/35",
+        "game1_mean": 7.3,
+        "game2_mean": 2.042,
+        "appearances": 203
+      },
+      {
+        "id": "M3-AI005",
+        "game1": "7/13/20/27/33",
+        "game2": "0/5/15/30/50",
+        "game1_mean": 5.548,
+        "game2_mean": 2.796,
+        "appearances": 207
+      },
+      {
+        "id": "M3-AI038",
+        "game1": "7/13/20/27/33",
+        "game2": "0/5/15/30/50",
+        "game1_mean": 5.557,
+        "game2_mean": 2.787,
+        "appearances": 209
+      },
+      {
+        "id": "M3-AI098",
+        "game1": "10/15/20/25/30",
+        "game2": "0/5/15/35/45",
+        "game1_mean": 4.875,
+        "game2_mean": 3.192,
+        "appearances": 175
+      },
+      {
+        "id": "M3-AI002",
+        "game1": "10/15/20/25/30",
+        "game2": "0/5/15/35/45",
+        "game1_mean": 4.876,
+        "game2_mean": 3.183,
+        "appearances": 190
+      },
+      {
+        "id": "M3-AI106",
+        "game1": "1/13/22/29/35",
+        "game2": "0/11/24/30/35",
+        "game1_mean": 7.339,
+        "game2_mean": 1.694,
+        "appearances": 190
+      },
+      {
+        "id": "M3-AI079",
+        "game1": "6/12/20/29/33",
+        "game2": "0/4/22/37/37",
+        "game1_mean": 5.71,
+        "game2_mean": 2.649,
+        "appearances": 194
+      },
+      {
+        "id": "M3-AI100",
+        "game1": "4/10/21/30/35",
+        "game2": "2/8/22/30/38",
+        "game1_mean": 7.154,
+        "game2_mean": 1.774,
+        "appearances": 214
+      },
+      {
+        "id": "M3-AI009",
+        "game1": "7/13/20/27/33",
+        "game2": "0/4/16/30/50",
+        "game1_mean": 5.539,
+        "game2_mean": 2.74,
+        "appearances": 205
+      },
+      {
+        "id": "M3-AI094",
+        "game1": "5/10/15/30/40",
+        "game2": "8/12/20/25/35",
+        "game1_mean": 7.413,
+        "game2_mean": 1.605,
+        "appearances": 184
+      },
+      {
+        "id": "M3-AI035",
+        "game1": "5/10/15/30/40",
+        "game2": "5/10/20/30/35",
+        "game1_mean": 7.385,
+        "game2_mean": 1.566,
+        "appearances": 189
+      },
+      {
+        "id": "M3-AI001",
+        "game1": "7/13/20/27/33",
+        "game2": "4/8/15/27/46",
+        "game1_mean": 5.545,
+        "game2_mean": 2.624,
+        "appearances": 226
+      },
+      {
+        "id": "M3-AI036",
+        "game1": "7/13/20/27/33",
+        "game2": "0/0/20/30/50",
+        "game1_mean": 5.53,
+        "game2_mean": 2.611,
+        "appearances": 202
+      },
+      {
+        "id": "M3-AI108",
+        "game1": "0/16/21/28/35",
+        "game2": "0/12/24/30/34",
+        "game1_mean": 7.15,
+        "game2_mean": 1.627,
+        "appearances": 194
+      },
+      {
+        "id": "M3-AI073",
+        "game1": "0/12/26/29/33",
+        "game2": "0/8/24/32/36",
+        "game1_mean": 6.759,
+        "game2_mean": 1.849,
+        "appearances": 191
+      },
+      {
+        "id": "M3-AI092",
+        "game1": "5/10/20/30/35",
+        "game2": "0/0/30/30/40",
+        "game1_mean": 6.557,
+        "game2_mean": 1.948,
+        "appearances": 234
+      },
+      {
+        "id": "M3-AI080",
+        "game1": "0/13/25/30/32",
+        "game2": "0/10/23/31/36",
+        "game1_mean": 6.729,
+        "game2_mean": 1.842,
+        "appearances": 170
+      },
+      {
+        "id": "M3-AI008",
+        "game1": "7/13/20/27/33",
+        "game2": "3/7/15/30/45",
+        "game1_mean": 5.562,
+        "game2_mean": 2.503,
+        "appearances": 198
+      },
+      {
+        "id": "M3-AI127",
+        "game1": "7/13/20/27/33",
+        "game2": "0/0/21/30/49",
+        "game1_mean": 5.527,
+        "game2_mean": 2.514,
+        "appearances": 190
+      },
+      {
+        "id": "M3-AI007",
+        "game1": "10/15/20/25/30",
+        "game2": "0/5/15/30/50",
+        "game1_mean": 4.885,
+        "game2_mean": 2.839,
+        "appearances": 196
+      },
+      {
+        "id": "M3-AI129",
+        "game1": "7/13/20/27/33",
+        "game2": "3/4/18/30/45",
+        "game1_mean": 5.542,
+        "game2_mean": 2.363,
+        "appearances": 199
+      },
+      {
+        "id": "M3-AI069",
+        "game1": "7/13/20/26/34",
+        "game2": "0/0/26/30/44",
+        "game1_mean": 5.621,
+        "game2_mean": 2.31,
+        "appearances": 218
+      },
+      {
+        "id": "M3-AI091",
+        "game1": "5/10/20/30/35",
+        "game2": "0/15/20/30/35",
+        "game1_mean": 6.556,
+        "game2_mean": 1.741,
+        "appearances": 210
+      },
+      {
+        "id": "M3-AI039",
+        "game1": "16/21/21/21/21",
+        "game2": "0/0/25/30/45",
+        "game1_mean": 5.474,
+        "game2_mean": 2.346,
+        "appearances": 189
+      },
+      {
+        "id": "M3-AI062",
+        "game1": "7/13/20/27/33",
+        "game2": "0/5/20/30/45",
+        "game1_mean": 5.535,
+        "game2_mean": 2.291,
+        "appearances": 202
+      },
+      {
+        "id": "M3-AI003",
+        "game1": "7/13/20/27/33",
+        "game2": "0/5/20/30/45",
+        "game1_mean": 5.536,
+        "game2_mean": 2.289,
+        "appearances": 237
+      },
+      {
+        "id": "M3-AI130",
+        "game1": "7/13/20/27/33",
+        "game2": "5/10/15/30/40",
+        "game1_mean": 5.545,
+        "game2_mean": 2.147,
+        "appearances": 204
+      },
+      {
+        "id": "M3-AI070",
+        "game1": "7/13/20/27/33",
+        "game2": "5/10/15/30/40",
+        "game1_mean": 5.543,
+        "game2_mean": 2.141,
+        "appearances": 188
+      },
+      {
+        "id": "M3-AI063",
+        "game1": "7/13/20/27/33",
+        "game2": "5/10/15/30/40",
+        "game1_mean": 5.539,
+        "game2_mean": 2.141,
+        "appearances": 203
+      },
+      {
+        "id": "M3-AI006",
+        "game1": "7/13/20/27/33",
+        "game2": "5/10/15/30/40",
+        "game1_mean": 5.542,
+        "game2_mean": 2.139,
+        "appearances": 204
+      },
+      {
+        "id": "M3-AI004",
+        "game1": "7/13/20/27/33",
+        "game2": "5/10/15/30/40",
+        "game1_mean": 5.543,
+        "game2_mean": 2.13,
+        "appearances": 191
+      },
+      {
+        "id": "M3-AI032",
+        "game1": "7/13/20/27/33",
+        "game2": "10/16/22/25/27",
+        "game1_mean": 5.54,
+        "game2_mean": 1.973,
+        "appearances": 218
+      },
+      {
+        "id": "M3-AI124",
+        "game1": "7/13/20/27/33",
+        "game2": "2/8/20/30/40",
+        "game1_mean": 5.542,
+        "game2_mean": 1.906,
+        "appearances": 177
+      },
+      {
+        "id": "M3-AI125",
+        "game1": "7/13/20/27/33",
+        "game2": "0/10/20/30/40",
+        "game1_mean": 5.542,
+        "game2_mean": 1.887,
+        "appearances": 197
+      },
+      {
+        "id": "M3-AI066",
+        "game1": "7/13/20/27/33",
+        "game2": "4/8/20/31/37",
+        "game1_mean": 5.54,
+        "game2_mean": 1.783,
+        "appearances": 211
+      },
+      {
+        "id": "M3-AI128",
+        "game1": "7/13/20/27/33",
+        "game2": "2/8/22/29/39",
+        "game1_mean": 5.529,
+        "game2_mean": 1.759,
+        "appearances": 207
+      },
+      {
+        "id": "M3-AI033",
+        "game1": "10/15/20/25/30",
+        "game2": "5/10/15/30/40",
+        "game1_mean": 4.888,
+        "game2_mean": 2.143,
+        "appearances": 182
+      },
+      {
+        "id": "M3-AI121",
+        "game1": "10/15/20/25/30",
+        "game2": "5/10/15/30/40",
+        "game1_mean": 4.875,
+        "game2_mean": 2.149,
+        "appearances": 211
+      },
+      {
+        "id": "M3-AI122",
+        "game1": "7/13/20/27/33",
+        "game2": "5/10/22/26/37",
+        "game1_mean": 5.539,
+        "game2_mean": 1.747,
+        "appearances": 203
+      },
+      {
+        "id": "M3-AI068",
+        "game1": "7/13/20/27/33",
+        "game2": "0/15/20/30/35",
+        "game1_mean": 5.539,
+        "game2_mean": 1.743,
+        "appearances": 203
+      },
+      {
+        "id": "M3-AI123",
+        "game1": "7/13/20/27/33",
+        "game2": "0/17/21/28/34",
+        "game1_mean": 5.546,
+        "game2_mean": 1.721,
+        "appearances": 223
+      },
+      {
+        "id": "M3-AI034",
+        "game1": "7/13/20/27/33",
+        "game2": "10/15/20/25/30",
+        "game1_mean": 5.537,
+        "game2_mean": 1.711,
+        "appearances": 200
+      },
+      {
+        "id": "M3-AI037",
+        "game1": "7/13/20/27/33",
+        "game2": "10/12/22/26/30",
+        "game1_mean": 5.531,
+        "game2_mean": 1.681,
+        "appearances": 207
+      },
+      {
+        "id": "M3-AI061",
+        "game1": "7/13/20/27/33",
+        "game2": "0/10/25/30/35",
+        "game1_mean": 5.538,
+        "game2_mean": 1.578,
+        "appearances": 196
+      },
+      {
+        "id": "M3-AI126",
+        "game1": "10/15/20/25/30",
+        "game2": "6/9/17/28/40",
+        "game1_mean": 4.882,
+        "game2_mean": 1.896,
+        "appearances": 202
+      },
+      {
+        "id": "M3-AI065",
+        "game1": "10/15/20/25/30",
+        "game2": "0/10/20/30/40",
+        "game1_mean": 4.889,
+        "game2_mean": 1.878,
+        "appearances": 195
+      }
+    ],
+    "winner_archetypes": {
+      "game1": [
+        [
+          "meta_ai_sampler",
+          200
+        ]
+      ],
+      "game2": [
+        [
+          "ai_verbatim",
+          102
+        ],
+        [
+          "meta_contrarian",
+          26
+        ],
+        [
+          "ai_plus1",
+          18
+        ],
+        [
+          "meta_ai_sampler",
+          18
+        ],
+        [
+          "human_underdog",
+          17
+        ],
+        [
+          "ai_round",
+          13
+        ],
+        [
+          "ai_gut",
+          4
+        ],
+        [
+          "meta_simulator",
+          2
+        ]
+      ]
+    },
+    "winner_allocations": {
+      "game1": [
+        [
+          "4/16/0/37/43",
+          77
+        ],
+        [
+          "2/16/0/37/45",
+          37
+        ],
+        [
+          "5/16/0/37/42",
+          19
+        ],
+        [
+          "2/16/0/36/46",
+          19
+        ],
+        [
+          "2/17/0/37/44",
+          14
+        ],
+        [
+          "2/15/0/37/46",
+          12
+        ],
+        [
+          "3/15/2/38/42",
+          7
+        ],
+        [
+          "1/16/0/36/47",
+          5
+        ],
+        [
+          "2/15/0/36/47",
+          3
+        ],
+        [
+          "4/15/0/38/43",
+          3
+        ]
+      ],
+      "game2": [
+        [
+          "12/21/0/0/67",
+          68
+        ],
+        [
+          "12/17/0/0/71",
+          41
+        ],
+        [
+          "10/20/0/0/70",
+          9
+        ],
+        [
+          "0/0/44/56/0",
+          9
+        ],
+        [
+          "3/25/2/0/70",
+          7
+        ],
+        [
+          "20/30/50/0/0",
+          6
+        ],
+        [
+          "1/0/42/57/0",
+          5
+        ],
+        [
+          "20/29/51/0/0",
+          5
+        ],
+        [
+          "12/19/0/0/69",
+          5
+        ],
+        [
+          "16/33/51/0/0",
+          5
+        ]
+      ]
+    }
+  },
+  "entrant_501": {
+    "game1": {
+      "best_response_to_baseline": {
+        "alloc": "3/16/1/37/43",
+        "baseline_score": 10.366,
+        "baseline_rank_of_501": 1,
+        "replication_mean": 10.427,
+        "replication_rank1_rate": 0.995,
+        "replication_top5_rate": 1.0
+      },
+      "robust_best_response": {
+        "alloc": "3/16/1/37/43",
+        "baseline_score": 10.366,
+        "baseline_rank_of_501": 1,
+        "replication_mean": 10.427,
+        "replication_rank1_rate": 0.995,
+        "replication_top5_rate": 1.0
+      },
+      "baseline_winner_P283": {
+        "alloc": "5/16/0/37/42",
+        "baseline_score": 10.304,
+        "baseline_rank_of_501": 2,
+        "replication_mean": 10.336,
+        "replication_rank1_rate": 0.175,
+        "replication_top5_rate": 0.92
+      }
+    },
+    "game2": {
+      "best_response_to_baseline": {
+        "alloc": "5/25/0/0/70",
+        "baseline_payout": 7.756,
+        "baseline_rank_of_501": 1,
+        "baseline_finish": {
+          "mean_payout": 7.758,
+          "p_first": 0.841,
+          "p_top2": 0.953,
+          "p_last": 0.015,
+          "mean_castle_points": 6.984
+        },
+        "replication_mean": 7.668,
+        "replication_rank1_rate": 0.535,
+        "replication_top5_rate": 0.89
+      },
+      "robust_best_response": {
+        "alloc": "7/25/0/0/68",
+        "baseline_payout": 7.809,
+        "baseline_rank_of_501": 1,
+        "baseline_finish": {
+          "mean_payout": 7.766,
+          "p_first": 0.837,
+          "p_top2": 0.937,
+          "p_last": 0.017,
+          "mean_castle_points": 6.983
+        },
+        "replication_mean": 7.704,
+        "replication_rank1_rate": 0.645,
+        "replication_top5_rate": 0.94
+      },
+      "baseline_winner_P117": {
+        "alloc": "12/17/0/0/71",
+        "baseline_payout": 7.675,
+        "baseline_rank_of_501": 1,
+        "baseline_finish": {
+          "mean_payout": 7.624,
+          "p_first": 0.773,
+          "p_top2": 0.961,
+          "p_last": 0.009,
+          "mean_castle_points": 6.952
+        },
+        "replication_mean": 7.552,
+        "replication_rank1_rate": 0.185,
+        "replication_top5_rate": 0.655
+      }
+    }
+  },
+  "sensitivity": {
+    "ai_vs_human:ai=85,meta=75,human=340": {
+      "mix": {
+        "ai_verbatim": 51,
+        "ai_round": 12,
+        "ai_gut": 12,
+        "ai_plus1": 10,
+        "meta_level2": 15,
+        "meta_simulator": 15,
+        "meta_ai_sampler": 15,
+        "meta_equilibrium": 15,
+        "meta_contrarian": 15,
+        "human_proportional": 68,
+        "human_round": 49,
+        "human_even": 39,
+        "human_top_heavy": 48,
+        "human_all_in": 29,
+        "human_plus1": 39,
+        "human_random": 39,
+        "human_underdog": 29
+      },
+      "game1_top3": [
+        [
+          "meta_level2",
+          10.016
+        ],
+        [
+          "meta_ai_sampler",
+          9.776
+        ],
+        [
+          "meta_simulator",
+          9.75
+        ]
+      ],
+      "game2_top3": [
+        [
+          "meta_ai_sampler",
+          6.587
+        ],
+        [
+          "meta_simulator",
+          6.448
+        ],
+        [
+          "meta_level2",
+          6.43
+        ]
+      ],
+      "game1_all": {
+        "meta_level2": 10.016,
+        "meta_ai_sampler": 9.776,
+        "meta_simulator": 9.75,
+        "meta_contrarian": 9.045,
+        "human_top_heavy": 8.834,
+        "ai_plus1": 8.48,
+        "ai_gut": 8.362,
+        "ai_verbatim": 8.209,
+        "ai_round": 8.016,
+        "human_plus1": 7.97,
+        "meta_equilibrium": 7.756,
+        "human_all_in": 7.733,
+        "human_underdog": 7.014,
+        "human_round": 6.798,
+        "human_proportional": 6.43,
+        "human_random": 5.742,
+        "human_even": 5.078
+      },
+      "game2_all": {
+        "meta_ai_sampler": 6.587,
+        "meta_simulator": 6.448,
+        "meta_level2": 6.43,
+        "meta_contrarian": 6.142,
+        "human_underdog": 5.738,
+        "human_all_in": 5.453,
+        "ai_gut": 4.138,
+        "ai_plus1": 4.131,
+        "meta_equilibrium": 4.101,
+        "human_top_heavy": 4.038,
+        "ai_verbatim": 3.971,
+        "ai_round": 3.927,
+        "human_plus1": 3.148,
+        "human_random": 2.687,
+        "human_round": 2.4,
+        "human_even": 2.198,
+        "human_proportional": 2.052
+      },
+      "robust_pick_game1": {
+        "alloc": "3/16/1/37/43",
+        "mean": 10.011,
+        "beats_everyone_rate": 0.0
+      },
+      "robust_pick_game2": {
+        "alloc": "7/25/0/0/68",
+        "mean": 7.4,
+        "beats_everyone_rate": 0.617
+      }
+    },
+    "ai_vs_human:ai=170,meta=75,human=255": {
+      "mix": {
+        "ai_verbatim": 102,
+        "ai_round": 24,
+        "ai_gut": 24,
+        "ai_plus1": 20,
+        "meta_level2": 15,
+        "meta_simulator": 15,
+        "meta_ai_sampler": 15,
+        "meta_equilibrium": 15,
+        "meta_contrarian": 15,
+        "human_proportional": 51,
+        "human_round": 37,
+        "human_even": 29,
+        "human_top_heavy": 36,
+        "human_all_in": 22,
+        "human_plus1": 29,
+        "human_random": 29,
+        "human_underdog": 22
+      },
+      "game1_top3": [
+        [
+          "meta_level2",
+          9.886
+        ],
+        [
+          "meta_ai_sampler",
+          9.876
+        ],
+        [
+          "meta_simulator",
+          9.7
+        ]
+      ],
+      "game2_top3": [
+        [
+          "meta_ai_sampler",
+          6.675
+        ],
+        [
+          "meta_simulator",
+          6.482
+        ],
+        [
+          "meta_level2",
+          6.404
+        ]
+      ],
+      "game1_all": {
+        "meta_level2": 9.886,
+        "meta_ai_sampler": 9.876,
+        "meta_simulator": 9.7,
+        "meta_contrarian": 9.137,
+        "human_top_heavy": 8.617,
+        "ai_plus1": 8.24,
+        "ai_gut": 8.13,
+        "ai_verbatim": 7.921,
+        "human_all_in": 7.893,
+        "ai_round": 7.756,
+        "meta_equilibrium": 7.705,
+        "human_plus1": 7.641,
+        "human_underdog": 6.792,
+        "human_round": 6.386,
+        "human_proportional": 6.044,
+        "human_random": 5.646,
+        "human_even": 4.77
+      },
+      "game2_all": {
+        "meta_ai_sampler": 6.675,
+        "meta_simulator": 6.482,
+        "meta_level2": 6.404,
+        "meta_contrarian": 6.179,
+        "human_underdog": 6.037,
+        "human_all_in": 5.249,
+        "meta_equilibrium": 3.959,
+        "ai_gut": 3.88,
+        "ai_plus1": 3.874,
+        "ai_verbatim": 3.777,
+        "human_top_heavy": 3.72,
+        "ai_round": 3.719,
+        "human_plus1": 2.898,
+        "human_random": 2.666,
+        "human_round": 2.19,
+        "human_even": 2.085,
+        "human_proportional": 1.947
+      },
+      "robust_pick_game1": {
+        "alloc": "3/16/1/37/43",
+        "mean": 10.223,
+        "beats_everyone_rate": 0.933
+      },
+      "robust_pick_game2": {
+        "alloc": "7/25/0/0/68",
+        "mean": 7.527,
+        "beats_everyone_rate": 0.733
+      }
+    },
+    "ai_vs_human:ai=250,meta=75,human=175": {
+      "mix": {
+        "ai_verbatim": 150,
+        "ai_round": 35,
+        "ai_gut": 35,
+        "ai_plus1": 30,
+        "meta_level2": 15,
+        "meta_simulator": 15,
+        "meta_ai_sampler": 15,
+        "meta_equilibrium": 15,
+        "meta_contrarian": 15,
+        "human_proportional": 35,
+        "human_round": 25,
+        "human_even": 20,
+        "human_top_heavy": 25,
+        "human_all_in": 15,
+        "human_plus1": 20,
+        "human_random": 20,
+        "human_underdog": 15
+      },
+      "game1_top3": [
+        [
+          "meta_ai_sampler",
+          9.987
+        ],
+        [
+          "meta_level2",
+          9.797
+        ],
+        [
+          "meta_simulator",
+          9.648
+        ]
+      ],
+      "game2_top3": [
+        [
+          "meta_ai_sampler",
+          6.788
+        ],
+        [
+          "meta_simulator",
+          6.528
+        ],
+        [
+          "meta_level2",
+          6.439
+        ]
+      ],
+      "game1_all": {
+        "meta_ai_sampler": 9.987,
+        "meta_level2": 9.797,
+        "meta_simulator": 9.648,
+        "meta_contrarian": 9.256,
+        "human_top_heavy": 8.455,
+        "ai_plus1": 7.984,
+        "ai_gut": 7.961,
+        "human_all_in": 7.925,
+        "ai_verbatim": 7.649,
+        "meta_equilibrium": 7.639,
+        "ai_round": 7.53,
+        "human_plus1": 7.324,
+        "human_underdog": 6.643,
+        "human_round": 6.038,
+        "human_proportional": 5.685,
+        "human_random": 5.488,
+        "human_even": 4.498
+      },
+      "game2_all": {
+        "meta_ai_sampler": 6.788,
+        "meta_simulator": 6.528,
+        "meta_level2": 6.439,
+        "human_underdog": 6.318,
+        "meta_contrarian": 6.203,
+        "human_all_in": 5.105,
+        "meta_equilibrium": 3.977,
+        "ai_plus1": 3.726,
+        "ai_gut": 3.707,
+        "human_top_heavy": 3.609,
+        "ai_round": 3.596,
+        "ai_verbatim": 3.547,
+        "human_plus1": 2.724,
+        "human_random": 2.682,
+        "human_round": 2.038,
+        "human_even": 1.991,
+        "human_proportional": 1.891
+      },
+      "robust_pick_game1": {
+        "alloc": "3/16/1/37/43",
+        "mean": 10.437,
+        "beats_everyone_rate": 1.0
+      },
+      "robust_pick_game2": {
+        "alloc": "7/25/0/0/68",
+        "mean": 7.733,
+        "beats_everyone_rate": 0.783
+      }
+    },
+    "ai_vs_human:ai=340,meta=75,human=85": {
+      "mix": {
+        "ai_verbatim": 204,
+        "ai_round": 48,
+        "ai_gut": 47,
+        "ai_plus1": 41,
+        "meta_level2": 15,
+        "meta_simulator": 15,
+        "meta_ai_sampler": 15,
+        "meta_equilibrium": 15,
+        "meta_contrarian": 15,
+        "human_proportional": 17,
+        "human_round": 12,
+        "human_even": 10,
+        "human_top_heavy": 12,
+        "human_all_in": 7,
+        "human_plus1": 10,
+        "human_random": 10,
+        "human_underdog": 7
+      },
+      "game1_top3": [
+        [
+          "meta_ai_sampler",
+          10.126
+        ],
+        [
+          "meta_level2",
+          9.691
+        ],
+        [
+          "meta_simulator",
+          9.612
+        ]
+      ],
+      "game2_top3": [
+        [
+          "meta_ai_sampler",
+          6.928
+        ],
+        [
+          "meta_simulator",
+          6.625
+        ],
+        [
+          "human_underdog",
+          6.546
+        ]
+      ],
+      "game1_all": {
+        "meta_ai_sampler": 10.126,
+        "meta_level2": 9.691,
+        "meta_simulator": 9.612,
+        "meta_contrarian": 9.379,
+        "human_top_heavy": 8.244,
+        "human_all_in": 7.909,
+        "ai_gut": 7.827,
+        "meta_equilibrium": 7.636,
+        "ai_plus1": 7.621,
+        "ai_verbatim": 7.368,
+        "ai_round": 7.224,
+        "human_plus1": 6.923,
+        "human_underdog": 6.539,
+        "human_round": 5.71,
+        "human_random": 5.369,
+        "human_proportional": 5.269,
+        "human_even": 4.204
+      },
+      "game2_all": {
+        "meta_ai_sampler": 6.928,
+        "meta_simulator": 6.625,
+        "human_underdog": 6.546,
+        "meta_level2": 6.538,
+        "meta_contrarian": 6.296,
+        "human_all_in": 5.045,
+        "meta_equilibrium": 3.947,
+        "ai_gut": 3.628,
+        "ai_plus1": 3.519,
+        "ai_round": 3.464,
+        "ai_verbatim": 3.385,
+        "human_top_heavy": 3.327,
+        "human_random": 2.721,
+        "human_plus1": 2.586,
+        "human_even": 1.923,
+        "human_round": 1.919,
+        "human_proportional": 1.889
+      },
+      "robust_pick_game1": {
+        "alloc": "3/16/1/37/43",
+        "mean": 10.662,
+        "beats_everyone_rate": 0.933
+      },
+      "robust_pick_game2": {
+        "alloc": "7/25/0/0/68",
+        "mean": 7.893,
+        "beats_everyone_rate": 0.233
+      }
+    },
+    "ai_vs_human:ai=425,meta=75,human=0": {
+      "mix": {
+        "ai_verbatim": 255,
+        "ai_round": 60,
+        "ai_gut": 59,
+        "ai_plus1": 51,
+        "meta_level2": 15,
+        "meta_simulator": 15,
+        "meta_ai_sampler": 15,
+        "meta_equilibrium": 15,
+        "meta_contrarian": 15,
+        "human_proportional": 0,
+        "human_round": 0,
+        "human_even": 0,
+        "human_top_heavy": 0,
+        "human_all_in": 0,
+        "human_plus1": 0,
+        "human_random": 0,
+        "human_underdog": 0
+      },
+      "game1_top3": [
+        [
+          "meta_ai_sampler",
+          10.254
+        ],
+        [
+          "meta_level2",
+          9.59
+        ],
+        [
+          "meta_simulator",
+          9.567
+        ]
+      ],
+      "game2_top3": [
+        [
+          "meta_ai_sampler",
+          7.083
+        ],
+        [
+          "meta_simulator",
+          6.7
+        ],
+        [
+          "meta_level2",
+          6.653
+        ]
+      ],
+      "game1_all": {
+        "meta_ai_sampler": 10.254,
+        "meta_level2": 9.59,
+        "meta_simulator": 9.567,
+        "meta_contrarian": 9.482,
+        "ai_gut": 7.632,
+        "meta_equilibrium": 7.623,
+        "ai_plus1": 7.378,
+        "ai_verbatim": 7.094,
+        "ai_round": 6.947
+      },
+      "game2_all": {
+        "meta_ai_sampler": 7.083,
+        "meta_simulator": 6.7,
+        "meta_level2": 6.653,
+        "meta_contrarian": 6.343,
+        "meta_equilibrium": 3.958,
+        "ai_gut": 3.497,
+        "ai_plus1": 3.384,
+        "ai_round": 3.307,
+        "ai_verbatim": 3.281
+      },
+      "robust_pick_game1": {
+        "alloc": "3/16/1/37/43",
+        "mean": 10.885,
+        "beats_everyone_rate": 0.7
+      },
+      "robust_pick_game2": {
+        "alloc": "7/25/0/0/68",
+        "mean": 8.088,
+        "beats_everyone_rate": 0.017
+      }
+    },
+    "meta_share:ai=294,meta=0,human=206": {
+      "mix": {
+        "ai_verbatim": 177,
+        "ai_round": 41,
+        "ai_gut": 41,
+        "ai_plus1": 35,
+        "meta_level2": 0,
+        "meta_simulator": 0,
+        "meta_ai_sampler": 0,
+        "meta_equilibrium": 0,
+        "meta_contrarian": 0,
+        "human_proportional": 41,
+        "human_round": 29,
+        "human_even": 24,
+        "human_top_heavy": 29,
+        "human_all_in": 18,
+        "human_plus1": 24,
+        "human_random": 23,
+        "human_underdog": 18
+      },
+      "game1_top3": [
+        [
+          "human_top_heavy",
+          8.808
+        ],
+        [
+          "ai_plus1",
+          8.406
+        ],
+        [
+          "ai_gut",
+          8.326
+        ]
+      ],
+      "game2_top3": [
+        [
+          "human_underdog",
+          6.43
+        ],
+        [
+          "human_all_in",
+          5.844
+        ],
+        [
+          "ai_gut",
+          4.242
+        ]
+      ],
+      "game1_all": {
+        "human_top_heavy": 8.808,
+        "ai_plus1": 8.406,
+        "ai_gut": 8.326,
+        "ai_verbatim": 8.09,
+        "human_all_in": 7.936,
+        "human_plus1": 7.836,
+        "ai_round": 7.811,
+        "human_underdog": 6.748,
+        "human_round": 6.292,
+        "human_proportional": 5.892,
+        "human_random": 5.424,
+        "human_even": 4.399
+      },
+      "game2_all": {
+        "human_underdog": 6.43,
+        "human_all_in": 5.844,
+        "ai_gut": 4.242,
+        "ai_plus1": 4.215,
+        "human_top_heavy": 4.101,
+        "ai_round": 4.009,
+        "ai_verbatim": 4.006,
+        "human_plus1": 3.09,
+        "human_random": 2.936,
+        "human_even": 2.3,
+        "human_round": 2.134,
+        "human_proportional": 1.985
+      },
+      "robust_pick_game1": {
+        "alloc": "3/16/1/37/43",
+        "mean": 10.615,
+        "beats_everyone_rate": 0.65
+      },
+      "robust_pick_game2": {
+        "alloc": "7/25/0/0/68",
+        "mean": 7.92,
+        "beats_everyone_rate": 0.317
+      }
+    },
+    "meta_share:ai=279,meta=25,human=196": {
+      "mix": {
+        "ai_verbatim": 167,
+        "ai_round": 39,
+        "ai_gut": 39,
+        "ai_plus1": 34,
+        "meta_level2": 5,
+        "meta_simulator": 5,
+        "meta_ai_sampler": 5,
+        "meta_equilibrium": 5,
+        "meta_contrarian": 5,
+        "human_proportional": 39,
+        "human_round": 28,
+        "human_even": 23,
+        "human_top_heavy": 28,
+        "human_all_in": 17,
+        "human_plus1": 22,
+        "human_random": 22,
+        "human_underdog": 17
+      },
+      "game1_top3": [
+        [
+          "meta_ai_sampler",
+          10.237
+        ],
+        [
+          "meta_level2",
+          10.218
+        ],
+        [
+          "meta_simulator",
+          10.007
+        ]
+      ],
+      "game2_top3": [
+        [
+          "meta_ai_sampler",
+          7.384
+        ],
+        [
+          "meta_level2",
+          7.325
+        ],
+        [
+          "meta_simulator",
+          7.286
+        ]
+      ],
+      "game1_all": {
+        "meta_ai_sampler": 10.237,
+        "meta_level2": 10.218,
+        "meta_simulator": 10.007,
+        "meta_contrarian": 9.329,
+        "human_top_heavy": 8.7,
+        "ai_plus1": 8.254,
+        "ai_gut": 8.206,
+        "ai_verbatim": 7.952,
+        "human_all_in": 7.895,
+        "ai_round": 7.711,
+        "human_plus1": 7.672,
+        "meta_equilibrium": 7.631,
+        "human_underdog": 6.595,
+        "human_round": 6.258,
+        "human_proportional": 5.818,
+        "human_random": 5.478,
+        "human_even": 4.443
+      },
+      "game2_all": {
+        "meta_ai_sampler": 7.384,
+        "meta_level2": 7.325,
+        "meta_simulator": 7.286,
+        "meta_contrarian": 6.527,
+        "human_underdog": 6.336,
+        "human_all_in": 5.603,
+        "meta_equilibrium": 4.28,
+        "ai_gut": 4.042,
+        "ai_plus1": 4.023,
+        "human_top_heavy": 3.946,
+        "ai_round": 3.877,
+        "ai_verbatim": 3.822,
+        "human_plus1": 3.006,
+        "human_random": 2.825,
+        "human_even": 2.189,
+        "human_round": 2.115,
+        "human_proportional": 1.944
+      },
+      "robust_pick_game1": {
+        "alloc": "3/16/1/37/43",
+        "mean": 10.554,
+        "beats_everyone_rate": 0.9
+      },
+      "robust_pick_game2": {
+        "alloc": "7/25/0/0/68",
+        "mean": 7.861,
+        "beats_everyone_rate": 0.467
+      }
+    },
+    "meta_share:ai=250,meta=75,human=175": {
+      "mix": {
+        "ai_verbatim": 150,
+        "ai_round": 35,
+        "ai_gut": 35,
+        "ai_plus1": 30,
+        "meta_level2": 15,
+        "meta_simulator": 15,
+        "meta_ai_sampler": 15,
+        "meta_equilibrium": 15,
+        "meta_contrarian": 15,
+        "human_proportional": 35,
+        "human_round": 25,
+        "human_even": 20,
+        "human_top_heavy": 25,
+        "human_all_in": 15,
+        "human_plus1": 20,
+        "human_random": 20,
+        "human_underdog": 15
+      },
+      "game1_top3": [
+        [
+          "meta_ai_sampler",
+          9.991
+        ],
+        [
+          "meta_level2",
+          9.8
+        ],
+        [
+          "meta_simulator",
+          9.662
+        ]
+      ],
+      "game2_top3": [
+        [
+          "meta_ai_sampler",
+          6.803
+        ],
+        [
+          "meta_simulator",
+          6.519
+        ],
+        [
+          "meta_level2",
+          6.478
+        ]
+      ],
+      "game1_all": {
+        "meta_ai_sampler": 9.991,
+        "meta_level2": 9.8,
+        "meta_simulator": 9.662,
+        "meta_contrarian": 9.24,
+        "human_top_heavy": 8.379,
+        "ai_gut": 7.999,
+        "ai_plus1": 7.955,
+        "human_all_in": 7.943,
+        "ai_verbatim": 7.665,
+        "meta_equilibrium": 7.651,
+        "ai_round": 7.459,
+        "human_plus1": 7.336,
+        "human_underdog": 6.753,
+        "human_round": 6.054,
+        "human_proportional": 5.67,
+        "human_random": 5.425,
+        "human_even": 4.521
+      },
+      "game2_all": {
+        "meta_ai_sampler": 6.803,
+        "meta_simulator": 6.519,
+        "meta_level2": 6.478,
+        "human_underdog": 6.258,
+        "meta_contrarian": 6.235,
+        "human_all_in": 5.129,
+        "meta_equilibrium": 3.936,
+        "ai_gut": 3.737,
+        "ai_plus1": 3.711,
+        "human_top_heavy": 3.588,
+        "ai_verbatim": 3.566,
+        "ai_round": 3.518,
+        "human_plus1": 2.723,
+        "human_random": 2.674,
+        "human_round": 2.035,
+        "human_even": 1.995,
+        "human_proportional": 1.889
+      },
+      "robust_pick_game1": {
+        "alloc": "3/16/1/37/43",
+        "mean": 10.419,
+        "beats_everyone_rate": 0.983
+      },
+      "robust_pick_game2": {
+        "alloc": "7/25/0/0/68",
+        "mean": 7.685,
+        "beats_everyone_rate": 0.617
+      }
+    },
+    "meta_share:ai=206,meta=150,human=144": {
+      "mix": {
+        "ai_verbatim": 123,
+        "ai_round": 29,
+        "ai_gut": 29,
+        "ai_plus1": 25,
+        "meta_level2": 30,
+        "meta_simulator": 30,
+        "meta_ai_sampler": 30,
+        "meta_equilibrium": 30,
+        "meta_contrarian": 30,
+        "human_proportional": 29,
+        "human_round": 21,
+        "human_even": 17,
+        "human_top_heavy": 21,
+        "human_all_in": 12,
+        "human_plus1": 16,
+        "human_random": 16,
+        "human_underdog": 12
+      },
+      "game1_top3": [
+        [
+          "meta_ai_sampler",
+          9.642
+        ],
+        [
+          "meta_contrarian",
+          9.18
+        ],
+        [
+          "meta_level2",
+          9.164
+        ]
+      ],
+      "game2_top3": [
+        [
+          "human_underdog",
+          6.152
+        ],
+        [
+          "meta_ai_sampler",
+          6.043
+        ],
+        [
+          "meta_contrarian",
+          5.735
+        ]
+      ],
+      "game1_all": {
+        "meta_ai_sampler": 9.642,
+        "meta_contrarian": 9.18,
+        "meta_level2": 9.164,
+        "meta_simulator": 9.131,
+        "human_top_heavy": 8.04,
+        "human_all_in": 7.884,
+        "meta_equilibrium": 7.695,
+        "ai_gut": 7.617,
+        "ai_plus1": 7.447,
+        "ai_verbatim": 7.226,
+        "ai_round": 7.21,
+        "human_plus1": 6.781,
+        "human_underdog": 6.701,
+        "human_round": 5.831,
+        "human_random": 5.561,
+        "human_proportional": 5.463,
+        "human_even": 4.619
+      },
+      "game2_all": {
+        "human_underdog": 6.152,
+        "meta_ai_sampler": 6.043,
+        "meta_contrarian": 5.735,
+        "meta_simulator": 5.535,
+        "meta_level2": 5.418,
+        "human_all_in": 4.626,
+        "meta_equilibrium": 3.6,
+        "ai_gut": 3.429,
+        "ai_plus1": 3.336,
+        "ai_round": 3.313,
+        "ai_verbatim": 3.257,
+        "human_top_heavy": 3.228,
+        "human_random": 2.565,
+        "human_plus1": 2.401,
+        "human_round": 2.042,
+        "human_proportional": 1.89,
+        "human_even": 1.838
+      },
+      "robust_pick_game1": {
+        "alloc": "3/16/1/37/43",
+        "mean": 10.231,
+        "beats_everyone_rate": 1.0
+      },
+      "robust_pick_game2": {
+        "alloc": "7/25/0/0/68",
+        "mean": 7.519,
+        "beats_everyone_rate": 0.1
+      }
+    },
+    "meta_share:ai=147,meta=250,human=103": {
+      "mix": {
+        "ai_verbatim": 88,
+        "ai_round": 21,
+        "ai_gut": 20,
+        "ai_plus1": 18,
+        "meta_level2": 50,
+        "meta_simulator": 50,
+        "meta_ai_sampler": 50,
+        "meta_equilibrium": 50,
+        "meta_contrarian": 50,
+        "human_proportional": 20,
+        "human_round": 15,
+        "human_even": 12,
+        "human_top_heavy": 14,
+        "human_all_in": 9,
+        "human_plus1": 12,
+        "human_random": 12,
+        "human_underdog": 9
+      },
+      "game1_top3": [
+        [
+          "meta_ai_sampler",
+          9.145
+        ],
+        [
+          "meta_contrarian",
+          9.096
+        ],
+        [
+          "meta_simulator",
+          8.47
+        ]
+      ],
+      "game2_top3": [
+        [
+          "human_underdog",
+          6.024
+        ],
+        [
+          "meta_contrarian",
+          5.26
+        ],
+        [
+          "meta_ai_sampler",
+          5.196
+        ]
+      ],
+      "game1_all": {
+        "meta_ai_sampler": 9.145,
+        "meta_contrarian": 9.096,
+        "meta_simulator": 8.47,
+        "meta_level2": 8.349,
+        "human_all_in": 7.837,
+        "meta_equilibrium": 7.685,
+        "human_top_heavy": 7.521,
+        "ai_gut": 7.153,
+        "ai_plus1": 6.803,
+        "human_underdog": 6.773,
+        "ai_round": 6.717,
+        "ai_verbatim": 6.659,
+        "human_plus1": 6.073,
+        "human_random": 5.613,
+        "human_round": 5.471,
+        "human_proportional": 5.19,
+        "human_even": 4.774
+      },
+      "game2_all": {
+        "human_underdog": 6.024,
+        "meta_contrarian": 5.26,
+        "meta_ai_sampler": 5.196,
+        "meta_simulator": 4.491,
+        "meta_level2": 4.235,
+        "human_all_in": 4.22,
+        "meta_equilibrium": 3.284,
+        "ai_gut": 3.275,
+        "ai_plus1": 3.167,
+        "ai_round": 3.139,
+        "ai_verbatim": 3.085,
+        "human_top_heavy": 2.979,
+        "human_random": 2.596,
+        "human_plus1": 2.367,
+        "human_round": 2.222,
+        "human_proportional": 2.108,
+        "human_even": 1.907
+      },
+      "robust_pick_game1": {
+        "alloc": "3/16/1/37/43",
+        "mean": 9.975,
+        "beats_everyone_rate": 0.8
+      },
+      "robust_pick_game2": {
+        "alloc": "7/25/0/0/68",
+        "mean": 7.339,
+        "beats_everyone_rate": 0.0
+      }
+    }
+  },
+  "runtime_s": 702.0
+}

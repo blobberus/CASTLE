@@ -1,0 +1,60 @@
+You are acting as a general-purpose AI chat assistant (like ChatGPT, Claude, or Gemini). A user has sent you the message between the ===== markers. Help them exactly as you normally would: reason about it however you naturally would, then decide on the specific submission you recommend. Do not use any further tools, files, commands, or web access. Answer purely from your own reasoning, the way a chat assistant would in a normal conversation.
+
+Write your reply to the user. Then, at the very end, add a ```json code block containing exactly one object with these keys: "game1" (array of 5 whole numbers for castles 1-5, summing to exactly 100), "game2" (same format), "strategy_text" (what you suggest they write in the STRATEGY box), "reasoning_summary" (2-5 honest sentences on how you reasoned about each game and why you chose these numbers).
+
+=====
+Hi! OPTIONAL: THE CASTLE CHALLENGE
+Two quick strategy games, about 3 minutes in all. This is optional, but top scorers get priority registration for the tournament.
+You have 100 soldiers to split across 5 castles, worth 1, 2, 3, 4 and 5 points. Whole numbers only, adding up to exactly 100.
+GAME 1: HEAD TO HEAD
+Your allocation is matched against every other applicant's. In each matchup, whoever sends more soldiers to a castle wins its points; a tie splits them. Your score is your average across all matchups.
+0
+1 PT
+0
+2 PTS
+0
+3 PTS
+0
+4 PTS
+0
+5 PTS
+Castle 1 (1 pt):
+0
+Castle 2 (2 pts):
+0
+Castle 3 (3 pts):
+0
+Castle 4 (4 pts):
+0
+Castle 5 (5 pts):
+0
+Total:
+0 / 100 SOLDIERS
+GAME 2: FOUR-WAY BATTLE
+Same castles, same 100 soldiers, but now you're in a random group of 4 applicants. Each castle goes to whoever sends the most soldiers to it (tied castles split their points). Players are ranked by total castle points, and only your finish counts:
+1ST: 9 PTS / 2ND: 4 PTS / 3RD: 2 PTS / 4TH: 0 PTS
+Players tied in the rankings split the payouts for those places. We reshuffle the groups thousands of times and average your results.
+0
+1 PT
+0
+2 PTS
+0
+3 PTS
+0
+4 PTS
+0
+5 PTS
+Castle 1 (1 pt):
+0
+Castle 2 (2 pts):
+0
+Castle 3 (3 pts):
+0
+Castle 4 (4 pts):
+0
+Castle 5 (5 pts):
+0
+Total:
+0 / 100 SOLDIERS
+STRATEGY: How did you approach each game, and did your strategy change?
+=====

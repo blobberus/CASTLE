@@ -1,4 +1,4 @@
-"""Build the 100-contestant population for Strategy 2.
+"""Build the contestant population for Strategy 2 (100 by default; scaled_mix(n) for any size).
 
 Every contestant is handed the same prompt (Trial.txt) and solves it on their
 own. Variance comes from *how* they approach it, mirroring an applicant pool
@@ -81,8 +81,17 @@ def eq_sample():
     return _EQ
 
 
-def load_ai():
-    return json.loads(AI_PATH.read_text(encoding="utf-8"))
+def load_ai(path=None):
+    return json.loads(Path(path or AI_PATH).read_text(encoding="utf-8"))
+
+
+def scaled_mix(n_players):
+    """BASE_MIX scaled to n_players seats, keeping proportions (largest-remainder rounding)."""
+    raw = {k: v * n_players / sum(BASE_MIX.values()) for k, v in BASE_MIX.items()}
+    mix = {k: int(np.floor(v)) for k, v in raw.items()}
+    for k in sorted(raw, key=lambda k: -(raw[k] - mix[k]))[: n_players - sum(mix.values())]:
+        mix[k] += 1
+    return mix
 
 
 def move(a, src, dst, k):

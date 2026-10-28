@@ -21,10 +21,10 @@ most applicants use AI, so 65 of the 100 are AI-influenced.
 | File | What it does |
 |---|---|
 | `contestants/ai_contestants.json` | The **30 real AI contestants**: fresh Claude subagents, full replies included. Committed; don't regenerate casually. |
-| `collect_ai_contestants.py` | One-off harvester that pulled those answers out of the Claude Code subagent transcripts. |
+| `collect_ai_contestants.py` | One-off harvester that pulled those answers out of the Claude Code subagent transcripts. `--prefix/--id-prefix/--out/--prompts-dir` reuse it for model 3. |
 | `population.py` | Builds the 100 contestants. Each archetype is a `gen_<name>(rng, ai)` function returning `(game1, game2, reasoning)`. |
-| `run_simulation.py` | Full pipeline: tournament, breakdowns, trends, replications, AI-share sensitivity, 101st-entrant best response. `--quick` for iterating. |
-| `make_charts.py` | Renders `results/fig_*.png`. |
+| `run_simulation.py` | Full pipeline: tournament, breakdowns, trends, replications, AI-share sensitivity, 101st-entrant best response. `--quick` for iterating. `--players N --ai-file F --out DIR` runs a scaled copy (model 3 = 500). |
+| `make_charts.py` | Renders `results/fig_*.png`. Pass a run folder (e.g. `../model3_simulation_500`) to chart another run. |
 | `contestants/population.json` | The baseline 100 with allocations, reasoning, STRATEGY text and their scores. |
 | `results/simulation_results.json` | All analysis outputs. |
 | `results/leaderboard.csv` | Baseline leaderboard (both games, combined rank). |
@@ -84,6 +84,16 @@ field. That is the point: they can be wrong.
    "top-heavy humans win" conclusion.
 
 ## Gotchas
+
+- **Scaling (`--players N`).** `scaled_mix(N)` multiplies every `BASE_MIX` count by
+  N/100 (largest-remainder rounding), `ai_verbatim` included. The baseline uses each
+  real AI answer exactly once only if `--ai-file` holds exactly 0.3N answers (150 for
+  N=500). Otherwise the `ai_verbatim` seats are resampled from the file.
+  The sensitivity sweeps scale their seat counts with N. The AI-vs-human sweep once
+  left metastrategists fixed at 15 for any N. That was harmless at N=100 but wrong at
+  500, and it is fixed (`round(15*N/100)`). Results keys become `entrant_{N+1}` and
+  `baseline_rank_of_{N+1}`. `scaled_mix(100)` reproduces `BASE_MIX`, so the committed
+  100-player results are unchanged.
 
 - Game 2 mean payout over everyone is always 3.75, and Game 1 average is 7.5. Use
   these as sanity checks after any rules change.

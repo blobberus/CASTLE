@@ -1,4 +1,7 @@
-"""Charts for the Strategy 2 explainer. Reads results/ and contestants/population.json."""
+"""Charts for the Strategy 2 explainer. Reads results/ and contestants/population.json.
+
+Usage: python make_charts.py [run-folder]   (default: this folder; model 3: ../model3_simulation_500)
+"""
 import json
 import sys
 from pathlib import Path
@@ -7,13 +10,14 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent / "shared"))
 from chart_style import CATEGORY_COLOR, SERIES, TEXT_2, hbar, plt, setup  # noqa: E402
 
-RES = HERE / "results"
+BASE = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else HERE
+RES = BASE / "results"
 
 
 def main():
     setup()
     r = json.loads((RES / "simulation_results.json").read_text())
-    people = json.loads((HERE / "contestants" / "population.json").read_text(encoding="utf-8"))
+    people = json.loads((BASE / "contestants" / "population.json").read_text(encoding="utf-8"))
 
     # 1. every contestant: Game 1 score vs Game 2 payout, by category
     fig, ax = plt.subplots(figsize=(8, 5.5))
@@ -30,7 +34,7 @@ def main():
     ax.text(ax.get_xlim()[0] + 0.1, 3.8, "average (3.75)", fontsize=8, color=TEXT_2)
     ax.set_xlabel("Game 1 score (average points per matchup, out of 15)")
     ax.set_ylabel("Game 2 payout (average, out of 9)")
-    ax.set_title("All 100 contestants: Game 1 vs Game 2")
+    ax.set_title(f"All {len(people)} contestants: Game 1 vs Game 2")
     ax.set_xlim(right=ax.get_xlim()[1] + 1.2)
     ax.legend(loc="upper left", bbox_to_anchor=(0, -0.13), ncol=3)
     fig.tight_layout()
@@ -61,7 +65,7 @@ def main():
     for ax, key, title in ((axes[0], "game1_mean", "Game 1 average score"), (axes[1], "game2_mean", "Game 2 average payout")):
         hbar(ax, models, [by_model[m][key] for m in models], [SERIES[0]] * len(models))
         ax.set_title(title)
-    fig.suptitle("Real AI contestants by model (10 answers each)", x=0.01, ha="left", fontsize=9, color=TEXT_2)
+    fig.suptitle(f"Real AI contestants by model ({by_model[models[0]]['n']} answers each)", x=0.01, ha="left", fontsize=9, color=TEXT_2)
     fig.tight_layout(rect=(0, 0, 1, 0.92))
     fig.savefig(RES / "fig_ai_models.png", dpi=150)
     plt.close(fig)

@@ -1,0 +1,19 @@
+[    0.0s] Building baseline population (each contestant decides independently)
+[   75.5s] Playing Game 1 round robin and Game 2 (20000 reshuffles)
+[   80.0s] Trend analysis
+[   80.1s] Precomputing metastrategist library for replications
+[  295.6s] Running 200 independent replications
+[  384.0s] Best response to the simulated fields (entrant #501)
+[  494.2s] Sensitivity ai_vs_human:ai=85,meta=75,human=340
+[  515.0s] Sensitivity ai_vs_human:ai=170,meta=75,human=255
+[  535.8s] Sensitivity ai_vs_human:ai=250,meta=75,human=175
+[  556.5s] Sensitivity ai_vs_human:ai=340,meta=75,human=85
+[  577.5s] Sensitivity ai_vs_human:ai=425,meta=75,human=0
+[  597.9s] Sensitivity meta_share:ai=294,meta=0,human=206
+[  618.3s] Sensitivity meta_share:ai=279,meta=25,human=196
+[  638.9s] Sensitivity meta_share:ai=250,meta=75,human=175
+[  659.4s] Sensitivity meta_share:ai=206,meta=150,human=144
+[  680.5s] Sensitivity meta_share:ai=147,meta=250,human=103
+[  702.1s] wrote ..\model3_simulation_500\results\simulation_results.json
+
+GAME 1 robust entrant #501: 3/16/1/37/43 | GAME 2 robust entrant #501: 7/25/0/0/68

@@ -1,4 +1,4 @@
-"""Strategy 2 driver: build the 100 contestants, play both games, analyse, write results/.
+"""Strategy 2 driver: build the contestants (100 by default), play both games, analyse, write results/.
 
 Steps
   1. Build the baseline population (30 real AI answers + 70 modelled contestants),
@@ -8,13 +8,14 @@ Steps
   4. Trend analysis: which allocation features go with high scores
   5. Replications: independent re-draws of the population (AI answers bootstrapped,
      modelled contestants re-decided) to separate luck from strategy
-  6. The 101st entrant: best response to the simulated fields (one field and robust)
+  6. The extra (N+1th) entrant: best response to the simulated fields (one field and robust)
   7. Sensitivity: two sweeps - AI users vs humans (metastrategists fixed at 15), and
-     the number of metastrategists (0-50) - with the 101st-entrant picks tested in each
+     the number of metastrategists (0-50% of seats) - with the extra-entrant picks tested in each
   8. Save every replication's field to results/model_fields.npz so ../compare_strategies.py
      can test any allocation (including Strategy 1's picks) in this model
 
 Run:  python run_simulation.py           (full, about 4 minutes)
+      python run_simulation.py --players 500 --ai-file ../model3_simulation_500/contestants/ai_contestants.json \n             --out ../model3_simulation_500      (model 3: same model, 500 players)
       python run_simulation.py --quick   (fewer replications, for iterating)
 """
 import argparse
@@ -31,10 +32,11 @@ sys.path.insert(0, str(HERE.parent / "shared"))
 from castle import (all_allocations, fmt, game1_best_response, game1_round_robin,  # noqa: E402
                     game1_scores, game1_tables, game2_best_response, game2_detail, game2_expected,
                     game2_tournament, neighbours, sample_triples)
-from population import BASE_MIX, CATEGORY, DESCRIPTION, build_meta_library, build_population, load_ai  # noqa: E402
+from population import (BASE_MIX, CATEGORY, DESCRIPTION, build_meta_library, build_population,  # noqa: E402
+                        load_ai, scaled_mix)
 
-RESULTS = HERE / "results"
-RESULTS.mkdir(exist_ok=True)
+RESULTS = HERE / "results"          # re-pointed by --out in main()
+CONTESTANTS = HERE / "contestants"
 T0 = time.time()
 GRID5 = all_allocations(step=5)
 
@@ -95,7 +97,7 @@ def group_summary(people, s1, s2, place, key):
 
 
 def entrant_game1(alloc, field):
-    """Score and rank of an extra (101st) entrant in a Game 1 round robin."""
+    """Score and rank of an extra (N+1th) entrant in a Game 1 round robin."""
     pop = np.vstack([field, np.asarray(alloc)[None]])
     s, _ = game1_round_robin(pop)
     return float(s[-1]), int(ranks(s)[-1])
@@ -122,13 +124,13 @@ def hill_climb(seeds, triples):
     return np.unique(np.array(finals), axis=0)
 
 
-def mix_with_shares(ai_frac=50 / 85, meta_seats=15):
-    """Re-weight BASE_MIX: `meta_seats` metastrategists, and `ai_frac` of the remaining seats AI-assisted.
+def mix_with_shares(ai_frac=50 / 85, meta_seats=15, n=100):
+    """Re-weight BASE_MIX for n seats: `meta_seats` metastrategists, `ai_frac` of the rest AI-assisted.
 
     Seats inside each group keep BASE_MIX proportions (largest-remainder rounding).
     """
     groups = {g: [k for k in BASE_MIX if CATEGORY[k] == g] for g in ("AI-assisted", "Metastrategist", "Human")}
-    rest = 100 - meta_seats
+    rest = n - meta_seats
     totals = {"Metastrategist": meta_seats, "AI-assisted": int(round(ai_frac * rest))}
     totals["Human"] = rest - totals["AI-assisted"]
     mix = {}
@@ -146,18 +148,29 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--quick", action="store_true")
     ap.add_argument("--seed", type=int, default=7)
+    ap.add_argument("--players", type=int, default=100)
+    ap.add_argument("--ai-file", default=None, help="real AI answers (default contestants/ai_contestants.json)")
+    ap.add_argument("--out", default=None, help="folder for contestants/ and results/ (default: this folder)")
     args = ap.parse_args()
+    global RESULTS, CONTESTANTS
+    if args.out:
+        RESULTS, CONTESTANTS = Path(args.out) / "results", Path(args.out) / "contestants"
+    RESULTS.mkdir(parents=True, exist_ok=True)
+    CONTESTANTS.mkdir(parents=True, exist_ok=True)
+    N = args.players
+    mix = scaled_mix(N)
+    nxt = f"{N + 1}"
     rng = np.random.default_rng(args.seed)
     Q = args.quick
     n_rep = 40 if Q else 200
     n_sens = 15 if Q else 60
     shuffles = 4000 if Q else 20000
-    ai = load_ai()
+    ai = load_ai(args.ai_file)
 
     # 1. baseline population -------------------------------------------------
     log("Building baseline population (each contestant decides independently)")
-    people = build_population(args.seed, ai=ai, ai_mode="fixed")
-    (HERE / "contestants" / "population.json").write_text(json.dumps(people, indent=2, ensure_ascii=False), encoding="utf-8")
+    people = build_population(args.seed, mix=mix, ai=ai, ai_mode="fixed")
+    (CONTESTANTS / "population.json").write_text(json.dumps(people, indent=2, ensure_ascii=False), encoding="utf-8")
 
     # 2-3. tournaments and breakdowns----------------------------------------------------
     log(f"Playing Game 1 round robin and Game 2 ({shuffles} reshuffles)")
@@ -182,7 +195,7 @@ def main():
                  ("id", "archetype", "model", "framing", "game1", "game1_score", "game2", "game2_payout",
                   "game2_p_first", "reasoning")} for p in sorted(people, key=lambda p: -p[key] if rev else p[key])[:n]]
 
-    out = {"seed": args.seed, "quick": Q, "mix": BASE_MIX, "descriptions": DESCRIPTION,
+    out = {"seed": args.seed, "quick": Q, "players": N, "mix": mix, "descriptions": DESCRIPTION,
            "baseline": {"game1_top10": top("game1_score"), "game2_top10": top("game2_payout"),
                         "game1_bottom5": top("game1_score", 5, rev=False), "game2_bottom5": top("game2_payout", 5, rev=False),
                         "by_category": group_summary(people, s1, s2, place, "category"),
@@ -206,14 +219,15 @@ def main():
 
     # 5. replications -----------------------------------------------------------
     log("Precomputing metastrategist library for replications")
-    lib = build_meta_library(args.seed + 1, per_type=6 if Q else 12, ai=ai)
+    per_type = 6 if Q else max(12, 3 * max(mix[k] for k in ("meta_level2", "meta_simulator", "meta_ai_sampler")))
+    lib = build_meta_library(args.seed + 1, per_type=per_type, ai=ai)
     log(f"Running {n_rep} independent replications")
     arch_stats = {a: {"g1": [], "g2": [], "g1_rank": [], "g2_rank": [], "g1_top": 0, "g2_top": 0, "n": 0} for a in BASE_MIX}
     ai_answer_stats = {r["id"]: {"g1": [], "g2": []} for r in ai}
     winners = {"game1": [], "game2": []}
     rep_fields = []
     for rep in range(n_rep):
-        pop = build_population(10_000 + rep, ai=ai, ai_mode="bootstrap", meta_library=lib)
+        pop = build_population(10_000 + rep, mix=mix, ai=ai, ai_mode="bootstrap", meta_library=lib)
         a1, a2, pl, _ = play(pop, rng, 2000)
         q1, q2 = ranks(a1), ranks(a2)
         rep_fields.append((np.array([p["game1"] for p in pop]), np.array([p["game2"] for p in pop]), a1, a2))
@@ -243,8 +257,8 @@ def main():
                                for g in winners},
     }
 
-    # 6. the 101st entrant ----------------------------------------------------------
-    log("Best response to the simulated fields (the 101st entrant)")
+    # 6. the extra (N+1th) entrant ------------------------------------------------
+    log(f"Best response to the simulated fields (entrant #{nxt})")
     base1 = np.array([p["game1"] for p in people])
     base2 = np.array([p["game2"] for p in people])
     br1_single, v1 = game1_best_response(game1_tables(base1))
@@ -263,7 +277,7 @@ def main():
     def evaluate1(a):
         base_score, base_rank = entrant_game1(a, base1)
         reps = [entrant_game1(a, f1) for f1, _, _, _ in rep_fields]
-        return {"alloc": fmt(a), "baseline_score": round(base_score, 3), "baseline_rank_of_101": base_rank,
+        return {"alloc": fmt(a), "baseline_score": round(base_score, 3), f"baseline_rank_of_{nxt}": base_rank,
                 "replication_mean": round(float(np.mean([x[0] for x in reps])), 3),
                 "replication_rank1_rate": round(float(np.mean([x[1] == 1 for x in reps])), 3),
                 "replication_top5_rate": round(float(np.mean([x[1] <= 5 for x in reps])), 3)}
@@ -271,7 +285,7 @@ def main():
     def evaluate2(a):
         base_v, base_rank = entrant_game2(a, base2, s2, rng)
         reps = [entrant_game2(a, f2, c2, rng, K=1500) for _, f2, _, c2 in rep_fields]
-        return {"alloc": fmt(a), "baseline_payout": round(base_v, 3), "baseline_rank_of_101": base_rank,
+        return {"alloc": fmt(a), "baseline_payout": round(base_v, 3), f"baseline_rank_of_{nxt}": base_rank,
                 "baseline_finish": game2_detail(a, sample_triples(base2, 8000, rng)),
                 "replication_mean": round(float(np.mean([x[0] for x in reps])), 3),
                 "replication_rank1_rate": round(float(np.mean([x[1] == 1 for x in reps])), 3),
@@ -279,7 +293,7 @@ def main():
 
     best_g1_contestant = max(people, key=lambda p: p["game1_score"])
     best_g2_contestant = max(people, key=lambda p: p["game2_payout"])
-    out["entrant_101"] = {
+    out[f"entrant_{nxt}"] = {
         "game1": {"best_response_to_baseline": evaluate1(br1_single), "robust_best_response": evaluate1(br1_robust),
                   "baseline_winner_" + best_g1_contestant["id"]: evaluate1(best_g1_contestant["game1"])},
         "game2": {"best_response_to_baseline": evaluate2(br2_single), "robust_best_response": evaluate2(br2_robust),
@@ -288,17 +302,17 @@ def main():
 
     # 7. sensitivity: who wins when the population mix changes? -------------------
     sens, sens_fields = {}, {}
-    sweeps = [("ai_vs_human", {"ai_frac": f}) for f in (0.2, 0.4, 50 / 85, 0.8, 1.0)] +              [("meta_share", {"meta_seats": m}) for m in (0, 5, 15, 30, 50)]
+    sweeps = [("ai_vs_human", {"ai_frac": f, "meta_seats": round(15 * N / 100)}) for f in (0.2, 0.4, 50 / 85, 0.8, 1.0)] +              [("meta_share", {"meta_seats": round(m * N / 100)}) for m in (0, 5, 15, 30, 50)]
     for sweep, kw in sweeps:
-        mix = mix_with_shares(**kw)
-        label = f"{sweep}:" + (f"ai={sum(v for k, v in mix.items() if CATEGORY[k] == 'AI-assisted')}"
-                               f",meta={sum(v for k, v in mix.items() if CATEGORY[k] == 'Metastrategist')}"
-                               f",human={sum(v for k, v in mix.items() if CATEGORY[k] == 'Human')}")
+        smix = mix_with_shares(n=N, **kw)
+        label = f"{sweep}:" + (f"ai={sum(v for k, v in smix.items() if CATEGORY[k] == 'AI-assisted')}"
+                               f",meta={sum(v for k, v in smix.items() if CATEGORY[k] == 'Metastrategist')}"
+                               f",human={sum(v for k, v in smix.items() if CATEGORY[k] == 'Human')}")
         log(f"Sensitivity {label}")
-        acc = {a: {"g1": [], "g2": []} for a in mix if mix[a]}
+        acc = {a: {"g1": [], "g2": []} for a in smix if smix[a]}
         e1, e2, w1, w2, f1s, f2s = [], [], [], [], [], []
         for rep in range(n_sens):
-            pop = build_population(50_000 + len(sens) * 1000 + rep, mix=mix, ai=ai, ai_mode="bootstrap", meta_library=lib)
+            pop = build_population(50_000 + len(sens) * 1000 + rep, mix=smix, ai=ai, ai_mode="bootstrap", meta_library=lib)
             a1, a2, _, _ = play(pop, rng, 1500)
             f1, f2 = np.array([q["game1"] for q in pop]), np.array([q["game2"] for q in pop])
             f1s.append(f1); f2s.append(f2)
@@ -309,7 +323,7 @@ def main():
             e1.append(v1); e2.append(v2); w1.append(v1 > a1.max()); w2.append(v2 > a2.max())
         best1 = sorted(((a, np.mean(v["g1"])) for a, v in acc.items()), key=lambda x: -x[1])
         best2 = sorted(((a, np.mean(v["g2"])) for a, v in acc.items()), key=lambda x: -x[1])
-        sens[label] = {"mix": mix,
+        sens[label] = {"mix": smix,
                        "game1_top3": [(a, round(float(v), 3)) for a, v in best1[:3]],
                        "game2_top3": [(a, round(float(v), 3)) for a, v in best2[:3]],
                        "game1_all": {a: round(float(v), 3) for a, v in best1},
@@ -328,10 +342,10 @@ def main():
     out["runtime_s"] = round(time.time() - T0, 1)
     name = "simulation_results_quick.json" if Q else "simulation_results.json"
     (RESULTS / name).write_text(json.dumps(out, indent=2, default=lambda o: o.item() if hasattr(o, "item") else str(o)))
-    with open(HERE / "contestants" / "population.json", "w", encoding="utf-8") as fh:
+    with open(CONTESTANTS / "population.json", "w", encoding="utf-8") as fh:
         json.dump(people, fh, indent=2, ensure_ascii=False)
     log(f"wrote {RESULTS / name}")
-    print("\nGAME 1 robust 101st entrant:", fmt(br1_robust), "| GAME 2 robust 101st entrant:", fmt(br2_robust))
+    print("\nGAME 1 robust entrant #" + nxt + ":", fmt(br1_robust), "| GAME 2 robust entrant #" + nxt + ":", fmt(br2_robust))
 
 
 if __name__ == "__main__":
