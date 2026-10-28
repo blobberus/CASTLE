@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+*_quick.json
+*_quick.npz

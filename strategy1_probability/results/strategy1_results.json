@@ -1,0 +1,1526 @@
+{
+  "seed": 2026,
+  "quick": false,
+  "game1_theory": {
+    "closed_form": {
+      "marginal_caps": [
+        13.33,
+        26.67,
+        40.0,
+        53.33,
+        66.67
+      ],
+      "marginal_means": [
+        6.67,
+        13.33,
+        20.0,
+        26.67,
+        33.33
+      ],
+      "score_vs_equilibrium": {
+        "7/13/20/27/33": 7.5,
+        "20/20/20/20/20": 7.0,
+        "0/0/0/50/50": 7.5,
+        "0/0/33/33/34": 7.5,
+        "10/15/20/25/30": 7.5,
+        "0/0/0/0/100": 5.0,
+        "3/14/21/28/34": 7.5
+      }
+    },
+    "fictitious_play": {
+      "iterations": 6000,
+      "best_reply_score_vs_mixture": 7.7598,
+      "mean_allocation": [
+        6.55,
+        13.32,
+        20.18,
+        25.69,
+        34.25
+      ],
+      "p99_allocation": [
+        13.0,
+        27.0,
+        40.0,
+        53.0,
+        67.01000000000022
+      ],
+      "sample_support": [
+        "0/1/16/53/30",
+        "12/18/34/35/1",
+        "13/26/20/7/34",
+        "9/8/27/45/11",
+        "1/15/8/8/68",
+        "0/20/20/17/43",
+        "3/3/0/42/52",
+        "6/7/26/52/9",
+        "12/25/3/30/30",
+        "1/0/20/19/60",
+        "4/2/31/47/16",
+        "10/12/34/24/20"
+      ]
+    }
+  },
+  "game1": {
+    "ladder_baseline": [
+      {
+        "round": 1,
+        "best_move": "1/2/22/34/41",
+        "field_at_this_round": {
+          "unique_allocations": 1330,
+          "mean_allocation": [
+            4.2,
+            7.6,
+            18.3,
+            30.7,
+            39.3
+          ]
+        },
+        "score_vs_round0": 11.305,
+        "score_vs_round1": 8.235
+      },
+      {
+        "round": 2,
+        "best_move": "8/4/3/39/46",
+        "field_at_this_round": {
+          "unique_allocations": 1474,
+          "mean_allocation": [
+            5.6,
+            8.2,
+            12.8,
+            29.0,
+            44.3
+          ]
+        },
+        "score_vs_round0": 9.434,
+        "score_vs_round1": 10.707,
+        "score_vs_round2": 7.371
+      },
+      {
+        "round": 3,
+        "best_move": "1/4/3/40/52",
+        "field_at_this_round": {
+          "unique_allocations": 1483,
+          "mean_allocation": [
+            6.1,
+            10.5,
+            19.0,
+            21.1,
+            43.2
+          ]
+        },
+        "score_vs_round0": 9.456,
+        "score_vs_round1": 10.487,
+        "score_vs_round2": 9.001,
+        "score_vs_round3": 7.056
+      },
+      {
+        "round": 4,
+        "best_move": "1/3/3/40/53",
+        "field_at_this_round": {
+          "unique_allocations": 1485,
+          "mean_allocation": [
+            6.8,
+            10.8,
+            21.0,
+            19.6,
+            41.9
+          ]
+        },
+        "score_vs_round0": 9.453,
+        "score_vs_round1": 10.393,
+        "score_vs_round2": 9.024,
+        "score_vs_round3": 7.299,
+        "score_vs_round4": 6.466
+      }
+    ],
+    "beat_the_textbook_answer": {
+      "textbook": "7/13/20/27/33",
+      "counter": "3/14/21/28/34",
+      "counter_score_vs_textbook": 14.0
+    },
+    "n_hypotheses": 64,
+    "pick": "1/3/4/39/53",
+    "pick_expected": 8.88,
+    "pick_win_prob_per_castle_pooled": [
+      0.168,
+      0.208,
+      0.148,
+      0.848,
+      0.892
+    ],
+    "top10_pooled": [
+      {
+        "alloc": "1/3/4/39/53",
+        "score": 8.88
+      },
+      {
+        "alloc": "1/4/3/39/53",
+        "score": 8.877
+      },
+      {
+        "alloc": "1/3/3/40/53",
+        "score": 8.875
+      },
+      {
+        "alloc": "2/3/3/39/53",
+        "score": 8.874
+      },
+      {
+        "alloc": "1/4/4/39/52",
+        "score": 8.874
+      },
+      {
+        "alloc": "1/3/3/39/54",
+        "score": 8.873
+      },
+      {
+        "alloc": "1/4/4/38/53",
+        "score": 8.873
+      },
+      {
+        "alloc": "1/3/4/40/52",
+        "score": 8.872
+      },
+      {
+        "alloc": "2/3/4/39/52",
+        "score": 8.872
+      },
+      {
+        "alloc": "2/3/4/38/53",
+        "score": 8.87
+      }
+    ],
+    "comparison": [
+      {
+        "name": "robust_pick",
+        "alloc": "1/3/4/39/53",
+        "mean": 8.88,
+        "worst": 7.379,
+        "best": 9.785,
+        "max_regret": 1.149
+      },
+      {
+        "name": "ladder_round4",
+        "alloc": "1/3/3/40/53",
+        "mean": 8.875,
+        "worst": 7.386,
+        "best": 9.776,
+        "max_regret": 1.143
+      },
+      {
+        "name": "ladder_round3",
+        "alloc": "1/4/3/40/52",
+        "mean": 8.869,
+        "worst": 7.333,
+        "best": 9.812,
+        "max_regret": 1.195
+      },
+      {
+        "name": "ladder_round2",
+        "alloc": "8/4/3/39/46",
+        "mean": 8.615,
+        "worst": 7.161,
+        "best": 9.895,
+        "max_regret": 1.611
+      },
+      {
+        "name": "ladder_round1",
+        "alloc": "1/2/22/34/41",
+        "mean": 8.321,
+        "worst": 6.352,
+        "best": 10.079,
+        "max_regret": 2.712
+      },
+      {
+        "name": "two_castles",
+        "alloc": "0/0/0/50/50",
+        "mean": 8.216,
+        "worst": 6.986,
+        "best": 8.997,
+        "max_regret": 1.837
+      },
+      {
+        "name": "top_heavy_3",
+        "alloc": "0/0/33/33/34",
+        "mean": 7.447,
+        "worst": 6.018,
+        "best": 8.734,
+        "max_regret": 3.144
+      },
+      {
+        "name": "top_heavy_ladder",
+        "alloc": "0/10/20/30/40",
+        "mean": 7.369,
+        "worst": 6.038,
+        "best": 8.636,
+        "max_regret": 3.003
+      },
+      {
+        "name": "beat_proportional",
+        "alloc": "3/14/21/28/34",
+        "mean": 7.066,
+        "worst": 5.789,
+        "best": 8.398,
+        "max_regret": 3.661
+      },
+      {
+        "name": "proportional",
+        "alloc": "7/13/20/27/33",
+        "mean": 6.473,
+        "worst": 5.213,
+        "best": 7.546,
+        "max_regret": 4.585
+      },
+      {
+        "name": "round_linear",
+        "alloc": "10/15/20/25/30",
+        "mean": 6.242,
+        "worst": 4.848,
+        "best": 7.526,
+        "max_regret": 5.277
+      },
+      {
+        "name": "even",
+        "alloc": "20/20/20/20/20",
+        "mean": 6.106,
+        "worst": 4.788,
+        "best": 7.252,
+        "max_regret": 5.432
+      }
+    ],
+    "per_hypothesis": [
+      {
+        "variant": "baseline",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 9.785,
+        "hyp_best": "0/1/23/34/42",
+        "hyp_best_score": 9.977
+      },
+      {
+        "variant": "baseline",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 9.461,
+        "hyp_best": "0/1/23/34/42",
+        "hyp_best_score": 9.604
+      },
+      {
+        "variant": "baseline",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 9.214,
+        "hyp_best": "1/1/22/34/42",
+        "hyp_best_score": 9.904
+      },
+      {
+        "variant": "baseline",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.977,
+        "hyp_best": "1/1/22/34/42",
+        "hyp_best_score": 9.541
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.0,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 9.658,
+        "hyp_best": "2/4/3/39/52",
+        "hyp_best_score": 9.703
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.0,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 9.353,
+        "hyp_best": "2/4/3/39/52",
+        "hyp_best_score": 9.386
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.0,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 8.964,
+        "hyp_best": "0/1/22/34/43",
+        "hyp_best_score": 9.032
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.0,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.776,
+        "hyp_best": "0/1/22/34/43",
+        "hyp_best_score": 8.812
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 9.206,
+        "hyp_best": "3/7/29/6/55",
+        "hyp_best_score": 9.257
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 8.971,
+        "hyp_best": "1/3/3/40/53",
+        "hyp_best_score": 8.983
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 8.778,
+        "hyp_best": "1/3/5/39/52",
+        "hyp_best_score": 8.787
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.612,
+        "hyp_best": "1/2/5/39/53",
+        "hyp_best_score": 8.621
+      },
+      {
+        "variant": "baseline",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 8.096,
+        "hyp_best": "5/16/8/10/61",
+        "hyp_best_score": 9.024
+      },
+      {
+        "variant": "baseline",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 8.031,
+        "hyp_best": "5/15/8/11/61",
+        "hyp_best_score": 8.813
+      },
+      {
+        "variant": "baseline",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 8.476,
+        "hyp_best": "0/2/7/39/52",
+        "hyp_best_score": 8.528
+      },
+      {
+        "variant": "baseline",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.343,
+        "hyp_best": "0/1/9/37/53",
+        "hyp_best_score": 8.399
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 9.768,
+        "hyp_best": "0/1/23/34/42",
+        "hyp_best_score": 10.22
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 9.452,
+        "hyp_best": "0/1/23/34/42",
+        "hyp_best_score": 9.831
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 9.22,
+        "hyp_best": "1/1/22/34/42",
+        "hyp_best_score": 10.092
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.979,
+        "hyp_best": "1/1/22/34/42",
+        "hyp_best_score": 9.708
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 1.0,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 9.777,
+        "hyp_best": "2/4/4/39/51",
+        "hyp_best_score": 9.82
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 1.0,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 9.454,
+        "hyp_best": "2/4/4/39/51",
+        "hyp_best_score": 9.493
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 1.0,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 9.048,
+        "hyp_best": "0/0/23/35/42",
+        "hyp_best_score": 9.234
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 1.0,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.846,
+        "hyp_best": "0/0/22/35/43",
+        "hyp_best_score": 8.984
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 9.42,
+        "hyp_best": "1/4/3/40/52",
+        "hyp_best_score": 9.449
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 9.154,
+        "hyp_best": "1/4/3/40/52",
+        "hyp_best_score": 9.171
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 8.809,
+        "hyp_best": "1/3/5/39/52",
+        "hyp_best_score": 8.815
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.633,
+        "hyp_best": "1/2/6/39/52",
+        "hyp_best_score": 8.645
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 8.385,
+        "hyp_best": "8/16/8/9/59",
+        "hyp_best_score": 9.097
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 8.275,
+        "hyp_best": "5/16/9/10/60",
+        "hyp_best_score": 8.872
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 8.549,
+        "hyp_best": "0/4/7/38/51",
+        "hyp_best_score": 8.575
+      },
+      {
+        "variant": "ai_heavy",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.414,
+        "hyp_best": "0/2/7/38/53",
+        "hyp_best_score": 8.444
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 9.699,
+        "hyp_best": "0/1/23/34/42",
+        "hyp_best_score": 9.875
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 9.389,
+        "hyp_best": "0/1/23/34/42",
+        "hyp_best_score": 9.524
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 9.162,
+        "hyp_best": "1/1/22/34/42",
+        "hyp_best_score": 9.882
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.929,
+        "hyp_best": "1/1/22/34/42",
+        "hyp_best_score": 9.529
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 1.0,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 9.594,
+        "hyp_best": "2/4/3/39/52",
+        "hyp_best_score": 9.639
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 1.0,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 9.302,
+        "hyp_best": "2/4/3/39/52",
+        "hyp_best_score": 9.337
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 1.0,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 8.982,
+        "hyp_best": "0/1/23/34/42",
+        "hyp_best_score": 9.127
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 1.0,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.774,
+        "hyp_best": "0/1/22/35/42",
+        "hyp_best_score": 8.889
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 9.242,
+        "hyp_best": "1/4/2/40/53",
+        "hyp_best_score": 9.265
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 9.001,
+        "hyp_best": "1/4/2/40/53",
+        "hyp_best_score": 9.01
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 8.8,
+        "hyp_best": "1/3/6/38/52",
+        "hyp_best_score": 8.824
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.628,
+        "hyp_best": "1/3/6/38/52",
+        "hyp_best_score": 8.659
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 8.091,
+        "hyp_best": "6/15/8/10/61",
+        "hyp_best_score": 9.064
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 8.027,
+        "hyp_best": "5/14/8/11/62",
+        "hyp_best_score": 8.846
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 8.523,
+        "hyp_best": "0/5/5/38/52",
+        "hyp_best_score": 8.536
+      },
+      {
+        "variant": "human_heavy",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.394,
+        "hyp_best": "0/5/5/38/52",
+        "hyp_best_score": 8.407
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 9.741,
+        "hyp_best": "2/3/3/38/54",
+        "hyp_best_score": 9.788
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 9.426,
+        "hyp_best": "2/3/3/38/54",
+        "hyp_best_score": 9.463
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 9.367,
+        "hyp_best": "1/1/22/34/42",
+        "hyp_best_score": 9.567
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 9.119,
+        "hyp_best": "1/1/22/34/42",
+        "hyp_best_score": 9.282
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 1.0,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 9.272,
+        "hyp_best": "2/3/3/38/54",
+        "hyp_best_score": 9.293
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 1.0,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 9.022,
+        "hyp_best": "2/3/3/38/54",
+        "hyp_best_score": 9.045
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 1.0,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 8.884,
+        "hyp_best": "2/2/4/39/53",
+        "hyp_best_score": 8.89
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 1.0,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.683,
+        "hyp_best": "2/2/4/39/53",
+        "hyp_best_score": 8.69
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 8.489,
+        "hyp_best": "5/17/29/42/7",
+        "hyp_best_score": 8.856
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 8.362,
+        "hyp_best": "5/17/29/43/6",
+        "hyp_best_score": 8.638
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 8.667,
+        "hyp_best": "1/3/4/40/52",
+        "hyp_best_score": 8.668
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.506,
+        "hyp_best": "1/3/4/39/53",
+        "hyp_best_score": 8.506
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_score": 7.379,
+        "hyp_best": "5/7/32/46/10",
+        "hyp_best_score": 8.528
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_score": 7.431,
+        "hyp_best": "5/6/33/46/10",
+        "hyp_best_score": 8.36
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_score": 8.316,
+        "hyp_best": "1/6/28/12/53",
+        "hyp_best_score": 8.365
+      },
+      {
+        "variant": "top_heavy",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_score": 8.213,
+        "hyp_best": "1/6/26/13/54",
+        "hyp_best_score": 8.236
+      }
+    ]
+  },
+  "game2_rules": [
+    {
+      "castle": 1,
+      "points": 1,
+      "soldiers_for_50pct_vs_1": 2,
+      "soldiers_for_50pct_vs_3": 8,
+      "soldiers_for_80pct_vs_1": 8,
+      "soldiers_for_80pct_vs_3": 21,
+      "soldiers_for_95pct_vs_1": 22,
+      "soldiers_for_95pct_vs_3": 39
+    },
+    {
+      "castle": 2,
+      "points": 2,
+      "soldiers_for_50pct_vs_1": 4,
+      "soldiers_for_50pct_vs_3": 14,
+      "soldiers_for_80pct_vs_1": 14,
+      "soldiers_for_80pct_vs_3": 21,
+      "soldiers_for_95pct_vs_1": 22,
+      "soldiers_for_95pct_vs_3": 39
+    },
+    {
+      "castle": 3,
+      "points": 3,
+      "soldiers_for_50pct_vs_1": 21,
+      "soldiers_for_50pct_vs_3": 25,
+      "soldiers_for_80pct_vs_1": 25,
+      "soldiers_for_80pct_vs_3": 34,
+      "soldiers_for_95pct_vs_1": 34,
+      "soldiers_for_95pct_vs_3": 38
+    },
+    {
+      "castle": 4,
+      "points": 4,
+      "soldiers_for_50pct_vs_1": 31,
+      "soldiers_for_50pct_vs_3": 36,
+      "soldiers_for_80pct_vs_1": 36,
+      "soldiers_for_80pct_vs_3": 51,
+      "soldiers_for_95pct_vs_1": 51,
+      "soldiers_for_95pct_vs_3": 52
+    },
+    {
+      "castle": 5,
+      "points": 5,
+      "soldiers_for_50pct_vs_1": 39,
+      "soldiers_for_50pct_vs_3": 51,
+      "soldiers_for_80pct_vs_1": 51,
+      "soldiers_for_80pct_vs_3": 61,
+      "soldiers_for_95pct_vs_1": 61,
+      "soldiers_for_95pct_vs_3": 100
+    }
+  ],
+  "game2_theory": {
+    "generations": 240,
+    "top_strategies": [
+      {
+        "alloc": "0/0/0/0/100",
+        "weight": 0.218
+      },
+      {
+        "alloc": "10/0/0/90/0",
+        "weight": 0.0167
+      },
+      {
+        "alloc": "0/5/0/95/0",
+        "weight": 0.0114
+      },
+      {
+        "alloc": "0/50/0/50/0",
+        "weight": 0.0104
+      },
+      {
+        "alloc": "20/0/0/80/0",
+        "weight": 0.0104
+      },
+      {
+        "alloc": "0/50/5/45/0",
+        "weight": 0.0092
+      },
+      {
+        "alloc": "0/10/0/90/0",
+        "weight": 0.0077
+      },
+      {
+        "alloc": "10/50/40/0/0",
+        "weight": 0.0074
+      },
+      {
+        "alloc": "0/0/70/25/5",
+        "weight": 0.0074
+      },
+      {
+        "alloc": "25/0/0/75/0",
+        "weight": 0.0073
+      },
+      {
+        "alloc": "5/50/45/0/0",
+        "weight": 0.0073
+      },
+      {
+        "alloc": "5/25/70/0/0",
+        "weight": 0.0072
+      },
+      {
+        "alloc": "0/0/5/95/0",
+        "weight": 0.007
+      },
+      {
+        "alloc": "0/0/10/90/0",
+        "weight": 0.0066
+      },
+      {
+        "alloc": "25/0/0/5/70",
+        "weight": 0.0065
+      }
+    ],
+    "mean_allocation": [
+      5.86,
+      13.46,
+      18.27,
+      26.33,
+      36.07
+    ],
+    "effective_support": 20.2,
+    "share_by_castles_contested": {
+      "1": 0.254,
+      "2": 0.297,
+      "3": 0.248,
+      "4": 0.168,
+      "5": 0.034
+    },
+    "best_reply": "11/1/21/66/1",
+    "best_reply_payout": 4.298
+  },
+  "game2": {
+    "ladder_baseline": [
+      {
+        "round": 1,
+        "best_move": "2/0/43/55/0",
+        "field_at_this_round": {
+          "unique_allocations": 1184,
+          "mean_allocation": [
+            4.8,
+            13.4,
+            22.2,
+            51.0,
+            8.6
+          ]
+        },
+        "payout_vs_round0": 8.67,
+        "payout_vs_round1": 2.859
+      },
+      {
+        "round": 2,
+        "best_move": "16/36/47/0/1",
+        "field_at_this_round": {
+          "unique_allocations": 1237,
+          "mean_allocation": [
+            10.0,
+            27.2,
+            26.8,
+            5.2,
+            30.7
+          ]
+        },
+        "payout_vs_round0": 5.889,
+        "payout_vs_round1": 7.344,
+        "payout_vs_round2": 3.323
+      },
+      {
+        "round": 3,
+        "best_move": "22/2/0/0/76",
+        "field_at_this_round": {
+          "unique_allocations": 1034,
+          "mean_allocation": [
+            18.1,
+            5.0,
+            3.6,
+            3.3,
+            70.0
+          ]
+        },
+        "payout_vs_round0": 6.833,
+        "payout_vs_round1": 7.319,
+        "payout_vs_round2": 7.408,
+        "payout_vs_round3": 4.205
+      }
+    ],
+    "n_hypotheses": 36,
+    "pick": "0/36/0/64/0",
+    "pick_mean_payout": 5.955,
+    "pick_finish_profile": {
+      "mean_payout": 5.955,
+      "p_first": 0.603,
+      "p_top2": 0.794,
+      "p_last": 0.096,
+      "mean_castle_points": 5.048
+    },
+    "comparison": [
+      {
+        "name": "0/36/0/64/0",
+        "alloc": "0/36/0/64/0",
+        "mean_payout": 5.955,
+        "worst": 5.138,
+        "best": 6.913,
+        "max_regret": 0.732
+      },
+      {
+        "name": "22/1/0/0/77",
+        "alloc": "22/1/0/0/77",
+        "mean_payout": 5.876,
+        "worst": 5.01,
+        "best": 6.45,
+        "max_regret": 0.938
+      },
+      {
+        "name": "21/0/0/0/79",
+        "alloc": "21/0/0/0/79",
+        "mean_payout": 5.872,
+        "worst": 5.112,
+        "best": 6.429,
+        "max_regret": 0.992
+      },
+      {
+        "name": "ladder_round3",
+        "alloc": "22/2/0/0/76",
+        "mean_payout": 5.844,
+        "worst": 4.874,
+        "best": 6.435,
+        "max_regret": 1.101
+      },
+      {
+        "name": "16/37/47/0/0",
+        "alloc": "16/37/47/0/0",
+        "mean_payout": 5.708,
+        "worst": 4.773,
+        "best": 7.069,
+        "max_regret": 1.091
+      },
+      {
+        "name": "ladder_round2",
+        "alloc": "16/36/47/0/1",
+        "mean_payout": 5.674,
+        "worst": 4.759,
+        "best": 7.04,
+        "max_regret": 1.14
+      },
+      {
+        "name": "0/0/39/61/0",
+        "alloc": "0/0/39/61/0",
+        "mean_payout": 5.45,
+        "worst": 4.657,
+        "best": 6.932,
+        "max_regret": 1.524
+      },
+      {
+        "name": "castles_3_and_4",
+        "alloc": "0/0/40/60/0",
+        "mean_payout": 5.426,
+        "worst": 4.575,
+        "best": 6.942,
+        "max_regret": 1.643
+      },
+      {
+        "name": "all_in_castle5",
+        "alloc": "0/0/0/0/100",
+        "mean_payout": 5.118,
+        "worst": 4.766,
+        "best": 5.391,
+        "max_regret": 2.097
+      },
+      {
+        "name": "castles_1_to_3",
+        "alloc": "20/28/52/0/0",
+        "mean_payout": 5.114,
+        "worst": 4.184,
+        "best": 6.403,
+        "max_regret": 1.645
+      },
+      {
+        "name": "castles_3_and_5",
+        "alloc": "0/0/37/0/63",
+        "mean_payout": 4.812,
+        "worst": 2.378,
+        "best": 7.093,
+        "max_regret": 3.773
+      },
+      {
+        "name": "ladder_round1",
+        "alloc": "2/0/43/55/0",
+        "mean_payout": 4.77,
+        "worst": 3.715,
+        "best": 6.546,
+        "max_regret": 2.638
+      },
+      {
+        "name": "two_castles_50_50",
+        "alloc": "0/0/0/50/50",
+        "mean_payout": 3.347,
+        "worst": 1.972,
+        "best": 5.029,
+        "max_regret": 4.228
+      },
+      {
+        "name": "three_castles_33",
+        "alloc": "0/0/33/33/34",
+        "mean_payout": 2.885,
+        "worst": 2.243,
+        "best": 3.598,
+        "max_regret": 4.69
+      },
+      {
+        "name": "top_heavy_0_10_20_30_40",
+        "alloc": "0/10/20/30/40",
+        "mean_payout": 2.557,
+        "worst": 2.096,
+        "best": 2.956,
+        "max_regret": 4.962
+      },
+      {
+        "name": "proportional",
+        "alloc": "7/13/20/27/33",
+        "mean_payout": 2.105,
+        "worst": 1.539,
+        "best": 2.725,
+        "max_regret": 5.461
+      }
+    ],
+    "per_hypothesis": [
+      {
+        "variant": "baseline",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_payout": 6.699,
+        "hyp_best_in_pool": "16/37/47/0/0",
+        "hyp_best_payout": 7.069
+      },
+      {
+        "variant": "baseline",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_payout": 6.17,
+        "hyp_best_in_pool": "16/37/47/0/0",
+        "hyp_best_payout": 6.536
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_payout": 5.989,
+        "hyp_best_in_pool": "22/1/0/0/77",
+        "hyp_best_payout": 6.378
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_payout": 5.624,
+        "hyp_best_in_pool": "22/1/0/0/77",
+        "hyp_best_payout": 5.954
+      },
+      {
+        "variant": "baseline",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_payout": 5.993,
+        "hyp_best_in_pool": "0/36/0/64/0",
+        "hyp_best_payout": 5.993
+      },
+      {
+        "variant": "baseline",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_payout": 5.768,
+        "hyp_best_in_pool": "0/36/0/64/0",
+        "hyp_best_payout": 5.768
+      },
+      {
+        "variant": "baseline",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_payout": 6.886,
+        "hyp_best_in_pool": "0/36/0/64/0",
+        "hyp_best_payout": 6.886
+      },
+      {
+        "variant": "baseline",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_payout": 6.314,
+        "hyp_best_in_pool": "0/36/0/64/0",
+        "hyp_best_payout": 6.314
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_payout": 5.821,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 6.204
+      },
+      {
+        "variant": "baseline",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_payout": 5.563,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 5.86
+      },
+      {
+        "variant": "baseline",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_payout": 5.432,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 5.758
+      },
+      {
+        "variant": "baseline",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_payout": 5.209,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 5.496
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_payout": 6.524,
+        "hyp_best_in_pool": "0/0/37/0/63",
+        "hyp_best_payout": 7.093
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_payout": 6.088,
+        "hyp_best_in_pool": "16/36/47/0/1",
+        "hyp_best_payout": 6.485
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_payout": 5.718,
+        "hyp_best_in_pool": "22/1/0/0/77",
+        "hyp_best_payout": 6.45
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_payout": 5.525,
+        "hyp_best_in_pool": "22/1/0/0/77",
+        "hyp_best_payout": 5.976
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_payout": 5.905,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 6.179
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_payout": 5.541,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 5.762
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_payout": 6.758,
+        "hyp_best_in_pool": "0/36/0/64/0",
+        "hyp_best_payout": 6.758
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_payout": 6.199,
+        "hyp_best_in_pool": "0/36/0/64/0",
+        "hyp_best_payout": 6.199
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_payout": 5.686,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 6.13
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_payout": 5.328,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 5.676
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_payout": 5.507,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 5.884
+      },
+      {
+        "variant": "concentrated_heavy",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_payout": 5.336,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 5.588
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_payout": 6.742,
+        "hyp_best_in_pool": "16/37/47/0/0",
+        "hyp_best_payout": 6.955
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 0.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_payout": 6.303,
+        "hyp_best_in_pool": "16/36/47/0/1",
+        "hyp_best_payout": 6.421
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_payout": 6.258,
+        "hyp_best_in_pool": "0/36/0/64/0",
+        "hyp_best_payout": 6.258
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 1.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_payout": 5.807,
+        "hyp_best_in_pool": "22/1/0/0/77",
+        "hyp_best_payout": 5.81
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.0,
+        "pick_payout": 6.181,
+        "hyp_best_in_pool": "0/36/0/64/0",
+        "hyp_best_payout": 6.181
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 2.5,
+        "temperature": 0.3,
+        "nash_share": 0.15,
+        "pick_payout": 5.78,
+        "hyp_best_in_pool": "0/36/0/64/0",
+        "hyp_best_payout": 5.78
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_payout": 6.913,
+        "hyp_best_in_pool": "0/0/40/60/0",
+        "hyp_best_payout": 6.942
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 0.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_payout": 6.397,
+        "hyp_best_in_pool": "0/0/40/60/0",
+        "hyp_best_payout": 6.437
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_payout": 6.119,
+        "hyp_best_in_pool": "0/36/0/64/0",
+        "hyp_best_payout": 6.119
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 1.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_payout": 5.622,
+        "hyp_best_in_pool": "22/1/0/0/77",
+        "hyp_best_payout": 5.81
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.0,
+        "pick_payout": 5.518,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 5.792
+      },
+      {
+        "variant": "spread_heavy",
+        "tau": 2.5,
+        "temperature": 0.8,
+        "nash_share": 0.15,
+        "pick_payout": 5.138,
+        "hyp_best_in_pool": "21/0/0/0/79",
+        "hyp_best_payout": 5.465
+      }
+    ]
+  },
+  "runtime_s": 684.1
+}

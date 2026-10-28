@@ -1,0 +1,27 @@
+[    0.0s] Game 1 theory: closed-form check
+[    0.0s] Game 1 theory: fictitious play, 6000 iterations
+[    1.6s]    FP exploitability: best reply scores 7.760 vs the mixture (7.5 = unexploitable)
+[    1.6s] Game 1 ladder (baseline field, tau=1.5, temperature=0.3)
+[    2.8s] Game 1 robust pick over hypothesis grid
+[   40.6s]    Game 1 pick 1/3/4/39/53 expected 8.880
+[   40.6s] Game 2 rules: cost of winning each castle vs 1 and vs 3 opponents
+[   41.0s] Game 2 equilibrium: 240 generations of multiplicative weights on the step-5 grid
+[   42.7s]    gen 0: top strategy 0/0/0/40/60 weight 0.000
+[   87.2s]    gen 25: top strategy 0/0/0/0/100 weight 0.232
+[  130.9s]    gen 50: top strategy 0/0/0/0/100 weight 0.228
+[  175.5s]    gen 75: top strategy 0/0/0/0/100 weight 0.227
+[  219.7s]    gen 100: top strategy 0/0/0/0/100 weight 0.210
+[  262.2s]    gen 125: top strategy 0/0/0/0/100 weight 0.219
+[  304.0s]    gen 150: top strategy 0/0/0/0/100 weight 0.216
+[  348.0s]    gen 175: top strategy 0/0/0/0/100 weight 0.221
+[  392.9s]    gen 200: top strategy 0/0/0/0/100 weight 0.219
+[  436.8s]    gen 225: top strategy 0/0/0/0/100 weight 0.211
+[  470.5s] Game 2 ladders [baseline]
+[  528.4s] Game 2 ladders [concentrated_heavy]
+[  584.1s] Game 2 ladders [spread_heavy]
+[  638.4s] Game 2 ladder table (exact best response each round, baseline field)
+[  649.4s] Game 2 robust pick: pooled hypotheses + hill climbing
+[  683.7s]    Game 2 pick 0/36/0/64/0 mean payout 5.955
+[  684.1s] wrote C:\Users\billy\Desktop\CASTLE\strategy1_probability\results\strategy1_results.json
+
+GAME 1 PICK: 1/3/4/39/53   GAME 2 PICK: 0/36/0/64/0

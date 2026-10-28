@@ -1,0 +1,19 @@
+[    0.0s] Building baseline population (each contestant decides independently)
+[   16.5s] Playing Game 1 round robin and Game 2 (20000 reshuffles)
+[   17.3s] Trend analysis
+[   17.4s] Precomputing metastrategist library for replications
+[   79.0s] Running 200 independent replications
+[   96.5s] Best response to the simulated fields (the 101st entrant)
+[  206.5s] Sensitivity ai_vs_human:ai=17,meta=15,human=68
+[  210.7s] Sensitivity ai_vs_human:ai=34,meta=15,human=51
+[  214.9s] Sensitivity ai_vs_human:ai=50,meta=15,human=35
+[  219.0s] Sensitivity ai_vs_human:ai=68,meta=15,human=17
+[  223.1s] Sensitivity ai_vs_human:ai=85,meta=15,human=0
+[  227.1s] Sensitivity meta_share:ai=59,meta=0,human=41
+[  231.2s] Sensitivity meta_share:ai=56,meta=5,human=39
+[  235.2s] Sensitivity meta_share:ai=50,meta=15,human=35
+[  239.3s] Sensitivity meta_share:ai=41,meta=30,human=29
+[  243.5s] Sensitivity meta_share:ai=29,meta=50,human=21
+[  247.7s] wrote C:\Users\billy\Desktop\CASTLE\strategy2_simulation\results\simulation_results.json
+
+GAME 1 robust 101st entrant: 2/16/1/38/43 | GAME 2 robust 101st entrant: 3/35/0/62/0

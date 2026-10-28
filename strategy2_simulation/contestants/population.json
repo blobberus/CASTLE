@@ -1,0 +1,2992 @@
+[
+  {
+    "id": "P001",
+    "source_ai_id": "AI01",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "haiku",
+    "framing": "verbatim",
+    "game1": [
+      7,
+      13,
+      20,
+      27,
+      33
+    ],
+    "game2": [
+      1,
+      4,
+      15,
+      30,
+      50
+    ],
+    "reasoning": "Game 1 is a head-to-head Blotto-style matchup averaged over all opponents, so I allocated roughly in proportion to castle value to avoid being cheaply beaten anywhere while weighting the 5-point castle most heavily. Game 2 ranks players by total points within a group of four, so I dropped the low-value castles and concentrated soldiers on castles 4 and 5, the most decisive points for a top finish. I could not derive exact equilibria for either game, so these numbers are reasoned heuristics rather than optimal solutions.",
+    "strategy_text": "Game 1: I spread my soldiers roughly in proportion to each castle's point value (7, 13, 20, 27, 33) so no castle is left open to an easy win against an opponent who concentrates on it, while keeping the most weight on the 5-point castle. Game 2: With only three opponents, the 1- and 2-point castles are cheap to win and worth little, and total points decide the finish. I put almost nothing on castles 1 and 2 and concentrated on castles 4 and 5 (30 and 50 soldiers) to win the big castles outright. My strategy changed between games: a spread-out allocation for the head-to-head average, and a concentrated one for the four-way finish.",
+    "game1_score": 5.515,
+    "game1_rank": 81,
+    "game2_payout": 2.672,
+    "game2_rank": 54,
+    "game2_p_first": 0.113,
+    "game2_p_second": 0.347,
+    "game2_mean_castle_points": 2.897,
+    "combined_rank": 65
+  },
+  {
+    "id": "P002",
+    "source_ai_id": "AI02",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "haiku",
+    "framing": "verbatim",
+    "game1": [
+      7,
+      13,
+      20,
+      27,
+      33
+    ],
+    "game2": [
+      0,
+      0,
+      20,
+      30,
+      50
+    ],
+    "reasoning": "Game 1 averages results across every head-to-head matchup, so I allocated roughly in proportion to castle value (about 7/13/20/27/33) to stay competitive on all castles without overcommitting. Game 2 pays out only for finishing position, with 9 points for first, so I conceded the two cheapest castles and concentrated soldiers on the three most valuable ones. The 20/30/50 split is aimed at winning castles 3, 4 and 5 against typical opponents. I did not simulate either game, so the exact numbers are judgment calls rather than optimized results.",
+    "strategy_text": "Game 1: I split soldiers roughly in proportion to castle value, since higher-value castles matter more but a balanced spread keeps me competitive everywhere across the matchups. Game 2: Only first place pays well, and with three opponents the small castles are hard to win consistently. I gave up castles 1 and 2 and concentrated on castles 3, 4 and 5, aiming to win the two biggest castles for 9 points. My strategy changed between the games because the scoring rewards different things: consistency in Game 1 and outright winning in Game 2.",
+    "game1_score": 5.515,
+    "game1_rank": 82,
+    "game2_payout": 2.407,
+    "game2_rank": 59,
+    "game2_p_first": 0.107,
+    "game2_p_second": 0.318,
+    "game2_mean_castle_points": 2.519,
+    "combined_rank": 69
+  },
+  {
+    "id": "P003",
+    "source_ai_id": "AI03",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "sonnet",
+    "framing": "verbatim",
+    "game1": [
+      1,
+      1,
+      25,
+      36,
+      37
+    ],
+    "game2": [
+      0,
+      5,
+      20,
+      35,
+      40
+    ],
+    "reasoning": "I treated both games as Colonel Blotto against likely human behavior, which tends to be proportional or even spreading. In Game 1 I gave up the low-value castles to win a majority of points on castles 3-5, using non-round numbers to avoid ties. In Game 2 the payout is convex in rank and I must beat the maximum of three opponents, so I shifted more soldiers onto castles 4 and 5 and kept a modest amount on castle 3. These are judgment-based estimates rather than computed optima.",
+    "strategy_text": "Both games are Blotto-style, so I guessed that most people spread soldiers roughly in proportion to castle value or evenly. In Game 1 I ignored the 1- and 2-point castles and put about 97 soldiers on castles 3, 4 and 5 (25/36/37), using odd numbers to avoid ties. That should beat a typical spread on the three biggest castles. In Game 2 I changed it. Only rank matters and first place pays much more, and I have to beat the top of three opponents on each castle, so I stacked castles 4 and 5 harder (35/40), kept 20 on castle 3, and put 5 on castle 2 as a small hedge.",
+    "game1_score": 9.596,
+    "game1_rank": 12,
+    "game2_payout": 2.9,
+    "game2_rank": 50,
+    "game2_p_first": 0.151,
+    "game2_p_second": 0.284,
+    "game2_mean_castle_points": 3.005,
+    "combined_rank": 26
+  },
+  {
+    "id": "P004",
+    "source_ai_id": "AI04",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "sonnet",
+    "framing": "verbatim",
+    "game1": [
+      0,
+      1,
+      32,
+      33,
+      34
+    ],
+    "game2": [
+      0,
+      0,
+      32,
+      34,
+      34
+    ],
+    "reasoning": "In Game 1, 15 total points means 8 wins a matchup, and castles 3-5 hold 12, so I abandoned castles 1-2 and split soldiers about evenly across 3-5, avoiding round numbers to reduce ties. In Game 2, the payout (9/4/2/0) rewards first place heavily, so I favored a concentrated, higher-variance allocation with a slight tilt to castles 4 and 5. I assumed many opponents spread soldiers fairly evenly or proportionally, which concentration beats. I could not test against real opponents, so these are reasoned guesses, not verified optima.",
+    "strategy_text": "Game 1: Total is 15 points, so I need 8 to win. Castles 3, 4 and 5 add up to 12, so I concentrated nearly all soldiers on them in a roughly even split and skipped the low-value castles, nudging numbers off round values to avoid ties. Game 2: Only rank matters and 1st pays much more than 2nd, so I used a similar concentrated approach but tilted slightly toward castles 4 and 5 and put zero on castles 1 and 2. I want to win the top score outright rather than finish safely in the middle. The strategy changed only slightly because the payoff structure rewards winning big over being consistent.",
+    "game1_score": 8.434,
+    "game1_rank": 35,
+    "game2_payout": 2.374,
+    "game2_rank": 65,
+    "game2_p_first": 0.125,
+    "game2_p_second": 0.23,
+    "game2_mean_castle_points": 2.381,
+    "combined_rank": 48
+  },
+  {
+    "id": "P005",
+    "source_ai_id": "AI05",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "opus",
+    "framing": "verbatim",
+    "game1": [
+      3,
+      11,
+      21,
+      31,
+      34
+    ],
+    "game2": [
+      0,
+      0,
+      37,
+      0,
+      63
+    ],
+    "reasoning": "For Game 1, I treated it as maximizing expected points against a field likely dominated by proportional, even, and mildly top-heavy splits, and chose numbers just above those common values on castles 3-5 with small amounts on 1-2 to catch empty castles. For Game 2, the convex rank payout and the need to beat the maximum of three opponents argued for concentration. Castles 3+5 (8 points) guarantee first place, and castle 3 is likely less contested than castle 4, so I put 63 on castle 5 and 37 on castle 3. Both choices are guesses about the field's behavior, not provably optimal.",
+    "strategy_text": "Game 1: Since score is average points, I tried to narrowly beat the most common allocations (proportional/even splits) on the high-value castles 3-5, used off-round numbers to win close calls by one soldier, and kept a few soldiers on castles 1-2 to pick up points from opponents who left them empty. Game 2: My strategy changed. With 4 players and payouts heavily weighted toward 1st, a balanced spread rarely wins any castle against the highest of three opponents, so I concentrated. I targeted castles 3 and 5: winning both gives 8 of 15 points, which guarantees 1st since no one else can reach 8. Castle 3 is also less contested than castle 4, because most concentrators pile onto 4 and 5.",
+    "game1_score": 7.626,
+    "game1_rank": 51,
+    "game2_payout": 5.761,
+    "game2_rank": 21,
+    "game2_p_first": 0.463,
+    "game2_p_second": 0.356,
+    "game2_mean_castle_points": 5.713,
+    "combined_rank": 33
+  },
+  {
+    "id": "P006",
+    "source_ai_id": "AI06",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "opus",
+    "framing": "verbatim",
+    "game1": [
+      1,
+      3,
+      22,
+      32,
+      42
+    ],
+    "game2": [
+      0,
+      0,
+      0,
+      44,
+      56
+    ],
+    "reasoning": "For Game 1, I guessed what most applicants would pick (proportional, even, linear and moderately top-heavy splits) and chose numbers just above the common round values on castles 3-5, plus token soldiers on castles 1-2 to beat people who leave them at zero. For Game 2, the four-player format with a payout that heavily favors first place rewards concentrating your soldiers, because spread armies rarely have the top bid against three opponents. Castles 4 and 5 together guarantee first place, so I put everything there. I used 44/56 instead of 50/50 so I win castle 5 against the most likely competing concentrated picks. All of this rests on guesses about how other applicants behave, not a provably optimal answer.",
+    "strategy_text": "Game 1: Since my score is my average points against everyone, I tried to narrowly beat the most common 'round' allocations on the valuable castles. I put 22/32/42 on castles 3-5 to beat 20/30/40 (and 21/31/41), and a few soldiers on castles 1-2 to win them from people who leave them empty. Game 2: Yes, my strategy changed. With three opponents, a spread-out army rarely has the top bid on any castle, and first place pays much more than second. So I put everything on castles 4 and 5, since winning both (9 of 15 points) guarantees first. I split them 44/56 so I beat the common 50/50 and 45/55 picks on the 5-point castle.",
+    "game1_score": 9.808,
+    "game1_rank": 8,
+    "game2_payout": 5.255,
+    "game2_rank": 29,
+    "game2_p_first": 0.389,
+    "game2_p_second": 0.42,
+    "game2_mean_castle_points": 5.426,
+    "combined_rank": 18
+  },
+  {
+    "id": "P007",
+    "source_ai_id": "AI07",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "haiku",
+    "framing": "optimal",
+    "game1": [
+      7,
+      13,
+      20,
+      27,
+      33
+    ],
+    "game2": [
+      5,
+      10,
+      20,
+      30,
+      35
+    ],
+    "reasoning": "Game 1 is a head-to-head Colonel Blotto style game with unknown opponents, and proportional allocation matches the average of the known equilibrium for weighted battlefields, so I used 7, 13, 20, 27, 33. Game 2 pays heavily for first place, so I concentrated on the high-value castles 4 and 5 and conceded castle 1 and much of castle 2, giving 5, 10, 20, 30, 35. I checked the second allocation informally against a proportional opponent and it came out ahead. The Game 2 choice is a heuristic, not a computed optimum, and it could be wrong if the other applicants are also top-heavy.",
+    "strategy_text": "Game 1: I spread soldiers roughly in proportion to castle value, since without knowing my opponents that is a robust middle choice. Game 2: The 9/4/2/0 payouts reward finishing first, so I shifted weight toward castles 4 and 5 and gave up on the cheap castles 1 and 2. Yes, my approach changed between the games, because the scoring rewards different things.",
+    "game1_score": 5.515,
+    "game1_rank": 83,
+    "game2_payout": 1.653,
+    "game2_rank": 98,
+    "game2_p_first": 0.03,
+    "game2_p_second": 0.152,
+    "game2_mean_castle_points": 1.982,
+    "combined_rank": 95
+  },
+  {
+    "id": "P008",
+    "source_ai_id": "AI08",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "haiku",
+    "framing": "optimal",
+    "game1": [
+      0,
+      0,
+      21,
+      29,
+      50
+    ],
+    "game2": [
+      0,
+      0,
+      0,
+      49,
+      51
+    ],
+    "reasoning": "Game 1 is an average over head-to-head matchups against unknown opponents, so I tested candidate splits against even, value-proportional, and top-heavy allocations and chose one that scored well across them while beating common round numbers narrowly. Game 2 rewards first place, and since the other three players can get at most 6 points from castles 1-3, winning castles 4 and 5 secures 9 points against most groups. I used 49 and 51 instead of 50 and 50 to beat round-number players on the most valuable castle. These are robust heuristics rather than a proven equilibrium, since the true best response depends on the actual applicant pool.",
+    "strategy_text": "Game 1: I skipped the two cheapest castles and concentrated on the top three, placing just enough on castles 3 and 4 to beat typical allocations. Game 2: only finishing position matters, and the other three players can score at most 6 from castles 1-3 combined, so I went all in on castles 4 and 5 to lock in 9 points. My strategy changed because Game 1 scores each castle separately while Game 2 rewards beating the group.",
+    "game1_score": 8.369,
+    "game1_rank": 36,
+    "game2_payout": 5.039,
+    "game2_rank": 34,
+    "game2_p_first": 0.359,
+    "game2_p_second": 0.415,
+    "game2_mean_castle_points": 5.364,
+    "combined_rank": 31
+  },
+  {
+    "id": "P009",
+    "source_ai_id": "AI09",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "sonnet",
+    "framing": "optimal",
+    "game1": [
+      1,
+      2,
+      30,
+      32,
+      35
+    ],
+    "game2": [
+      0,
+      1,
+      29,
+      34,
+      36
+    ],
+    "reasoning": "Both games are Colonel Blotto variants, and the best play depends on what other applicants submit, so I reasoned about likely opponent behavior, not a proven equilibrium. Typical opponents spread soldiers evenly or in proportion to castle value, so concentrating on castles 3, 4 and 5 (12 of 15 points) usually wins a majority. In Game 1, I added small amounts to castles 1 and 2 to win ties against zeros, and set my numbers just above common round values. In Game 2, the 9/4/2/0 payouts reward finishing first, so I put more soldiers on castles 4 and 5 to beat the best of three opponents.",
+    "strategy_text": "Game 1: I gave up the cheap castles 1 and 2 and concentrated on castles 3, 4 and 5, which are worth 12 of the 15 points. I put slightly more than the common even-split or proportional allocations on those three, so I would likely win all of them against typical opponents. Game 2: I kept the same concentration idea, since finishing first pays 9 points. I shifted a few more soldiers to castles 4 and 5, because the strongest of three rivals is the one I have to beat. My strategy changed only slightly between the games.",
+    "game1_score": 8.672,
+    "game1_rank": 31,
+    "game2_payout": 2.359,
+    "game2_rank": 67,
+    "game2_p_first": 0.116,
+    "game2_p_second": 0.235,
+    "game2_mean_castle_points": 2.419,
+    "combined_rank": 47
+  },
+  {
+    "id": "P010",
+    "source_ai_id": "AI10",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "sonnet",
+    "framing": "optimal",
+    "game1": [
+      5,
+      10,
+      22,
+      28,
+      35
+    ],
+    "game2": [
+      3,
+      9,
+      21,
+      29,
+      38
+    ],
+    "reasoning": "I treated Game 1 as a Colonel Blotto game against a mixed pool of naive players (even splits or value-proportional splits), so I conceded castles 1 and 2 and placed slightly above typical levels on castles 3, 4 and 5 to win 12 of 15 points against those players. For Game 2 the payout is rank-based and top-heavy, so I favored a concentrated allocation that is likely to win the three biggest castles, with a bit more on castles 4 and 5 because the maximum of three opponents is a tougher bar. These choices come from reasoning about likely opponent behavior, not from simulation, so there is real uncertainty.",
+    "strategy_text": "Game 1: I assumed many players would split evenly (20 each) or proportionally to castle value (about 7/13/20/27/33). I conceded the cheap castles 1 and 2 and put just above those common levels on castles 3, 4 and 5, which gives 12 of 15 points against both of those styles. Game 2: Only rank matters and 1st pays far more than the other places, so I used a similar idea but concentrated slightly harder on castles 4 and 5, since I have to beat the best of three opponents on each. So my strategy changed a little between games: head to head I aimed for the highest average score, and in the four-way game I aimed for first place.",
+    "game1_score": 7.348,
+    "game1_rank": 62,
+    "game2_payout": 1.669,
+    "game2_rank": 96,
+    "game2_p_first": 0.042,
+    "game2_p_second": 0.198,
+    "game2_mean_castle_points": 1.95,
+    "combined_rank": 81
+  },
+  {
+    "id": "P011",
+    "source_ai_id": "AI11",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "opus",
+    "framing": "optimal",
+    "game1": [
+      1,
+      5,
+      22,
+      31,
+      41
+    ],
+    "game2": [
+      0,
+      0,
+      42,
+      58,
+      0
+    ],
+    "reasoning": "Neither game has an objectively optimal answer, so I guessed at what applicants typically submit (even splits, value-based splits, round numbers, dropping the low castles) and picked allocations that beat those. For Game 1, where points are averaged, I chose small margins over common values on castles 3-5 plus cheap wins on castles 1-2. For Game 2, being ranked in a 4-player group means you have to win castles outright, so I concentrated on castles 3 and 4 and left the contested castle 5 alone, since 7 points nearly always wins 1st. The main risk in Game 2 is that many others make the same contrarian move.",
+    "strategy_text": "Game 1 is scored on average points, so I tried to slightly outbid the most common allocations (even 20s, splits by castle value, round numbers like 10/20/30/40) on castles 3-5. I used off-round numbers (22/31/41) to win the ties, and put a few soldiers on castles 1-2 to pick them up from people who leave them empty. Game 2 changed my approach completely: to take a castle you have to beat all three opponents, and only your placement counts, so spreading out wins nothing. I skipped castle 5, where everyone stacks soldiers, and committed heavily to castles 3 and 4 (42/58). Winning both gives 7 of the 15 points, which almost always takes 1st because the other 8 points get split three ways.",
+    "game1_score": 9.384,
+    "game1_rank": 17,
+    "game2_payout": 7.078,
+    "game2_rank": 5,
+    "game2_p_first": 0.714,
+    "game2_p_second": 0.119,
+    "game2_mean_castle_points": 6.227,
+    "combined_rank": 7
+  },
+  {
+    "id": "P012",
+    "source_ai_id": "AI12",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "opus",
+    "framing": "optimal",
+    "game1": [
+      1,
+      1,
+      21,
+      36,
+      41
+    ],
+    "game2": [
+      1,
+      0,
+      36,
+      0,
+      63
+    ],
+    "reasoning": "Game 1 is scored by average points, so the castles are independent and the goal is to beat the most common opponent numbers per castle as cheaply as possible. I guessed at a likely field (even splits, proportional splits, 40-ish on castle 5, 30-35 on castle 4, 20 on castle 3, many zeros on castles 1-2) and placed soldiers one above those clusters. Game 2 is rank-based with a big reward for first, so I concentrated on castles 3 and 5, whose 8 combined points guarantee first. I put more on castle 5 to beat the obvious 50 and 60 bids and enough on castle 3 to beat typical 30-35 bids. Both choices depend on guesses about other entrants, so they are judgment calls rather than proven optima.",
+    "strategy_text": "Game 1 is scored by average points, so each castle is really a separate bet. I tried to land just above the numbers I expected most people to choose: 21 on castle 3 to beat the many 20s, 36 on castle 4 to beat 30s and 35s, and 41 on castle 5 to beat 40s. I put a single soldier on castles 1 and 2 to win them from anyone who left them empty. My strategy changed for Game 2 because only finishing place counts, and spreading out rarely makes you the top bidder against three opponents. Castles 3 and 5 are worth 8 of the 15 points, which guarantees first, so I went heavy on castle 5 (63, above the obvious 50 and 60 bids) and solid on castle 3 (36), which I expected people to neglect while fighting over 4 and 5. I added 1 soldier on castle 1 as a tiebreaker.",
+    "game1_score": 9.621,
+    "game1_rank": 10,
+    "game2_payout": 5.656,
+    "game2_rank": 24,
+    "game2_p_first": 0.453,
+    "game2_p_second": 0.375,
+    "game2_mean_castle_points": 5.795,
+    "combined_rank": 16
+  },
+  {
+    "id": "P013",
+    "source_ai_id": "AI13",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "haiku",
+    "framing": "quick",
+    "game1": [
+      7,
+      13,
+      20,
+      27,
+      33
+    ],
+    "game2": [
+      0,
+      5,
+      25,
+      30,
+      40
+    ],
+    "reasoning": "Game 1 is a head-to-head average, so I wanted coverage across every castle, weighted toward the more valuable ones. Game 2 rewards only the top finish, and winning a group takes the most points, so I concentrated soldiers on the high-value castles rather than spreading thin. I don't know how other applicants actually allocate, so these numbers are reasoned guesses rather than optimized against a known distribution. Adjust if you have a sense of what the typical applicant will do.",
+    "strategy_text": "Game 1: I spread soldiers in proportion to castle value so I can win matchups across all five castles without overspending on the 1-point castle. Game 2: I concentrated on castles 3-5 to win the high-value points outright against three opponents, skipping castle 1 and mostly skipping castle 2.",
+    "game1_score": 5.515,
+    "game1_rank": 84,
+    "game2_payout": 1.933,
+    "game2_rank": 83,
+    "game2_p_first": 0.063,
+    "game2_p_second": 0.232,
+    "game2_mean_castle_points": 2.179,
+    "combined_rank": 87
+  },
+  {
+    "id": "P014",
+    "source_ai_id": "AI14",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "haiku",
+    "framing": "quick",
+    "game1": [
+      7,
+      13,
+      20,
+      27,
+      33
+    ],
+    "game2": [
+      0,
+      10,
+      20,
+      30,
+      40
+    ],
+    "reasoning": "Game 1 is head-to-head against unknown opponents, so I used a value-proportional split (about 100 * value / 15), a robust default that ties mirror spreads and holds up on the high-value castles. Game 2 pays out only for finishing near the top, and a castle goes to whoever sends the most soldiers, so heavy concentration on castles 5, 4, and 3 is more likely to win them outright. Giving up castle 1 costs at most 1 point and frees 40 soldiers for the valuable castles. The opponents' distributions are unknown, so these are reasoned heuristics rather than equilibrium solutions.",
+    "strategy_text": "Game 1: I spread soldiers roughly in proportion to castle value so I don't give up big castles to anyone. Game 2: I concentrated soldiers on the top castles to win them outright and gave up castle 1, the least valuable. My strategy changed because the four-way game rewards winning castles outright rather than just matching others.",
+    "game1_score": 5.515,
+    "game1_rank": 85,
+    "game2_payout": 1.899,
+    "game2_rank": 86,
+    "game2_p_first": 0.056,
+    "game2_p_second": 0.201,
+    "game2_mean_castle_points": 2.209,
+    "combined_rank": 89
+  },
+  {
+    "id": "P015",
+    "source_ai_id": "AI15",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "sonnet",
+    "framing": "quick",
+    "game1": [
+      8,
+      14,
+      22,
+      26,
+      30
+    ],
+    "game2": [
+      2,
+      4,
+      28,
+      32,
+      34
+    ],
+    "reasoning": "For Game 1, I assumed many opponents spread soldiers evenly (about 20 each) or favor the big castles, so I put more than 20 on castles 3-5 and gave up castles 1-2 cheaply to maximize average points. For Game 2, payouts are steep (9 for 1st, 4 for 2nd, 2 for 3rd, 0 for 4th), so I went heavier on castles 3-5, which are worth 12 of the 15 points, and nearly abandoned castles 1-2. These are judgment-based guesses about how other applicants will play, not computed optima.",
+    "strategy_text": "Game 1: I put the most soldiers on the high-value castles and gave up the 1-point castle. Game 2: I changed to an even heavier focus on castles 3-5 because only a top-two finish pays well.",
+    "game1_score": 5.99,
+    "game1_rank": 71,
+    "game2_payout": 1.967,
+    "game2_rank": 82,
+    "game2_p_first": 0.087,
+    "game2_p_second": 0.18,
+    "game2_mean_castle_points": 2.127,
+    "combined_rank": 80
+  },
+  {
+    "id": "P016",
+    "source_ai_id": "AI16",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "sonnet",
+    "framing": "quick",
+    "game1": [
+      2,
+      12,
+      24,
+      28,
+      34
+    ],
+    "game2": [
+      0,
+      0,
+      33,
+      33,
+      34
+    ],
+    "reasoning": "In Game 1 I expected many opponents to use near-even or top-heavy splits, so I conceded the 1-point castle and gave castles 2-5 a bit more than an even share, with the most on castle 5. In Game 2 the payouts reward first place heavily (9 vs 4), so I chose a high-variance plan of about 33 soldiers on each of castles 3, 4 and 5. That targets 12 of the 15 points, and winning two of the three usually means a first-place finish. I did not run any simulation, so these are reasoned guesses about how other players will behave.",
+    "strategy_text": "Game 1: I assumed many players would split soldiers roughly evenly or favor the big castles, so I gave up castle 1 and put slightly more than an even share on castles 2-5, weighted toward the high-value ones. Game 2: first place pays much more than the other places, so I changed strategy and concentrated about 33 soldiers each on castles 3, 4 and 5 (12 of the 15 points) and abandoned castles 1 and 2. Winning two of those three castles usually puts me in first place.",
+    "game1_score": 7.419,
+    "game1_rank": 61,
+    "game2_payout": 2.222,
+    "game2_rank": 74,
+    "game2_p_first": 0.105,
+    "game2_p_second": 0.213,
+    "game2_mean_castle_points": 2.282,
+    "combined_rank": 66
+  },
+  {
+    "id": "P017",
+    "source_ai_id": "AI17",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "opus",
+    "framing": "quick",
+    "game1": [
+      2,
+      13,
+      22,
+      28,
+      35
+    ],
+    "game2": [
+      0,
+      21,
+      34,
+      45,
+      0
+    ],
+    "reasoning": "Game 1 scores average points, so I used an allocation roughly proportional to castle values (about 7/13/20/27/33) and moved each number slightly above likely popular values like 10, 20, 25 and 33. Game 2's payouts (9/4/2/0) reward 1st place heavily, and with 3 opponents you need to beat the highest bid on each castle you want. So I gave up castle 5, where the most soldiers go, and castle 1, and focused on castles 2-4. Together those are worth 9 points, which means 1st place is guaranteed if I take all three. These numbers are guesses about what other applicants will do, not a computed optimum.",
+    "strategy_text": "In Game 1 I spread soldiers roughly in proportion to castle value, set just above common round numbers. In Game 2 only finishing 1st really pays, so I gave up castles 1 and 5 and stacked castles 2-4 (9 of 15 points), which guarantees 1st if I win all three.",
+    "game1_score": 7.591,
+    "game1_rank": 57,
+    "game2_payout": 4.876,
+    "game2_rank": 36,
+    "game2_p_first": 0.415,
+    "game2_p_second": 0.155,
+    "game2_mean_castle_points": 5.109,
+    "combined_rank": 44
+  },
+  {
+    "id": "P018",
+    "source_ai_id": "AI18",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "opus",
+    "framing": "quick",
+    "game1": [
+      1,
+      14,
+      21,
+      30,
+      34
+    ],
+    "game2": [
+      0,
+      0,
+      0,
+      47,
+      53
+    ],
+    "reasoning": "For Game 1 I guessed the common entries (even 20s, splits in proportion to castle value, round numbers) and picked numbers just above them on castles 3 to 5, with 14 on castle 2 to beat the proportional split's 13. I checked the split against several likely opponents: it scores about 12 to 14 of 15 against spread-out entries and does badly against players who pile onto castles 3 to 5. For Game 2, first place pays the most and a castle needs the top bid of four, so spreading out wins little. Putting everything on castles 4 and 5 (9 points, enough to guarantee first) gives the best shot at first place. Both picks depend on guesses about what other applicants enter.",
+    "strategy_text": "In Game 1 I spread my soldiers to narrowly beat common allocations like even 20s or splits in proportion to castle value, focusing on castles 3 to 5. In Game 2 my strategy changed: a castle needs the top bid out of four and first place pays the most, so I put everything into castles 4 and 5 to try to lock in 9 points and finish first.",
+    "game1_score": 7.596,
+    "game1_rank": 56,
+    "game2_payout": 5.24,
+    "game2_rank": 31,
+    "game2_p_first": 0.385,
+    "game2_p_second": 0.406,
+    "game2_mean_castle_points": 5.446,
+    "combined_rank": 41
+  },
+  {
+    "id": "P019",
+    "source_ai_id": "AI19",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "haiku",
+    "framing": "field_aware",
+    "game1": [
+      0,
+      8,
+      17,
+      30,
+      45
+    ],
+    "game2": [
+      0,
+      0,
+      20,
+      30,
+      50
+    ],
+    "reasoning": "Castle 1 is nearly worthless, so both games give it nothing. In Game 1, the score is an average across all matchups, so I weighted the high-value castles heavily while keeping some presence on castles 2 and 3 to avoid being exploited by a field that spreads its soldiers. In Game 2, only the top finish matters much (9 points for first versus 4 for second), so I concentrated on the castles most likely to decide the ranking, dropping the low-value castles that would be contested by everyone. I expect other AI-assisted applicants to submit proportional allocations, which is why I departed from that pattern. These numbers are reasoned guesses rather than simulated or equilibrium results.",
+    "strategy_text": "I approached each game from its scoring rules. In Game 1, I gave up on castle 1 since it is worth only 1 point, and concentrated soldiers on castles 4 and 5, keeping a meaningful force on castle 3 and a small amount on castle 2. I expected many other applicants to spread soldiers roughly in proportion to castle value, so I deliberately deviated from that. In Game 2, finishing first is worth far more than average points, so I abandoned castles 1 and 2 and concentrated on castles 3, 4, and 5 to win the most points against a spread-out field. My strategy changed between games because the scoring rewards different things. I did not test these allocations by simulation, so the choices are based on reasoning rather than measured results.",
+    "game1_score": 7.798,
+    "game1_rank": 47,
+    "game2_payout": 2.41,
+    "game2_rank": 58,
+    "game2_p_first": 0.104,
+    "game2_p_second": 0.325,
+    "game2_mean_castle_points": 2.53,
+    "combined_rank": 54
+  },
+  {
+    "id": "P020",
+    "source_ai_id": "AI20",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "haiku",
+    "framing": "field_aware",
+    "game1": [
+      0,
+      10,
+      20,
+      30,
+      40
+    ],
+    "game2": [
+      0,
+      0,
+      25,
+      35,
+      40
+    ],
+    "reasoning": "Game 1 is a head-to-head allocation where a castle is only won by outsending each opponent, so I avoided the common equal-split and extreme top-heavy patterns and weighted the high-value castles while keeping modest troops on 2 and 3 to avoid free losses. Game 2 rewards finishing first, so I concentrated on castles 3 to 5 and dropped the low-value castles entirely, with castle 5 kept a bit below a pure top-heavy play to avoid over-committing to the most contested castle. I could not observe the other applicants' distribution, so these are reasoned guesses that I checked against a few plausible opponent patterns rather than solved optimally.",
+    "strategy_text": "In Game 1 I concentrated soldiers on the higher-value castles (4 and 5) and kept some soldiers on 2 and 3 to avoid giving up easy points. I skipped castle 1 since it is worth only 1 point. In Game 2 I changed strategy: since only my finish matters and first place pays 9, I went all-in on castles 3 to 5 and abandoned 1 and 2, aiming for a high total among the three.",
+    "game1_score": 7.606,
+    "game1_rank": 53,
+    "game2_payout": 2.918,
+    "game2_rank": 49,
+    "game2_p_first": 0.158,
+    "game2_p_second": 0.306,
+    "game2_mean_castle_points": 2.973,
+    "combined_rank": 51
+  },
+  {
+    "id": "P021",
+    "source_ai_id": "AI21",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "sonnet",
+    "framing": "field_aware",
+    "game1": [
+      0,
+      0,
+      25,
+      37,
+      38
+    ],
+    "game2": [
+      1,
+      1,
+      22,
+      38,
+      38
+    ],
+    "reasoning": "I expected the field to be dominated by proportional and even-three-castle allocations, since many applicants likely use AI and reason similarly. For Game 1, I gave up the 1- and 2-point castles and concentrated about 37-38 soldiers on castles 4 and 5, with a moderate bid on castle 3, to beat those common patterns. For Game 2, the top-heavy payouts reward a high chance of a top-two finish, so I kept the concentrated approach with a small adjustment: 1 soldier each on castles 1-2 to pick up uncontested points and break ties. These are judgment calls with no simulation, so the numbers are estimates.",
+    "strategy_text": "Game 1: I assumed many applicants would submit proportional allocations or an even split across castles 3-5, so I abandoned castles 1-2 and put about 37-38 soldiers on castles 4 and 5, which beats those common allocations there, with a moderate bid on castle 3. Game 2: The payouts reward finishing first or second, so I kept the same idea of winning castles 4 and 5 (9 of 15 points) but put a token 1 soldier each on castles 1-2 to pick up uncontested points and break ties. My strategy changed slightly because ranking payouts favor consistent top-two finishes over maximizing average points.",
+    "game1_score": 9.596,
+    "game1_rank": 13,
+    "game2_payout": 2.895,
+    "game2_rank": 51,
+    "game2_p_first": 0.145,
+    "game2_p_second": 0.311,
+    "game2_mean_castle_points": 2.98,
+    "combined_rank": 28
+  },
+  {
+    "id": "P022",
+    "source_ai_id": "AI22",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "sonnet",
+    "framing": "field_aware",
+    "game1": [
+      0,
+      13,
+      21,
+      29,
+      37
+    ],
+    "game2": [
+      0,
+      0,
+      32,
+      34,
+      34
+    ],
+    "reasoning": "In Game 1, a matchup is won by getting 8 of 15 points, so I expected common answers to be a proportional split or a split across the top three castles, and I chose numbers just above the round proportional values on castles 2 to 5 while dropping the 1-point castle. In Game 2, the payouts (9/4/2/0) reward finishing first, so I switched to a concentrated strategy on castles 3, 4 and 5 with 32/34/34 to narrowly beat the typical 33-per-castle allocations. The exact numbers are guesses about the field, since nobody knows what other applicants will submit.",
+    "strategy_text": "Game 1: I assumed many people would split soldiers in proportion to castle value (around 7/13/20/27/33) or pile onto the top three castles. I gave up the 1-point castle and put slightly more than the round-number proportional amounts on castles 2 to 5, so I narrowly beat the typical proportional split while still taking the 5-point castle against concentrators. Game 2: first place pays far more than second, so my approach changed to a higher-variance one. I concentrated on castles 3, 4 and 5 (12 of 15 points) with about 32/34/34, aiming to edge out the common 33-per-castle splits and win the majority of points.",
+    "game1_score": 7.763,
+    "game1_rank": 48,
+    "game2_payout": 2.393,
+    "game2_rank": 63,
+    "game2_p_first": 0.128,
+    "game2_p_second": 0.227,
+    "game2_mean_castle_points": 2.391,
+    "combined_rank": 59
+  },
+  {
+    "id": "P023",
+    "source_ai_id": "AI23",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "opus",
+    "framing": "field_aware",
+    "game1": [
+      4,
+      16,
+      26,
+      33,
+      21
+    ],
+    "game2": [
+      0,
+      0,
+      39,
+      0,
+      61
+    ],
+    "reasoning": "I guessed that the field would be mostly AI answers near proportional allocation, plus round-number human entries, with castle 5 the most contested. For Game 1, where average points matter, I gave up most of castle 5 and set castles 1-4 just above the expected clusters. That wins about 9-10 points against typical opponents. For Game 2, the payout rewards first place and you must beat the highest of three opponents, so I put everything on castles 3 and 5. Together they are worth 8 of 15 points, a guaranteed outright win. I used 61/39 so the margins clear common round numbers. These choices rest on my guesses about the field, not on any data or simulation.",
+    "strategy_text": "Game 1: I expected most entries to be near proportional (about 7/13/20/27/33) with lots of soldiers on castle 5. Since my score is average points across matchups, I mostly gave up castle 5 (21 still beats even 20s and anyone who skipped it). I used those soldiers to go just above the usual numbers on castles 2-4 (16/26/33) and took castle 1 cheaply with 4. Game 2: yes, my strategy changed. In a four-way fight, spreading out wins nothing, and first place pays far more than anything else. Castles 3 and 5 together are 8 of 15 points, a guaranteed outright win. So I went all-in on those two (39 and 61), using odd numbers to beat round-number entries like 40, 55 and 60.",
+    "game1_score": 8.571,
+    "game1_rank": 33,
+    "game2_payout": 5.68,
+    "game2_rank": 22,
+    "game2_p_first": 0.479,
+    "game2_p_second": 0.277,
+    "game2_mean_castle_points": 5.633,
+    "combined_rank": 23
+  },
+  {
+    "id": "P024",
+    "source_ai_id": "AI24",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "opus",
+    "framing": "field_aware",
+    "game1": [
+      11,
+      18,
+      32,
+      36,
+      3
+    ],
+    "game2": [
+      21,
+      28,
+      51,
+      0,
+      0
+    ],
+    "reasoning": "I assumed the field is mostly AI-generated entries that are roughly proportional and top-heavy, often with round or plus-one numbers, and tested candidates by hand against a made-up pool of such entries. For Game 1, conceding castle 5 (plus a 3-soldier token to beat other skip-5 entries) and beating typical amounts on castles 1-4 scored about 9.5 average, versus about 7.5 for a typical entry. For Game 2, the four-way format makes castles 4 and 5 very expensive, so securing castles 1-3 (6 points) with big margins gives 1st whenever castles 4 and 5 go to different opponents and usually 2nd otherwise. These are bets on opponent behavior, not guarantees, and if many people get similar advice the edge shrinks.",
+    "strategy_text": "Game 1: I expected most entries to be roughly proportional and top-heavy, with 35-40 on castle 5. So I gave up castle 5 except for a small token and used those soldiers to beat typical amounts on castles 1-4, with non-round numbers to win close calls. Game 2: Yes, my strategy changed. With four players, the fight for castles 4 and 5 gets even more expensive, so I made sure of castles 1-3 (6 points) with large margins. If the top two castles go to different opponents, 6 points wins the group, and otherwise it usually finishes second.",
+    "game1_score": 9.111,
+    "game1_rank": 22,
+    "game2_payout": 6.89,
+    "game2_rank": 6,
+    "game2_p_first": 0.663,
+    "game2_p_second": 0.242,
+    "game2_mean_castle_points": 5.486,
+    "combined_rank": 13
+  },
+  {
+    "id": "P025",
+    "source_ai_id": "AI25",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "haiku",
+    "framing": "game_theory",
+    "game1": [
+      7,
+      13,
+      20,
+      27,
+      33
+    ],
+    "game2": [
+      2,
+      8,
+      15,
+      30,
+      45
+    ],
+    "reasoning": "For Game 1, the score is a head-to-head average against everyone, so a value-proportional split (about 7/13/20/27/33) is a robust, balanced choice with no obvious exploitable weak point. For Game 2, winner-take-all style payouts reward finishing first and 4-way matchups make winning cheap castles unreliable, so I concentrated more on the high-value castles 4 and 5 and only a token amount on castles 1 and 2. The main uncertainty is how heavily other players will weight the cheap castles, which I could not test without simulation.",
+    "strategy_text": "(see STRATEGY box text above)",
+    "game1_score": 5.515,
+    "game1_rank": 86,
+    "game2_payout": 2.262,
+    "game2_rank": 72,
+    "game2_p_first": 0.092,
+    "game2_p_second": 0.262,
+    "game2_mean_castle_points": 2.536,
+    "combined_rank": 82
+  },
+  {
+    "id": "P026",
+    "source_ai_id": "AI26",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "haiku",
+    "framing": "game_theory",
+    "game1": [
+      7,
+      13,
+      20,
+      27,
+      33
+    ],
+    "game2": [
+      1,
+      4,
+      20,
+      30,
+      45
+    ],
+    "reasoning": "Game 1 has no known opponent distribution, so I used a value-proportional split that avoids overpaying for any castle and is robust to what others do, though it isn't a proven equilibrium. Game 2 pays 9 points for first and holding castles 3-5 secures 12 of 15 points, so I concentrated soldiers there, sized to outbid typical allocations of around 20, 30 and 45. I kept one soldier on castle 1 as a minimal hedge against a total concession.",
+    "strategy_text": "Game 1: I split soldiers in proportion to castle value (about 7/13/20/27/33), which equalizes points per soldier and doesn't require guessing opponents' allocations. Game 2: Since only the top finish pays well and ties split, I concentrated on the three most valuable castles (20/30/45 on castles 3-5), because holding them caps everyone else's score and often wins outright. My approach changed between games: the head-to-head game rewards broad coverage, while the ranking game rewards focus on the high-value castles.",
+    "game1_score": 5.515,
+    "game1_rank": 87,
+    "game2_payout": 2.21,
+    "game2_rank": 75,
+    "game2_p_first": 0.09,
+    "game2_p_second": 0.253,
+    "game2_mean_castle_points": 2.435,
+    "combined_rank": 84
+  },
+  {
+    "id": "P027",
+    "source_ai_id": "AI27",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "sonnet",
+    "framing": "game_theory",
+    "game1": [
+      1,
+      1,
+      30,
+      32,
+      36
+    ],
+    "game2": [
+      1,
+      1,
+      31,
+      32,
+      35
+    ],
+    "reasoning": "Game 1 is Colonel Blotto against a population that is probably uniform or proportional. The best reply is to concentrate on castles 3, 4 and 5 (12 of 15 points) and leave 1 soldier each on castles 1 and 2 to beat any zero allocations. Game 2 rewards first place most, and a majority of points usually wins, so the same three-castle concentration fits. I made the split slightly more balanced and put a bit more on castle 5 to hedge against heavier concentration from three opponents. The numbers are heuristic best responses, not a computed equilibrium.",
+    "strategy_text": "Game 1: I expected many players to spread soldiers evenly or in proportion to castle value. So I gave up the cheap castles (1 soldier each) and concentrated on castles 3, 4 and 5, which is 12 of the 15 points. Game 2: I kept the same idea, since the payout rewards first place most and a majority of points is what usually wins. I shifted slightly toward castle 5 and kept the soldiers balanced across the three big castles. My strategy barely changed between the games.",
+    "game1_score": 8.859,
+    "game1_rank": 27,
+    "game2_payout": 2.093,
+    "game2_rank": 78,
+    "game2_p_first": 0.097,
+    "game2_p_second": 0.201,
+    "game2_mean_castle_points": 2.201,
+    "combined_rank": 55
+  },
+  {
+    "id": "P028",
+    "source_ai_id": "AI28",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "sonnet",
+    "framing": "game_theory",
+    "game1": [
+      1,
+      11,
+      22,
+      30,
+      36
+    ],
+    "game2": [
+      0,
+      0,
+      27,
+      33,
+      40
+    ],
+    "reasoning": "For Game 1 I assumed the population mostly plays even or value-proportional splits, so I shifted soldiers away from the cheap castles to win castles 3-5 against those, scoring about 12 of 15 points. For Game 2 the 9/4/2/0 payout rewards first place heavily, so I chose a concentrated strategy that needs to beat the maximum of three opponents on castles 3-5, putting nothing on castles 1 and 2. This is a heuristic best response to a guessed opponent distribution, not a computed equilibrium, since there is no pure-strategy equilibrium in Blotto-type games.",
+    "strategy_text": "Game 1: I assumed many players would split evenly or in proportion to castle value, so I gave up the 1-point castle and mostly the 2-point castle and put slightly more than proportional soldiers on castles 3, 4 and 5 to win those against typical allocations. Game 2: because the payout is steeply weighted toward 1st place, I changed to a more concentrated, high-variance plan: nothing on castles 1 and 2 and heavy stacks on 3, 4 and 5 (27/33/40), to maximize my chance of winning the 12 points that usually decide first place.",
+    "game1_score": 8.192,
+    "game1_rank": 39,
+    "game2_payout": 2.436,
+    "game2_rank": 57,
+    "game2_p_first": 0.119,
+    "game2_p_second": 0.263,
+    "game2_mean_castle_points": 2.537,
+    "combined_rank": 45
+  },
+  {
+    "id": "P029",
+    "source_ai_id": "AI29",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "opus",
+    "framing": "game_theory",
+    "game1": [
+      1,
+      2,
+      24,
+      32,
+      41
+    ],
+    "game2": [
+      0,
+      0,
+      34,
+      0,
+      66
+    ],
+    "reasoning": "For Game 1, I used the fact that the score is average points, which makes each castle independent: you earn its value times the share of opponents you outbid. So I treated the Nash equilibrium (uniform marginals, mean equal to the proportional split) as a benchmark and chose bids just above the likely clusters of other applicants on the high-value castles, giving up most of castles 1-2. For Game 2, a castle goes to the highest of four bids and first place pays far more than the others, so I picked a two-castle concentration: 8 points (castles 5+3) guarantees first, and 66/34 should beat nearly everyone on both. Both choices rest on guesses about what other applicants submit, so they are well-reasoned bets, not provably optimal answers.",
+    "strategy_text": "Game 1: Points are averaged across head-to-head matchups, so each castle is scored independently. The Nash equilibrium (uniform random up to about 13.3 x castle value) only guarantees half the points, so I aimed to beat the common submissions instead: proportional 7/13/20/27/33, 20s everywhere and round numbers. I bid just above where they bunch up on castles 3-5 (24/32/41) and put only token amounts on castles 1-2. Game 2: Yes, my strategy changed. With four players the top bid on each castle is high, and first place pays far more than the others, so spreading out doesn't work. 8 of the 15 points guarantees first, so I went all in on castles 5 and 3 (66 and 34), amounts very few people will beat.",
+    "game1_score": 9.798,
+    "game1_rank": 9,
+    "game2_payout": 6.046,
+    "game2_rank": 16,
+    "game2_p_first": 0.488,
+    "game2_p_second": 0.399,
+    "game2_mean_castle_points": 5.869,
+    "combined_rank": 11
+  },
+  {
+    "id": "P030",
+    "source_ai_id": "AI30",
+    "archetype": "ai_verbatim",
+    "category": "AI-assisted",
+    "model": "opus",
+    "framing": "game_theory",
+    "game1": [
+      2,
+      11,
+      22,
+      29,
+      36
+    ],
+    "game2": [
+      0,
+      0,
+      39,
+      61,
+      0
+    ],
+    "reasoning": "Game 1 is Colonel Blotto scored by expected points. Theory says the equilibrium is random but allocates in proportion to castle value on average, so I started from 7/13/20/27/33 and adjusted to beat the obvious numbers people tend to pick, giving 2/11/22/29/36. For Game 2, I reasoned that with three opponents the highest bid on each castle is high, that the payouts strongly reward first place, and that 7-8 of 15 points usually wins. I expected castle 5 to be overcrowded, so I concentrated on castles 4 and 3 with large margins (61 and 39). Both choices rest on my guesses about how other applicants will play, not on hard data.",
+    "strategy_text": "Game 1: Each castle counts separately toward my average, so I started from the value-weighted split (7/13/20/27/33) that theory gives on average. Then I aimed just above the obvious numbers on the valuable castles (22, 29, 36) and put a token 2 on castle 1 to beat the people who leave it empty. Game 2: Yes, my strategy changed. With four players I have to beat three opponents on a castle, so spreading thin wins nothing, and the 9/4/2/0 payouts mean first place is what counts. I expected most players to crowd castle 5, so I skipped it and put everything on castles 4 and 3 (7 points), which usually finishes first because the other castles split among the other players.",
+    "game1_score": 7.899,
+    "game1_rank": 45,
+    "game2_payout": 6.54,
+    "game2_rank": 11,
+    "game2_p_first": 0.6,
+    "game2_p_second": 0.24,
+    "game2_mean_castle_points": 5.881,
+    "combined_rank": 24
+  },
+  {
+    "id": "P031",
+    "archetype": "ai_round",
+    "category": "AI-assisted",
+    "game1": [
+      0,
+      10,
+      15,
+      30,
+      45
+    ],
+    "game2": [
+      0,
+      0,
+      20,
+      30,
+      50
+    ],
+    "reasoning": "AI (haiku) suggested 0/8/17/30/45 and 0/0/20/30/50; I rounded to 5s.",
+    "strategy_text": "Asked an AI, then rounded the numbers to multiples of 5 because they looked cleaner. Game 1: 0/10/15/30/45. Game 2: 0/0/20/30/50; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 7.843,
+    "game1_rank": 46,
+    "game2_payout": 2.401,
+    "game2_rank": 60,
+    "game2_p_first": 0.101,
+    "game2_p_second": 0.328,
+    "game2_mean_castle_points": 2.524,
+    "combined_rank": 57
+  },
+  {
+    "id": "P032",
+    "archetype": "ai_round",
+    "category": "AI-assisted",
+    "game1": [
+      5,
+      15,
+      20,
+      25,
+      35
+    ],
+    "game2": [
+      0,
+      10,
+      15,
+      30,
+      45
+    ],
+    "reasoning": "AI (haiku) suggested 7/13/20/27/33 and 2/8/15/30/45; I rounded to 5s.",
+    "strategy_text": "Asked an AI, then rounded the numbers to multiples of 5 because they looked cleaner. Game 1: 5/15/20/25/35. Game 2: 0/10/15/30/45; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.97,
+    "game1_rank": 72,
+    "game2_payout": 2.351,
+    "game2_rank": 70,
+    "game2_p_first": 0.106,
+    "game2_p_second": 0.232,
+    "game2_mean_castle_points": 2.614,
+    "combined_rank": 72
+  },
+  {
+    "id": "P033",
+    "archetype": "ai_round",
+    "category": "AI-assisted",
+    "game1": [
+      5,
+      15,
+      20,
+      25,
+      35
+    ],
+    "game2": [
+      5,
+      10,
+      20,
+      30,
+      35
+    ],
+    "reasoning": "AI (haiku) suggested 7/13/20/27/33 and 5/10/20/30/35; I rounded to 5s.",
+    "strategy_text": "Asked an AI, then rounded the numbers to multiples of 5 because they looked cleaner. Game 1: 5/15/20/25/35. Game 2: 5/10/20/30/35; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.97,
+    "game1_rank": 73,
+    "game2_payout": 1.676,
+    "game2_rank": 95,
+    "game2_p_first": 0.032,
+    "game2_p_second": 0.157,
+    "game2_mean_castle_points": 2.003,
+    "combined_rank": 88
+  },
+  {
+    "id": "P034",
+    "archetype": "ai_round",
+    "category": "AI-assisted",
+    "game1": [
+      5,
+      15,
+      20,
+      25,
+      35
+    ],
+    "game2": [
+      0,
+      10,
+      15,
+      30,
+      45
+    ],
+    "reasoning": "AI (haiku) suggested 7/13/20/27/33 and 2/8/15/30/45; I rounded to 5s.",
+    "strategy_text": "Asked an AI, then rounded the numbers to multiples of 5 because they looked cleaner. Game 1: 5/15/20/25/35. Game 2: 0/10/15/30/45; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.97,
+    "game1_rank": 74,
+    "game2_payout": 2.353,
+    "game2_rank": 69,
+    "game2_p_first": 0.106,
+    "game2_p_second": 0.238,
+    "game2_mean_castle_points": 2.621,
+    "combined_rank": 75
+  },
+  {
+    "id": "P035",
+    "archetype": "ai_round",
+    "category": "AI-assisted",
+    "game1": [
+      5,
+      15,
+      20,
+      25,
+      35
+    ],
+    "game2": [
+      0,
+      10,
+      15,
+      30,
+      45
+    ],
+    "reasoning": "AI (haiku) suggested 7/13/20/27/33 and 2/8/15/30/45; I rounded to 5s.",
+    "strategy_text": "Asked an AI, then rounded the numbers to multiples of 5 because they looked cleaner. Game 1: 5/15/20/25/35. Game 2: 0/10/15/30/45; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.97,
+    "game1_rank": 75,
+    "game2_payout": 2.355,
+    "game2_rank": 68,
+    "game2_p_first": 0.109,
+    "game2_p_second": 0.231,
+    "game2_mean_castle_points": 2.618,
+    "combined_rank": 76
+  },
+  {
+    "id": "P036",
+    "archetype": "ai_round",
+    "category": "AI-assisted",
+    "game1": [
+      0,
+      0,
+      25,
+      35,
+      40
+    ],
+    "game2": [
+      0,
+      0,
+      20,
+      40,
+      40
+    ],
+    "reasoning": "AI (sonnet) suggested 0/0/25/37/38 and 1/1/22/38/38; I rounded to 5s.",
+    "strategy_text": "Asked an AI, then rounded the numbers to multiples of 5 because they looked cleaner. Game 1: 0/0/25/35/40. Game 2: 0/0/20/40/40; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.551,
+    "game1_rank": 16,
+    "game2_payout": 2.951,
+    "game2_rank": 47,
+    "game2_p_first": 0.144,
+    "game2_p_second": 0.334,
+    "game2_mean_castle_points": 3.029,
+    "combined_rank": 27
+  },
+  {
+    "id": "P037",
+    "archetype": "ai_round",
+    "category": "AI-assisted",
+    "game1": [
+      5,
+      10,
+      20,
+      30,
+      35
+    ],
+    "game2": [
+      0,
+      0,
+      35,
+      0,
+      65
+    ],
+    "reasoning": "AI (opus) suggested 3/11/21/31/34 and 0/0/37/0/63; I rounded to 5s.",
+    "strategy_text": "Asked an AI, then rounded the numbers to multiples of 5 because they looked cleaner. Game 1: 5/10/20/30/35. Game 2: 0/0/35/0/65; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 6.879,
+    "game1_rank": 65,
+    "game2_payout": 5.928,
+    "game2_rank": 19,
+    "game2_p_first": 0.478,
+    "game2_p_second": 0.382,
+    "game2_mean_castle_points": 5.784,
+    "combined_rank": 38
+  },
+  {
+    "id": "P038",
+    "archetype": "ai_gut",
+    "category": "AI-assisted",
+    "game1": [
+      11,
+      13,
+      32,
+      36,
+      8
+    ],
+    "game2": [
+      21,
+      21,
+      51,
+      0,
+      7
+    ],
+    "reasoning": "AI (opus) suggested 11/18/32/36/3; I trusted my gut and moved a few soldiers.",
+    "strategy_text": "Asked an AI, then moved a few soldiers onto the castle that felt most important. Game 1: 11/13/32/36/8. Game 2: 21/21/51/0/7; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 8.692,
+    "game1_rank": 30,
+    "game2_payout": 6.207,
+    "game2_rank": 15,
+    "game2_p_first": 0.565,
+    "game2_p_second": 0.277,
+    "game2_mean_castle_points": 5.208,
+    "combined_rank": 20
+  },
+  {
+    "id": "P039",
+    "archetype": "ai_gut",
+    "category": "AI-assisted",
+    "game1": [
+      0,
+      0,
+      18,
+      32,
+      50
+    ],
+    "game2": [
+      0,
+      0,
+      0,
+      44,
+      56
+    ],
+    "reasoning": "AI (haiku) suggested 0/0/21/29/50; I trusted my gut and moved a few soldiers.",
+    "strategy_text": "Asked an AI, then moved a few soldiers onto the castle that felt most important. Game 1: 0/0/18/32/50. Game 2: 0/0/0/44/56; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 8.157,
+    "game1_rank": 40,
+    "game2_payout": 5.236,
+    "game2_rank": 32,
+    "game2_p_first": 0.386,
+    "game2_p_second": 0.421,
+    "game2_mean_castle_points": 5.412,
+    "combined_rank": 34
+  },
+  {
+    "id": "P040",
+    "archetype": "ai_gut",
+    "category": "AI-assisted",
+    "game1": [
+      1,
+      0,
+      30,
+      32,
+      37
+    ],
+    "game2": [
+      1,
+      0,
+      31,
+      32,
+      36
+    ],
+    "reasoning": "AI (sonnet) suggested 1/1/30/32/36; I trusted my gut and moved a few soldiers.",
+    "strategy_text": "Asked an AI, then moved a few soldiers onto the castle that felt most important. Game 1: 1/0/30/32/37. Game 2: 1/0/31/32/36; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 8.939,
+    "game1_rank": 26,
+    "game2_payout": 2.024,
+    "game2_rank": 79,
+    "game2_p_first": 0.088,
+    "game2_p_second": 0.214,
+    "game2_mean_castle_points": 2.119,
+    "combined_rank": 56
+  },
+  {
+    "id": "P041",
+    "archetype": "ai_gut",
+    "category": "AI-assisted",
+    "game1": [
+      7,
+      4,
+      20,
+      27,
+      42
+    ],
+    "game2": [
+      1,
+      4,
+      25,
+      20,
+      50
+    ],
+    "reasoning": "AI (haiku) suggested 7/13/20/27/33; I trusted my gut and moved a few soldiers.",
+    "strategy_text": "Asked an AI, then moved a few soldiers onto the castle that felt most important. Game 1: 7/4/20/27/42. Game 2: 1/4/25/20/50; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 7.515,
+    "game1_rank": 58,
+    "game2_payout": 3.085,
+    "game2_rank": 45,
+    "game2_p_first": 0.146,
+    "game2_p_second": 0.381,
+    "game2_mean_castle_points": 3.222,
+    "combined_rank": 52
+  },
+  {
+    "id": "P042",
+    "archetype": "ai_gut",
+    "category": "AI-assisted",
+    "game1": [
+      0,
+      3,
+      17,
+      30,
+      50
+    ],
+    "game2": [
+      0,
+      0,
+      17,
+      30,
+      53
+    ],
+    "reasoning": "AI (haiku) suggested 0/8/17/30/45; I trusted my gut and moved a few soldiers.",
+    "strategy_text": "Asked an AI, then moved a few soldiers onto the castle that felt most important. Game 1: 0/3/17/30/50. Game 2: 0/0/17/30/53; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 7.944,
+    "game1_rank": 44,
+    "game2_payout": 3.272,
+    "game2_rank": 44,
+    "game2_p_first": 0.167,
+    "game2_p_second": 0.43,
+    "game2_mean_castle_points": 3.255,
+    "combined_rank": 42
+  },
+  {
+    "id": "P043",
+    "archetype": "ai_gut",
+    "category": "AI-assisted",
+    "game1": [
+      0,
+      13,
+      20,
+      27,
+      40
+    ],
+    "game2": [
+      1,
+      4,
+      25,
+      30,
+      40
+    ],
+    "reasoning": "AI (haiku) suggested 7/13/20/27/33; I trusted my gut and moved a few soldiers.",
+    "strategy_text": "Asked an AI, then moved a few soldiers onto the castle that felt most important. Game 1: 0/13/20/27/40. Game 2: 1/4/25/30/40; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 6.929,
+    "game1_rank": 64,
+    "game2_payout": 1.992,
+    "game2_rank": 80,
+    "game2_p_first": 0.063,
+    "game2_p_second": 0.244,
+    "game2_mean_castle_points": 2.26,
+    "combined_rank": 77
+  },
+  {
+    "id": "P044",
+    "archetype": "ai_gut",
+    "category": "AI-assisted",
+    "game1": [
+      7,
+      13,
+      14,
+      27,
+      39
+    ],
+    "game2": [
+      0,
+      10,
+      17,
+      33,
+      40
+    ],
+    "reasoning": "AI (haiku) suggested 7/13/20/27/33; I trusted my gut and moved a few soldiers.",
+    "strategy_text": "Asked an AI, then moved a few soldiers onto the castle that felt most important. Game 1: 7/13/14/27/39. Game 2: 0/10/17/33/40; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 6.667,
+    "game1_rank": 66,
+    "game2_payout": 2.47,
+    "game2_rank": 56,
+    "game2_p_first": 0.114,
+    "game2_p_second": 0.229,
+    "game2_mean_castle_points": 2.719,
+    "combined_rank": 62
+  },
+  {
+    "id": "P045",
+    "archetype": "ai_plus1",
+    "category": "AI-assisted",
+    "game1": [
+      0,
+      6,
+      17,
+      31,
+      46
+    ],
+    "game2": [
+      0,
+      0,
+      18,
+      31,
+      51
+    ],
+    "reasoning": "AI (haiku) suggested 0/8/17/30/45; I added +1 to round numbers to win ties.",
+    "strategy_text": "Asked an AI, then bumped round-number castles by +1 to win ties. Game 1: 0/6/17/31/46. Game 2: 0/0/18/31/51; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 8.207,
+    "game1_rank": 38,
+    "game2_payout": 3.062,
+    "game2_rank": 46,
+    "game2_p_first": 0.143,
+    "game2_p_second": 0.41,
+    "game2_mean_castle_points": 3.223,
+    "combined_rank": 39
+  },
+  {
+    "id": "P046",
+    "archetype": "ai_plus1",
+    "category": "AI-assisted",
+    "game1": [
+      6,
+      13,
+      21,
+      27,
+      33
+    ],
+    "game2": [
+      0,
+      2,
+      21,
+      31,
+      46
+    ],
+    "reasoning": "AI (haiku) suggested 7/13/20/27/33; I added +1 to round numbers to win ties.",
+    "strategy_text": "Asked an AI, then bumped round-number castles by +1 to win ties. Game 1: 6/13/21/27/33. Game 2: 0/2/21/31/46; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 6.116,
+    "game1_rank": 69,
+    "game2_payout": 2.742,
+    "game2_rank": 52,
+    "game2_p_first": 0.134,
+    "game2_p_second": 0.318,
+    "game2_mean_castle_points": 2.846,
+    "combined_rank": 61
+  },
+  {
+    "id": "P047",
+    "archetype": "ai_plus1",
+    "category": "AI-assisted",
+    "game1": [
+      4,
+      10,
+      22,
+      28,
+      36
+    ],
+    "game2": [
+      3,
+      9,
+      21,
+      29,
+      38
+    ],
+    "reasoning": "AI (sonnet) suggested 5/10/22/28/35; I added +1 to round numbers to win ties.",
+    "strategy_text": "Asked an AI, then bumped round-number castles by +1 to win ties. Game 1: 4/10/22/28/36. Game 2: 3/9/21/29/38; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 7.626,
+    "game1_rank": 52,
+    "game2_payout": 1.661,
+    "game2_rank": 97,
+    "game2_p_first": 0.042,
+    "game2_p_second": 0.196,
+    "game2_mean_castle_points": 1.94,
+    "combined_rank": 79
+  },
+  {
+    "id": "P048",
+    "archetype": "ai_plus1",
+    "category": "AI-assisted",
+    "game1": [
+      1,
+      1,
+      21,
+      36,
+      41
+    ],
+    "game2": [
+      1,
+      0,
+      36,
+      0,
+      63
+    ],
+    "reasoning": "AI (opus) suggested 1/1/21/36/41; I added +1 to round numbers to win ties.",
+    "strategy_text": "Asked an AI, then bumped round-number castles by +1 to win ties. Game 1: 1/1/21/36/41. Game 2: 1/0/36/0/63; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.621,
+    "game1_rank": 11,
+    "game2_payout": 5.662,
+    "game2_rank": 23,
+    "game2_p_first": 0.454,
+    "game2_p_second": 0.373,
+    "game2_mean_castle_points": 5.802,
+    "combined_rank": 17
+  },
+  {
+    "id": "P049",
+    "archetype": "ai_plus1",
+    "category": "AI-assisted",
+    "game1": [
+      0,
+      1,
+      31,
+      32,
+      36
+    ],
+    "game2": [
+      0,
+      1,
+      29,
+      34,
+      36
+    ],
+    "reasoning": "AI (sonnet) suggested 1/2/30/32/35; I added +1 to round numbers to win ties.",
+    "strategy_text": "Asked an AI, then bumped round-number castles by +1 to win ties. Game 1: 0/1/31/32/36. Game 2: 0/1/29/34/36; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 8.753,
+    "game1_rank": 29,
+    "game2_payout": 2.395,
+    "game2_rank": 61,
+    "game2_p_first": 0.122,
+    "game2_p_second": 0.231,
+    "game2_mean_castle_points": 2.462,
+    "combined_rank": 43
+  },
+  {
+    "id": "P050",
+    "archetype": "ai_plus1",
+    "category": "AI-assisted",
+    "game1": [
+      6,
+      13,
+      21,
+      27,
+      33
+    ],
+    "game2": [
+      0,
+      2,
+      26,
+      31,
+      41
+    ],
+    "reasoning": "AI (haiku) suggested 7/13/20/27/33; I added +1 to round numbers to win ties.",
+    "strategy_text": "Asked an AI, then bumped round-number castles by +1 to win ties. Game 1: 6/13/21/27/33. Game 2: 0/2/26/31/41; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 6.116,
+    "game1_rank": 70,
+    "game2_payout": 2.592,
+    "game2_rank": 55,
+    "game2_p_first": 0.13,
+    "game2_p_second": 0.284,
+    "game2_mean_castle_points": 2.677,
+    "combined_rank": 63
+  },
+  {
+    "id": "P051",
+    "archetype": "meta_level2",
+    "category": "Metastrategist",
+    "game1": [
+      1,
+      1,
+      23,
+      34,
+      41
+    ],
+    "game2": [
+      4,
+      1,
+      40,
+      55,
+      0
+    ],
+    "reasoning": "Assumed mostly proportional / AI-style entries and computed the exact best response to that guess.",
+    "strategy_text": "Assumed most entries are proportional or AI '+1' answers and computed the exact best response. Game 1: 1/1/23/34/41. Game 2: 4/1/40/55/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 10.02,
+    "game1_rank": 4,
+    "game2_payout": 6.697,
+    "game2_rank": 9,
+    "game2_p_first": 0.69,
+    "game2_p_second": 0.11,
+    "game2_mean_castle_points": 6.25,
+    "combined_rank": 3
+  },
+  {
+    "id": "P052",
+    "archetype": "meta_level2",
+    "category": "Metastrategist",
+    "game1": [
+      1,
+      2,
+      23,
+      33,
+      41
+    ],
+    "game2": [
+      3,
+      5,
+      39,
+      53,
+      0
+    ],
+    "reasoning": "Assumed mostly proportional / AI-style entries and computed the exact best response to that guess.",
+    "strategy_text": "Assumed most entries are proportional or AI '+1' answers and computed the exact best response. Game 1: 1/2/23/33/41. Game 2: 3/5/39/53/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.98,
+    "game1_rank": 5,
+    "game2_payout": 5.986,
+    "game2_rank": 18,
+    "game2_p_first": 0.605,
+    "game2_p_second": 0.052,
+    "game2_mean_castle_points": 5.769,
+    "combined_rank": 8
+  },
+  {
+    "id": "P053",
+    "archetype": "meta_level2",
+    "category": "Metastrategist",
+    "game1": [
+      3,
+      3,
+      23,
+      33,
+      38
+    ],
+    "game2": [
+      1,
+      2,
+      43,
+      54,
+      0
+    ],
+    "reasoning": "Assumed mostly proportional / AI-style entries and computed the exact best response to that guess.",
+    "strategy_text": "Assumed most entries are proportional or AI '+1' answers and computed the exact best response. Game 1: 3/3/23/33/38. Game 2: 1/2/43/54/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.576,
+    "game1_rank": 14,
+    "game2_payout": 6.781,
+    "game2_rank": 7,
+    "game2_p_first": 0.698,
+    "game2_p_second": 0.068,
+    "game2_mean_castle_points": 6.236,
+    "combined_rank": 6
+  },
+  {
+    "id": "P054",
+    "archetype": "meta_simulator",
+    "category": "Metastrategist",
+    "game1": [
+      2,
+      1,
+      23,
+      32,
+      42
+    ],
+    "game2": [
+      0,
+      9,
+      41,
+      50,
+      0
+    ],
+    "reasoning": "Built my own imagined field of applicant types, simulated both games, submitted the best responses.",
+    "strategy_text": "Imagined a population of applicants, simulated both games, and best-responded to it. Game 1: 2/1/23/32/42. Game 2: 0/9/41/50/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.929,
+    "game1_rank": 6,
+    "game2_payout": 6.005,
+    "game2_rank": 17,
+    "game2_p_first": 0.622,
+    "game2_p_second": 0.033,
+    "game2_mean_castle_points": 5.646,
+    "combined_rank": 9
+  },
+  {
+    "id": "P055",
+    "archetype": "meta_simulator",
+    "category": "Metastrategist",
+    "game1": [
+      3,
+      3,
+      23,
+      33,
+      38
+    ],
+    "game2": [
+      0,
+      2,
+      45,
+      53,
+      0
+    ],
+    "reasoning": "Built my own imagined field of applicant types, simulated both games, submitted the best responses.",
+    "strategy_text": "Imagined a population of applicants, simulated both games, and best-responded to it. Game 1: 3/3/23/33/38. Game 2: 0/2/45/53/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.576,
+    "game1_rank": 15,
+    "game2_payout": 6.432,
+    "game2_rank": 13,
+    "game2_p_first": 0.668,
+    "game2_p_second": 0.055,
+    "game2_mean_castle_points": 5.95,
+    "combined_rank": 14
+  },
+  {
+    "id": "P056",
+    "archetype": "meta_simulator",
+    "category": "Metastrategist",
+    "game1": [
+      1,
+      1,
+      23,
+      33,
+      42
+    ],
+    "game2": [
+      4,
+      1,
+      42,
+      53,
+      0
+    ],
+    "reasoning": "Built my own imagined field of applicant types, simulated both games, submitted the best responses.",
+    "strategy_text": "Imagined a population of applicants, simulated both games, and best-responded to it. Game 1: 1/1/23/33/42. Game 2: 4/1/42/53/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 10.141,
+    "game1_rank": 1,
+    "game2_payout": 6.391,
+    "game2_rank": 14,
+    "game2_p_first": 0.644,
+    "game2_p_second": 0.05,
+    "game2_mean_castle_points": 6.062,
+    "combined_rank": 4
+  },
+  {
+    "id": "P057",
+    "archetype": "meta_ai_sampler",
+    "category": "Metastrategist",
+    "game1": [
+      4,
+      17,
+      0,
+      37,
+      42
+    ],
+    "game2": [
+      5,
+      0,
+      41,
+      54,
+      0
+    ],
+    "reasoning": "Asked the AI 5 times to see what AI users will submit, assumed ~25% non-AI entries, and best-responded to that field.",
+    "strategy_text": "Asked the AI several times to see what AI users would submit, then best-responded to that. Game 1: 4/17/0/37/42. Game 2: 5/0/41/54/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 10.086,
+    "game1_rank": 3,
+    "game2_payout": 6.536,
+    "game2_rank": 12,
+    "game2_p_first": 0.662,
+    "game2_p_second": 0.082,
+    "game2_mean_castle_points": 6.07,
+    "combined_rank": 5
+  },
+  {
+    "id": "P058",
+    "archetype": "meta_ai_sampler",
+    "category": "Metastrategist",
+    "game1": [
+      4,
+      15,
+      0,
+      37,
+      44
+    ],
+    "game2": [
+      8,
+      23,
+      0,
+      1,
+      68
+    ],
+    "reasoning": "Asked the AI 10 times to see what AI users will submit, assumed ~27% non-AI entries, and best-responded to that field.",
+    "strategy_text": "Asked the AI several times to see what AI users would submit, then best-responded to that. Game 1: 4/15/0/37/44. Game 2: 8/23/0/1/68; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 10.116,
+    "game1_rank": 2,
+    "game2_payout": 7.434,
+    "game2_rank": 2,
+    "game2_p_first": 0.754,
+    "game2_p_second": 0.184,
+    "game2_mean_castle_points": 6.817,
+    "combined_rank": 1
+  },
+  {
+    "id": "P059",
+    "archetype": "meta_ai_sampler",
+    "category": "Metastrategist",
+    "game1": [
+      3,
+      19,
+      0,
+      37,
+      41
+    ],
+    "game2": [
+      9,
+      35,
+      0,
+      55,
+      1
+    ],
+    "reasoning": "Asked the AI 5 times to see what AI users will submit, assumed ~27% non-AI entries, and best-responded to that field.",
+    "strategy_text": "Asked the AI several times to see what AI users would submit, then best-responded to that. Game 1: 3/19/0/37/41. Game 2: 9/35/0/55/1; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.843,
+    "game1_rank": 7,
+    "game2_payout": 7.551,
+    "game2_rank": 1,
+    "game2_p_first": 0.779,
+    "game2_p_second": 0.133,
+    "game2_mean_castle_points": 6.211,
+    "combined_rank": 2
+  },
+  {
+    "id": "P060",
+    "archetype": "meta_equilibrium",
+    "category": "Metastrategist",
+    "game1": [
+      10,
+      10,
+      30,
+      35,
+      15
+    ],
+    "game2": [
+      10,
+      23,
+      39,
+      3,
+      25
+    ],
+    "reasoning": "Played a random draw from the Blotto Nash equilibrium in both games so nobody can exploit me on average.",
+    "strategy_text": "Played a random draw from the Colonel Blotto Nash equilibrium (unexploitable on average). Game 1: 10/10/30/35/15. Game 2: 10/23/39/3/25; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 8.101,
+    "game1_rank": 41,
+    "game2_payout": 4.336,
+    "game2_rank": 39,
+    "game2_p_first": 0.334,
+    "game2_p_second": 0.233,
+    "game2_mean_castle_points": 4.165,
+    "combined_rank": 36
+  },
+  {
+    "id": "P061",
+    "archetype": "meta_equilibrium",
+    "category": "Metastrategist",
+    "game1": [
+      7,
+      22,
+      8,
+      43,
+      20
+    ],
+    "game2": [
+      0,
+      15,
+      9,
+      8,
+      68
+    ],
+    "reasoning": "Played a random draw from the Blotto Nash equilibrium in both games so nobody can exploit me on average.",
+    "strategy_text": "Played a random draw from the Colonel Blotto Nash equilibrium (unexploitable on average). Game 1: 7/22/8/43/20. Game 2: 0/15/9/8/68; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 7.455,
+    "game1_rank": 60,
+    "game2_payout": 5.92,
+    "game2_rank": 20,
+    "game2_p_first": 0.53,
+    "game2_p_second": 0.384,
+    "game2_mean_castle_points": 5.821,
+    "combined_rank": 37
+  },
+  {
+    "id": "P062",
+    "archetype": "meta_equilibrium",
+    "category": "Metastrategist",
+    "game1": [
+      0,
+      1,
+      4,
+      34,
+      61
+    ],
+    "game2": [
+      3,
+      10,
+      39,
+      34,
+      14
+    ],
+    "reasoning": "Played a random draw from the Blotto Nash equilibrium in both games so nobody can exploit me on average.",
+    "strategy_text": "Played a random draw from the Colonel Blotto Nash equilibrium (unexploitable on average). Game 1: 0/1/4/34/61. Game 2: 3/10/39/34/14; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 8.843,
+    "game1_rank": 28,
+    "game2_payout": 4.091,
+    "game2_rank": 42,
+    "game2_p_first": 0.312,
+    "game2_p_second": 0.199,
+    "game2_mean_castle_points": 4.224,
+    "combined_rank": 32
+  },
+  {
+    "id": "P063",
+    "archetype": "meta_contrarian",
+    "category": "Metastrategist",
+    "game1": [
+      8,
+      17,
+      29,
+      43,
+      3
+    ],
+    "game2": [
+      12,
+      32,
+      56,
+      0,
+      0
+    ],
+    "reasoning": "The crowd will overspend on castles 4-5, so Game 1: skip castle 5; Game 2: lock castles 1-3.",
+    "strategy_text": "Predicted the crowd would fight over castles 4-5 and built around skipping one of them. Game 1: 8/17/29/43/3. Game 2: 12/32/56/0/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.152,
+    "game1_rank": 20,
+    "game2_payout": 7.167,
+    "game2_rank": 3,
+    "game2_p_first": 0.716,
+    "game2_p_second": 0.238,
+    "game2_mean_castle_points": 5.652,
+    "combined_rank": 10
+  },
+  {
+    "id": "P064",
+    "archetype": "meta_contrarian",
+    "category": "Metastrategist",
+    "game1": [
+      10,
+      19,
+      28,
+      40,
+      3
+    ],
+    "game2": [
+      0,
+      0,
+      44,
+      56,
+      0
+    ],
+    "reasoning": "The crowd will overspend on castles 4-5, so Game 1: skip castle 5; Game 2: castles 3+4.",
+    "strategy_text": "Predicted the crowd would fight over castles 4-5 and built around skipping one of them. Game 1: 10/19/28/40/3. Game 2: 0/0/44/56/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.096,
+    "game1_rank": 23,
+    "game2_payout": 7.117,
+    "game2_rank": 4,
+    "game2_p_first": 0.737,
+    "game2_p_second": 0.071,
+    "game2_mean_castle_points": 6.285,
+    "combined_rank": 12
+  },
+  {
+    "id": "P065",
+    "archetype": "meta_contrarian",
+    "category": "Metastrategist",
+    "game1": [
+      8,
+      18,
+      29,
+      42,
+      3
+    ],
+    "game2": [
+      1,
+      23,
+      33,
+      43,
+      0
+    ],
+    "reasoning": "The crowd will overspend on castles 4-5, so Game 1: skip castle 5; Game 2: castles 2-4.",
+    "strategy_text": "Predicted the crowd would fight over castles 4-5 and built around skipping one of them. Game 1: 8/18/29/42/3. Game 2: 1/23/33/43/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.141,
+    "game1_rank": 21,
+    "game2_payout": 4.732,
+    "game2_rank": 38,
+    "game2_p_first": 0.387,
+    "game2_p_second": 0.176,
+    "game2_mean_castle_points": 5.01,
+    "combined_rank": 25
+  },
+  {
+    "id": "P066",
+    "archetype": "human_proportional",
+    "category": "Human",
+    "game1": [
+      7,
+      13,
+      20,
+      27,
+      33
+    ],
+    "game2": [
+      1,
+      4,
+      20,
+      36,
+      39
+    ],
+    "reasoning": "Points-proportional split; for Game 2 I either kept it or leaned harder on the top castles.",
+    "strategy_text": "Split soldiers in proportion to castle points, rounding by hand. Game 1: 7/13/20/27/33. Game 2: 1/4/20/36/39; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.515,
+    "game1_rank": 88,
+    "game2_payout": 2.727,
+    "game2_rank": 53,
+    "game2_p_first": 0.127,
+    "game2_p_second": 0.303,
+    "game2_mean_castle_points": 2.898,
+    "combined_rank": 70
+  },
+  {
+    "id": "P067",
+    "archetype": "human_proportional",
+    "category": "Human",
+    "game1": [
+      6,
+      14,
+      21,
+      26,
+      33
+    ],
+    "game2": [
+      6,
+      14,
+      21,
+      26,
+      33
+    ],
+    "reasoning": "Points-proportional split; for Game 2 I either kept it or leaned harder on the top castles.",
+    "strategy_text": "Split soldiers in proportion to castle points, rounding by hand. Game 1: 6/14/21/26/33. Game 2: 6/14/21/26/33; I kept the same idea because only finishing position counts in the four-way game.",
+    "game1_score": 5.955,
+    "game1_rank": 77,
+    "game2_payout": 1.822,
+    "game2_rank": 89,
+    "game2_p_first": 0.038,
+    "game2_p_second": 0.171,
+    "game2_mean_castle_points": 2.147,
+    "combined_rank": 85
+  },
+  {
+    "id": "P068",
+    "archetype": "human_proportional",
+    "category": "Human",
+    "game1": [
+      7,
+      14,
+      20,
+      26,
+      33
+    ],
+    "game2": [
+      3,
+      9,
+      20,
+      31,
+      37
+    ],
+    "reasoning": "Points-proportional split; for Game 2 I either kept it or leaned harder on the top castles.",
+    "strategy_text": "Split soldiers in proportion to castle points, rounding by hand. Game 1: 7/14/20/26/33. Game 2: 3/9/20/31/37; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.354,
+    "game1_rank": 91,
+    "game2_payout": 1.74,
+    "game2_rank": 93,
+    "game2_p_first": 0.052,
+    "game2_p_second": 0.185,
+    "game2_mean_castle_points": 2.032,
+    "combined_rank": 96
+  },
+  {
+    "id": "P069",
+    "archetype": "human_proportional",
+    "category": "Human",
+    "game1": [
+      6,
+      15,
+      20,
+      27,
+      32
+    ],
+    "game2": [
+      3,
+      10,
+      20,
+      32,
+      35
+    ],
+    "reasoning": "Points-proportional split; for Game 2 I either kept it or leaned harder on the top castles.",
+    "strategy_text": "Split soldiers in proportion to castle points, rounding by hand. Game 1: 6/15/20/27/32. Game 2: 3/10/20/32/35; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.414,
+    "game1_rank": 90,
+    "game2_payout": 1.979,
+    "game2_rank": 81,
+    "game2_p_first": 0.066,
+    "game2_p_second": 0.171,
+    "game2_mean_castle_points": 2.288,
+    "combined_rank": 90
+  },
+  {
+    "id": "P070",
+    "archetype": "human_proportional",
+    "category": "Human",
+    "game1": [
+      7,
+      12,
+      22,
+      25,
+      34
+    ],
+    "game2": [
+      4,
+      9,
+      22,
+      28,
+      37
+    ],
+    "reasoning": "Points-proportional split; for Game 2 I either kept it or leaned harder on the top castles.",
+    "strategy_text": "Split soldiers in proportion to castle points, rounding by hand. Game 1: 7/12/22/25/34. Game 2: 4/9/22/28/37; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 6.283,
+    "game1_rank": 67,
+    "game2_payout": 1.736,
+    "game2_rank": 94,
+    "game2_p_first": 0.044,
+    "game2_p_second": 0.202,
+    "game2_mean_castle_points": 1.995,
+    "combined_rank": 83
+  },
+  {
+    "id": "P071",
+    "archetype": "human_proportional",
+    "category": "Human",
+    "game1": [
+      7,
+      14,
+      20,
+      26,
+      33
+    ],
+    "game2": [
+      1,
+      10,
+      20,
+      30,
+      39
+    ],
+    "reasoning": "Points-proportional split; for Game 2 I either kept it or leaned harder on the top castles.",
+    "strategy_text": "Split soldiers in proportion to castle points, rounding by hand. Game 1: 7/14/20/26/33. Game 2: 1/10/20/30/39; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.354,
+    "game1_rank": 92,
+    "game2_payout": 1.792,
+    "game2_rank": 92,
+    "game2_p_first": 0.051,
+    "game2_p_second": 0.162,
+    "game2_mean_castle_points": 2.083,
+    "combined_rank": 97
+  },
+  {
+    "id": "P072",
+    "archetype": "human_proportional",
+    "category": "Human",
+    "game1": [
+      7,
+      12,
+      20,
+      29,
+      32
+    ],
+    "game2": [
+      3,
+      9,
+      20,
+      32,
+      36
+    ],
+    "reasoning": "Points-proportional split; for Game 2 I either kept it or leaned harder on the top castles.",
+    "strategy_text": "Split soldiers in proportion to castle points, rounding by hand. Game 1: 7/12/20/29/32. Game 2: 3/9/20/32/36; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.621,
+    "game1_rank": 80,
+    "game2_payout": 1.806,
+    "game2_rank": 91,
+    "game2_p_first": 0.061,
+    "game2_p_second": 0.181,
+    "game2_mean_castle_points": 2.092,
+    "combined_rank": 91
+  },
+  {
+    "id": "P073",
+    "archetype": "human_round",
+    "category": "Human",
+    "game1": [
+      0,
+      10,
+      20,
+      30,
+      40
+    ],
+    "game2": [
+      0,
+      0,
+      30,
+      30,
+      40
+    ],
+    "reasoning": "Round numbers that climb with castle value.",
+    "strategy_text": "Used a tidy round-number ladder. Game 1: 0/10/20/30/40. Game 2: 0/0/30/30/40; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 7.606,
+    "game1_rank": 54,
+    "game2_payout": 1.916,
+    "game2_rank": 84,
+    "game2_p_first": 0.058,
+    "game2_p_second": 0.259,
+    "game2_mean_castle_points": 2.106,
+    "combined_rank": 67
+  },
+  {
+    "id": "P074",
+    "archetype": "human_round",
+    "category": "Human",
+    "game1": [
+      0,
+      10,
+      20,
+      30,
+      40
+    ],
+    "game2": [
+      0,
+      10,
+      20,
+      30,
+      40
+    ],
+    "reasoning": "Round numbers that climb with castle value.",
+    "strategy_text": "Used a tidy round-number ladder. Game 1: 0/10/20/30/40. Game 2: 0/10/20/30/40; I kept the same idea because only finishing position counts in the four-way game.",
+    "game1_score": 7.606,
+    "game1_rank": 55,
+    "game2_payout": 1.884,
+    "game2_rank": 87,
+    "game2_p_first": 0.054,
+    "game2_p_second": 0.198,
+    "game2_mean_castle_points": 2.201,
+    "combined_rank": 73
+  },
+  {
+    "id": "P075",
+    "archetype": "human_round",
+    "category": "Human",
+    "game1": [
+      10,
+      10,
+      20,
+      30,
+      30
+    ],
+    "game2": [
+      10,
+      10,
+      20,
+      30,
+      30
+    ],
+    "reasoning": "Round numbers that climb with castle value.",
+    "strategy_text": "Used a tidy round-number ladder. Game 1: 10/10/20/30/30. Game 2: 10/10/20/30/30; I kept the same idea because only finishing position counts in the four-way game.",
+    "game1_score": 5.803,
+    "game1_rank": 78,
+    "game2_payout": 1.616,
+    "game2_rank": 99,
+    "game2_p_first": 0.021,
+    "game2_p_second": 0.142,
+    "game2_mean_castle_points": 1.96,
+    "combined_rank": 94
+  },
+  {
+    "id": "P076",
+    "archetype": "human_round",
+    "category": "Human",
+    "game1": [
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "game2": [
+      0,
+      0,
+      25,
+      35,
+      40
+    ],
+    "reasoning": "Round numbers that climb with castle value.",
+    "strategy_text": "Used a tidy round-number ladder. Game 1: 10/15/20/25/30. Game 2: 0/0/25/35/40; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 4.894,
+    "game1_rank": 94,
+    "game2_payout": 2.933,
+    "game2_rank": 48,
+    "game2_p_first": 0.157,
+    "game2_p_second": 0.312,
+    "game2_mean_castle_points": 2.983,
+    "combined_rank": 74
+  },
+  {
+    "id": "P077",
+    "archetype": "human_round",
+    "category": "Human",
+    "game1": [
+      10,
+      10,
+      20,
+      30,
+      30
+    ],
+    "game2": [
+      0,
+      0,
+      20,
+      30,
+      50
+    ],
+    "reasoning": "Round numbers that climb with castle value.",
+    "strategy_text": "Used a tidy round-number ladder. Game 1: 10/10/20/30/30. Game 2: 0/0/20/30/50; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.803,
+    "game1_rank": 79,
+    "game2_payout": 2.393,
+    "game2_rank": 62,
+    "game2_p_first": 0.102,
+    "game2_p_second": 0.32,
+    "game2_mean_castle_points": 2.509,
+    "combined_rank": 71
+  },
+  {
+    "id": "P078",
+    "archetype": "human_even",
+    "category": "Human",
+    "game1": [
+      18,
+      20,
+      21,
+      22,
+      19
+    ],
+    "game2": [
+      0,
+      0,
+      33,
+      33,
+      34
+    ],
+    "reasoning": "Even split so I'm competitive everywhere.",
+    "strategy_text": "Put about 20 on every castle. Game 1: 18/20/21/22/19. Game 2: 0/0/33/33/34; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.273,
+    "game1_rank": 93,
+    "game2_payout": 2.231,
+    "game2_rank": 73,
+    "game2_p_first": 0.102,
+    "game2_p_second": 0.22,
+    "game2_mean_castle_points": 2.282,
+    "combined_rank": 86
+  },
+  {
+    "id": "P079",
+    "archetype": "human_even",
+    "category": "Human",
+    "game1": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "game2": [
+      0,
+      0,
+      33,
+      33,
+      34
+    ],
+    "reasoning": "Even split so I'm competitive everywhere.",
+    "strategy_text": "Put about 20 on every castle. Game 1: 20/20/20/20/20. Game 2: 0/0/33/33/34; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 4.606,
+    "game1_rank": 96,
+    "game2_payout": 2.192,
+    "game2_rank": 76,
+    "game2_p_first": 0.102,
+    "game2_p_second": 0.213,
+    "game2_mean_castle_points": 2.246,
+    "combined_rank": 93
+  },
+  {
+    "id": "P080",
+    "archetype": "human_even",
+    "category": "Human",
+    "game1": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "game2": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "reasoning": "Even split so I'm competitive everywhere.",
+    "strategy_text": "Put about 20 on every castle. Game 1: 20/20/20/20/20. Game 2: 20/20/20/20/20; I kept the same idea because only finishing position counts in the four-way game.",
+    "game1_score": 4.606,
+    "game1_rank": 97,
+    "game2_payout": 1.818,
+    "game2_rank": 90,
+    "game2_p_first": 0.014,
+    "game2_p_second": 0.191,
+    "game2_mean_castle_points": 2.353,
+    "combined_rank": 99
+  },
+  {
+    "id": "P081",
+    "archetype": "human_even",
+    "category": "Human",
+    "game1": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "game2": [
+      20,
+      20,
+      20,
+      20,
+      20
+    ],
+    "reasoning": "Even split so I'm competitive everywhere.",
+    "strategy_text": "Put about 20 on every castle. Game 1: 20/20/20/20/20. Game 2: 20/20/20/20/20; I kept the same idea because only finishing position counts in the four-way game.",
+    "game1_score": 4.606,
+    "game1_rank": 98,
+    "game2_payout": 1.827,
+    "game2_rank": 88,
+    "game2_p_first": 0.017,
+    "game2_p_second": 0.181,
+    "game2_mean_castle_points": 2.342,
+    "combined_rank": 98
+  },
+  {
+    "id": "P082",
+    "archetype": "human_top_heavy",
+    "category": "Human",
+    "game1": [
+      0,
+      0,
+      30,
+      30,
+      40
+    ],
+    "game2": [
+      0,
+      1,
+      0,
+      49,
+      50
+    ],
+    "reasoning": "Castles 1-2 aren't worth fighting for; stack the big ones.",
+    "strategy_text": "Ignored the cheap castles and stacked the valuable ones. Game 1: 0/0/30/30/40. Game 2: 0/1/0/49/50; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 8.672,
+    "game1_rank": 32,
+    "game2_payout": 4.805,
+    "game2_rank": 37,
+    "game2_p_first": 0.343,
+    "game2_p_second": 0.361,
+    "game2_mean_castle_points": 4.961,
+    "combined_rank": 29
+  },
+  {
+    "id": "P083",
+    "archetype": "human_top_heavy",
+    "category": "Human",
+    "game1": [
+      0,
+      0,
+      22,
+      28,
+      50
+    ],
+    "game2": [
+      0,
+      0,
+      32,
+      34,
+      34
+    ],
+    "reasoning": "Castles 1-2 aren't worth fighting for; stack the big ones.",
+    "strategy_text": "Ignored the cheap castles and stacked the valuable ones. Game 1: 0/0/22/28/50. Game 2: 0/0/32/34/34; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 8.525,
+    "game1_rank": 34,
+    "game2_payout": 2.368,
+    "game2_rank": 66,
+    "game2_p_first": 0.124,
+    "game2_p_second": 0.228,
+    "game2_mean_castle_points": 2.373,
+    "combined_rank": 49
+  },
+  {
+    "id": "P084",
+    "archetype": "human_top_heavy",
+    "category": "Human",
+    "game1": [
+      0,
+      0,
+      33,
+      33,
+      34
+    ],
+    "game2": [
+      0,
+      0,
+      20,
+      30,
+      50
+    ],
+    "reasoning": "Castles 1-2 aren't worth fighting for; stack the big ones.",
+    "strategy_text": "Ignored the cheap castles and stacked the valuable ones. Game 1: 0/0/33/33/34. Game 2: 0/0/20/30/50; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 8.273,
+    "game1_rank": 37,
+    "game2_payout": 2.384,
+    "game2_rank": 64,
+    "game2_p_first": 0.098,
+    "game2_p_second": 0.329,
+    "game2_mean_castle_points": 2.52,
+    "combined_rank": 50
+  },
+  {
+    "id": "P085",
+    "archetype": "human_top_heavy",
+    "category": "Human",
+    "game1": [
+      0,
+      5,
+      15,
+      30,
+      50
+    ],
+    "game2": [
+      0,
+      0,
+      0,
+      40,
+      60
+    ],
+    "reasoning": "Castles 1-2 aren't worth fighting for; stack the big ones.",
+    "strategy_text": "Ignored the cheap castles and stacked the valuable ones. Game 1: 0/5/15/30/50. Game 2: 0/0/0/40/60; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 7.97,
+    "game1_rank": 43,
+    "game2_payout": 5.33,
+    "game2_rank": 26,
+    "game2_p_first": 0.396,
+    "game2_p_second": 0.434,
+    "game2_mean_castle_points": 5.375,
+    "combined_rank": 30
+  },
+  {
+    "id": "P086",
+    "archetype": "human_top_heavy",
+    "category": "Human",
+    "game1": [
+      0,
+      1,
+      20,
+      30,
+      49
+    ],
+    "game2": [
+      0,
+      1,
+      0,
+      39,
+      60
+    ],
+    "reasoning": "Castles 1-2 aren't worth fighting for; stack the big ones.",
+    "strategy_text": "Ignored the cheap castles and stacked the valuable ones. Game 1: 0/1/20/30/49. Game 2: 0/1/0/39/60; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 8.076,
+    "game1_rank": 42,
+    "game2_payout": 5.244,
+    "game2_rank": 30,
+    "game2_p_first": 0.388,
+    "game2_p_second": 0.418,
+    "game2_mean_castle_points": 5.357,
+    "combined_rank": 35
+  },
+  {
+    "id": "P087",
+    "archetype": "human_all_in",
+    "category": "Human",
+    "game1": [
+      0,
+      0,
+      0,
+      45,
+      55
+    ],
+    "game2": [
+      0,
+      0,
+      0,
+      0,
+      100
+    ],
+    "reasoning": "Go big or go home: guarantee the most valuable castles.",
+    "strategy_text": "Bet everything on one or two castles. Game 1: 0/0/0/45/55. Game 2: 0/0/0/0/100; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.197,
+    "game1_rank": 19,
+    "game2_payout": 5.371,
+    "game2_rank": 25,
+    "game2_p_first": 0.33,
+    "game2_p_second": 0.65,
+    "game2_mean_castle_points": 4.993,
+    "combined_rank": 19
+  },
+  {
+    "id": "P088",
+    "archetype": "human_all_in",
+    "category": "Human",
+    "game1": [
+      0,
+      0,
+      0,
+      50,
+      50
+    ],
+    "game2": [
+      0,
+      0,
+      0,
+      40,
+      60
+    ],
+    "reasoning": "Go big or go home: guarantee the most valuable castles.",
+    "strategy_text": "Bet everything on one or two castles. Game 1: 0/0/0/50/50. Game 2: 0/0/0/40/60; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.056,
+    "game1_rank": 24,
+    "game2_payout": 5.328,
+    "game2_rank": 27,
+    "game2_p_first": 0.397,
+    "game2_p_second": 0.431,
+    "game2_mean_castle_points": 5.375,
+    "combined_rank": 21
+  },
+  {
+    "id": "P089",
+    "archetype": "human_all_in",
+    "category": "Human",
+    "game1": [
+      0,
+      0,
+      0,
+      50,
+      50
+    ],
+    "game2": [
+      0,
+      0,
+      0,
+      0,
+      100
+    ],
+    "reasoning": "Go big or go home: guarantee the most valuable castles.",
+    "strategy_text": "Bet everything on one or two castles. Game 1: 0/0/0/50/50. Game 2: 0/0/0/0/100; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.056,
+    "game1_rank": 25,
+    "game2_payout": 5.323,
+    "game2_rank": 28,
+    "game2_p_first": 0.32,
+    "game2_p_second": 0.66,
+    "game2_mean_castle_points": 4.994,
+    "combined_rank": 22
+  },
+  {
+    "id": "P090",
+    "archetype": "human_plus1",
+    "category": "Human",
+    "game1": [
+      0,
+      14,
+      21,
+      28,
+      37
+    ],
+    "game2": [
+      1,
+      1,
+      32,
+      32,
+      34
+    ],
+    "reasoning": "Most people will play 7/13/20/27/33, so I went one above it where it counts.",
+    "strategy_text": "Guessed what most people do and added one soldier to beat it. Game 1: 0/14/21/28/37. Game 2: 1/1/32/32/34; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 7.763,
+    "game1_rank": 49,
+    "game2_payout": 2.102,
+    "game2_rank": 77,
+    "game2_p_first": 0.097,
+    "game2_p_second": 0.197,
+    "game2_mean_castle_points": 2.197,
+    "combined_rank": 64
+  },
+  {
+    "id": "P091",
+    "archetype": "human_plus1",
+    "category": "Human",
+    "game1": [
+      0,
+      14,
+      21,
+      28,
+      37
+    ],
+    "game2": [
+      0,
+      0,
+      0,
+      49,
+      51
+    ],
+    "reasoning": "Most people will play 7/13/20/27/33, so I went one above it where it counts.",
+    "strategy_text": "Guessed what most people do and added one soldier to beat it. Game 1: 0/14/21/28/37. Game 2: 0/0/0/49/51; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 7.763,
+    "game1_rank": 50,
+    "game2_payout": 5.037,
+    "game2_rank": 35,
+    "game2_p_first": 0.359,
+    "game2_p_second": 0.414,
+    "game2_mean_castle_points": 5.366,
+    "combined_rank": 40
+  },
+  {
+    "id": "P092",
+    "archetype": "human_plus1",
+    "category": "Human",
+    "game1": [
+      0,
+      15,
+      21,
+      27,
+      37
+    ],
+    "game2": [
+      0,
+      16,
+      21,
+      26,
+      37
+    ],
+    "reasoning": "Most people will play 10/15/20/25/30, so I went one above it where it counts.",
+    "strategy_text": "Guessed what most people do and added one soldier to beat it. Game 1: 0/15/21/27/37. Game 2: 0/16/21/26/37; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 7.47,
+    "game1_rank": 59,
+    "game2_payout": 1.902,
+    "game2_rank": 85,
+    "game2_p_first": 0.072,
+    "game2_p_second": 0.131,
+    "game2_mean_castle_points": 2.099,
+    "combined_rank": 78
+  },
+  {
+    "id": "P093",
+    "archetype": "human_plus1",
+    "category": "Human",
+    "game1": [
+      0,
+      21,
+      21,
+      21,
+      37
+    ],
+    "game2": [
+      0,
+      0,
+      0,
+      49,
+      51
+    ],
+    "reasoning": "Most people will play 20/20/20/20/20, so I went one above it where it counts.",
+    "strategy_text": "Guessed what most people do and added one soldier to beat it. Game 1: 0/21/21/21/37. Game 2: 0/0/0/49/51; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 7.035,
+    "game1_rank": 63,
+    "game2_payout": 5.08,
+    "game2_rank": 33,
+    "game2_p_first": 0.366,
+    "game2_p_second": 0.408,
+    "game2_mean_castle_points": 5.398,
+    "combined_rank": 46
+  },
+  {
+    "id": "P094",
+    "archetype": "human_random",
+    "category": "Human",
+    "game1": [
+      30,
+      5,
+      10,
+      40,
+      15
+    ],
+    "game2": [
+      10,
+      28,
+      18,
+      34,
+      10
+    ],
+    "reasoning": "Didn't overthink it.",
+    "strategy_text": "Low effort: typed numbers that roughly added up. Game 1: 30/5/10/40/15. Game 2: 10/28/18/34/10; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.96,
+    "game1_rank": 76,
+    "game2_payout": 3.328,
+    "game2_rank": 43,
+    "game2_p_first": 0.214,
+    "game2_p_second": 0.207,
+    "game2_mean_castle_points": 3.632,
+    "combined_rank": 60
+  },
+  {
+    "id": "P095",
+    "archetype": "human_random",
+    "category": "Human",
+    "game1": [
+      36,
+      8,
+      21,
+      18,
+      17
+    ],
+    "game2": [
+      10,
+      20,
+      5,
+      45,
+      20
+    ],
+    "reasoning": "Didn't overthink it.",
+    "strategy_text": "Low effort: typed numbers that roughly added up. Game 1: 36/8/21/18/17. Game 2: 10/20/5/45/20; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 3.869,
+    "game1_rank": 99,
+    "game2_payout": 4.236,
+    "game2_rank": 40,
+    "game2_p_first": 0.314,
+    "game2_p_second": 0.215,
+    "game2_mean_castle_points": 4.378,
+    "combined_rank": 68
+  },
+  {
+    "id": "P096",
+    "archetype": "human_random",
+    "category": "Human",
+    "game1": [
+      30,
+      30,
+      0,
+      30,
+      10
+    ],
+    "game2": [
+      45,
+      10,
+      20,
+      15,
+      10
+    ],
+    "reasoning": "Didn't overthink it.",
+    "strategy_text": "Low effort: typed numbers that roughly added up. Game 1: 30/30/0/30/10. Game 2: 45/10/20/15/10; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 5.47,
+    "game1_rank": 89,
+    "game2_payout": 1.491,
+    "game2_rank": 100,
+    "game2_p_first": 0.015,
+    "game2_p_second": 0.102,
+    "game2_mean_castle_points": 2.023,
+    "combined_rank": 100
+  },
+  {
+    "id": "P097",
+    "archetype": "human_random",
+    "category": "Human",
+    "game1": [
+      40,
+      5,
+      20,
+      10,
+      25
+    ],
+    "game2": [
+      25,
+      35,
+      20,
+      5,
+      15
+    ],
+    "reasoning": "Didn't overthink it.",
+    "strategy_text": "Low effort: typed numbers that roughly added up. Game 1: 40/5/20/10/25. Game 2: 25/35/20/5/15; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 3.465,
+    "game1_rank": 100,
+    "game2_payout": 2.324,
+    "game2_rank": 71,
+    "game2_p_first": 0.027,
+    "game2_p_second": 0.272,
+    "game2_mean_castle_points": 3.147,
+    "combined_rank": 92
+  },
+  {
+    "id": "P098",
+    "archetype": "human_underdog",
+    "category": "Human",
+    "game1": [
+      14,
+      20,
+      20,
+      20,
+      26
+    ],
+    "game2": [
+      21,
+      30,
+      49,
+      0,
+      0
+    ],
+    "reasoning": "Everyone will fight over the big castles; I'll take what they leave.",
+    "strategy_text": "Fought for the cheap castles everyone else ignores. Game 1: 14/20/20/20/26. Game 2: 21/30/49/0/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 4.828,
+    "game1_rank": 95,
+    "game2_payout": 6.747,
+    "game2_rank": 8,
+    "game2_p_first": 0.654,
+    "game2_p_second": 0.193,
+    "game2_mean_castle_points": 5.386,
+    "combined_rank": 53
+  },
+  {
+    "id": "P099",
+    "archetype": "human_underdog",
+    "category": "Human",
+    "game1": [
+      9,
+      20,
+      30,
+      41,
+      0
+    ],
+    "game2": [
+      24,
+      25,
+      50,
+      1,
+      0
+    ],
+    "reasoning": "Everyone will fight over the big castles; I'll take what they leave.",
+    "strategy_text": "Fought for the cheap castles everyone else ignores. Game 1: 9/20/30/41/0. Game 2: 24/25/50/1/0; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 9.247,
+    "game1_rank": 18,
+    "game2_payout": 6.679,
+    "game2_rank": 10,
+    "game2_p_first": 0.631,
+    "game2_p_second": 0.24,
+    "game2_mean_castle_points": 5.346,
+    "combined_rank": 15
+  },
+  {
+    "id": "P100",
+    "archetype": "human_underdog",
+    "category": "Human",
+    "game1": [
+      12,
+      18,
+      25,
+      25,
+      20
+    ],
+    "game2": [
+      11,
+      19,
+      29,
+      40,
+      1
+    ],
+    "reasoning": "Everyone will fight over the big castles; I'll take what they leave.",
+    "strategy_text": "Fought for the cheap castles everyone else ignores. Game 1: 12/18/25/25/20. Game 2: 11/19/29/40/1; I changed my allocation because only finishing position counts in the four-way game.",
+    "game1_score": 6.268,
+    "game1_rank": 68,
+    "game2_payout": 4.185,
+    "game2_rank": 41,
+    "game2_p_first": 0.306,
+    "game2_p_second": 0.211,
+    "game2_mean_castle_points": 4.574,
+    "combined_rank": 58
+  }
+]
